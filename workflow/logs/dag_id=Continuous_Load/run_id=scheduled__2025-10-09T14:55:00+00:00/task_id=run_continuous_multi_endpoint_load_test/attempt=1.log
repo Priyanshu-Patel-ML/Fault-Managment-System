@@ -1,0 +1,25 @@
+[2025-10-09T15:17:59.207+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-09T15:18:27.228+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-09T14:55:00+00:00 [queued]>
+[2025-10-09T15:18:28.012+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-09T14:55:00+00:00 [queued]>
+[2025-10-09T15:18:28.120+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-10-09T15:18:33.666+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_continuous_multi_endpoint_load_test> on 2025-10-09 14:55:00+00:00
+[2025-10-09T15:18:34.041+0000] {standard_task_runner.py:72} INFO - Started process 2051 to run task
+[2025-10-09T15:18:35.063+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Continuous_Load', 'run_continuous_multi_endpoint_load_test', 'scheduled__2025-10-09T14:55:00+00:00', '--job-id', '7044', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp3xkku5cv']
+[2025-10-09T15:18:35.073+0000] {standard_task_runner.py:105} INFO - Job 7044: Subtask run_continuous_multi_endpoint_load_test
+[2025-10-09T15:20:06.023+0000] {job.py:229} INFO - Heartbeat recovered after 202.04 seconds
+[2025-10-09T15:22:11.319+0000] {job.py:229} INFO - Heartbeat recovered after 154.46 seconds
+[2025-10-09T15:22:44.963+0000] {task_command.py:467} INFO - Running <TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-09T14:55:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-09T15:25:08.212+0000] {job.py:229} INFO - Heartbeat recovered after 177.51 seconds
+[2025-10-09T15:28:12.019+0000] {job.py:229} INFO - Heartbeat recovered after 197.49 seconds
+[2025-10-09T15:31:15.703+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Continuous_Load' AIRFLOW_CTX_TASK_ID='run_continuous_multi_endpoint_load_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-09T14:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-09T14:55:00+00:00'
+[2025-10-09T15:31:21.217+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-09T15:31:46.854+0000] {job.py:229} INFO - Heartbeat recovered after 223.05 seconds
+[2025-10-09T15:34:04.562+0000] {docker.py:157} ERROR - Failed to establish connection to Docker host unix://var/run/docker.sock: Error while fetching server API version: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+[2025-10-09T15:40:07.606+0000] {local_task_job_runner.py:228} ERROR - Heartbeat time limit exceeded!
+[2025-10-09T15:40:08.507+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-10-09T15:40:08.605+0000] {process_utils.py:132} INFO - Sending 15 to group 2051. PIDs of all processes in the group: [2051]
+[2025-10-09T15:40:08.605+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2051
+[2025-10-09T15:40:24.554+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-10-09T15:40:25.015+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-09T15:40:25.751+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2051, status='terminated', exitcode=2, started='15:18:33') (2051) terminated with exit code 2
+[2025-10-09T15:40:27.213+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

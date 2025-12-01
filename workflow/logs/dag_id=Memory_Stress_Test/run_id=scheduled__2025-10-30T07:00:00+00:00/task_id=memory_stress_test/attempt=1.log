@@ -1,0 +1,173 @@
+[2025-10-30T07:48:03.517+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-30T07:48:03.545+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [queued]>
+[2025-10-30T07:48:03.557+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [queued]>
+[2025-10-30T07:48:03.558+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-30T07:48:03.580+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-10-30 07:00:00+00:00
+[2025-10-30T07:48:03.595+0000] {standard_task_runner.py:72} INFO - Started process 4159 to run task
+[2025-10-30T07:48:03.605+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'scheduled__2025-10-30T07:00:00+00:00', '--job-id', '11687', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpn35aen6h']
+[2025-10-30T07:48:03.607+0000] {standard_task_runner.py:105} INFO - Job 11687: Subtask memory_stress_test
+[2025-10-30T07:48:03.713+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-30T07:48:03.963+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-30T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-30T07:00:00+00:00'
+[2025-10-30T07:48:03.971+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-30T07:48:04.058+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-30T07:48:04.692+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-30T07:48:23.491+0000] {docker.py:438} INFO - 
+[2025-10-30T07:48:24.372+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Validating the experiment's syntax
+[2025-10-30T07:48:24.897+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Experiment looks valid
+[2025-10-30T07:48:24.900+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Running experiment: Repeated Gradual Memory Stress Experiment
+[2025-10-30T07:48:24.905+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Steady-state strategy: default
+[2025-10-30T07:48:24.906+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Rollbacks strategy: default
+[2025-10-30T07:48:24.907+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-30T07:48:24.908+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Playing your experiment's method now...
+[2025-10-30T07:48:24.909+0000] {docker.py:438} INFO - [32m[2025-10-30 07:48:24 INFO] Action: repeated-gradual-memory-stress
+[2025-10-30T07:49:09.365+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2025-10-30T07:49:09.366+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-10-30T07:49:09.373+0000] {process_utils.py:132} INFO - Sending 15 to group 4159. PIDs of all processes in the group: [4159]
+[2025-10-30T07:49:09.373+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 4159
+[2025-10-30T07:49:09.374+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-10-30T07:49:09.377+0000] {docker.py:533} INFO - Stopping docker container
+[2025-10-30T07:49:09.827+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 434, in _run_image_with_mounts
+    for log_chunk in logstream:
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/types/daemon.py", line 29, in __next__
+    return next(self._stream)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 438, in <genexpr>
+    gen = (data for (_, data) in gen)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/utils/socket.py", line 112, in frames_iter_no_tty
+    (stream, n) = next_frame_header(socket)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/utils/socket.py", line 84, in next_frame_header
+    data = read_exactly(socket, 8)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/utils/socket.py", line 69, in read_exactly
+    next_data = read(socket, n - len(data))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/utils/socket.py", line 40, in read
+    poll.poll()
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-10-30T07:49:09.843+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=scheduled__2025-10-30T07:00:00+00:00, execution_date=20251030T070000, start_date=20251030T074909, end_date=20251030T074909
+[2025-10-30T07:49:09.881+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-30T07:49:09.938+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4159, status='terminated', exitcode=2, started='07:48:03') (4159) terminated with exit code 2
+[2025-10-30T07:52:43.404+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-30T07:52:43.432+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [queued]>
+[2025-10-30T07:52:43.444+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [queued]>
+[2025-10-30T07:52:43.445+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-30T07:52:43.466+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-10-30 07:00:00+00:00
+[2025-10-30T07:52:43.480+0000] {standard_task_runner.py:72} INFO - Started process 4165 to run task
+[2025-10-30T07:52:43.490+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'scheduled__2025-10-30T07:00:00+00:00', '--job-id', '11689', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpokyb04p_']
+[2025-10-30T07:52:43.492+0000] {standard_task_runner.py:105} INFO - Job 11689: Subtask memory_stress_test
+[2025-10-30T07:52:43.590+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-30T07:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-30T07:52:43.786+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-30T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-30T07:00:00+00:00'
+[2025-10-30T07:52:43.792+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-30T07:52:43.861+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-30T07:52:44.420+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-30T07:53:03.390+0000] {docker.py:438} INFO - 
+[2025-10-30T07:53:04.572+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:04 INFO] Validating the experiment's syntax
+[2025-10-30T07:53:05.142+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Experiment looks valid
+[2025-10-30T07:53:05.144+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Running experiment: Repeated Gradual Memory Stress Experiment
+[2025-10-30T07:53:05.150+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Steady-state strategy: default
+[2025-10-30T07:53:05.151+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Rollbacks strategy: default
+[2025-10-30T07:53:05.152+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-30T07:53:05.153+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Playing your experiment's method now...
+[2025-10-30T07:53:05.154+0000] {docker.py:438} INFO - [32m[2025-10-30 07:53:05 INFO] Action: repeated-gradual-memory-stress
+[2025-10-30T07:57:01.024+0000] {docker.py:438} INFO - [32m[2025-10-30 07:57:01 INFO] Let's rollback...
+[2025-10-30T07:57:01.026+0000] {docker.py:438} INFO - [32m[2025-10-30 07:57:01 INFO] No declared rollbacks, let's move on.
+[2025-10-30T07:57:01.027+0000] {docker.py:438} INFO - [32m[2025-10-30 07:57:01 INFO] Experiment ended with status: completed
+[2025-10-30T07:57:01.029+0000] {docker.py:438} INFO - 🚀 Starting REPEATED gradual memory stress cycles
+[2025-10-30T07:57:01.029+0000] {docker.py:438} INFO - 🔄 Cycle duration: 50s (gradual ramp to OOM)
+[2025-10-30T07:57:01.030+0000] {docker.py:438} INFO - ⏱️  Total experiment: 300s
+[2025-10-30T07:57:01.030+0000] {docker.py:438} INFO - 📈 Memory ramp: 50MB → 300MB (+80MB/10s)
+[2025-10-30T07:57:01.033+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-10-30T07:57:01.033+0000] {docker.py:438} INFO - ⏳ Recovery wait: 15s between cycles
+[2025-10-30T07:57:01.034+0000] {docker.py:438} INFO - 
+[2025-10-30T07:57:01.034+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #1 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-30T07:57:01.034+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 300s
+[2025-10-30T07:57:01.035+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-30T07:57:01.035+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-30T07:57:01.036+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-30T07:57:01.036+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-30T07:57:01.037+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-30T07:57:01.037+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-30T07:57:01.040+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-30T07:57:01.040+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-30T07:57:01.040+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-30T07:57:01.041+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-30T07:57:01.042+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-30T07:57:01.042+0000] {docker.py:438} INFO - 💥 OOM Event #1 triggered!
+[2025-10-30T07:57:01.042+0000] {docker.py:438} INFO - ✅ Cycle #1 completed in 64s
+[2025-10-30T07:57:01.043+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-30T07:57:01.043+0000] {docker.py:438} INFO - 
+[2025-10-30T07:57:01.044+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #2 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-30T07:57:01.044+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 221s
+[2025-10-30T07:57:01.045+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-30T07:57:01.045+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-30T07:57:01.045+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-30T07:57:01.046+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-30T07:57:01.048+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-30T07:57:01.048+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-30T07:57:01.049+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-30T07:57:01.049+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-30T07:57:01.050+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-30T07:57:01.050+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-30T07:57:01.050+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-30T07:57:01.053+0000] {docker.py:438} INFO - 💥 OOM Event #2 triggered!
+[2025-10-30T07:57:01.053+0000] {docker.py:438} INFO - ✅ Cycle #2 completed in 64s
+[2025-10-30T07:57:01.054+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-30T07:57:01.054+0000] {docker.py:438} INFO - 
+[2025-10-30T07:57:01.055+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #3 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-30T07:57:01.055+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 143s
+[2025-10-30T07:57:01.055+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-30T07:57:01.056+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-30T07:57:01.056+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-30T07:57:01.057+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-30T07:57:01.057+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-30T07:57:01.059+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-30T07:57:01.059+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-30T07:57:01.060+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-30T07:57:01.060+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-30T07:57:01.062+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-30T07:57:01.062+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-30T07:57:01.063+0000] {docker.py:438} INFO - 💥 OOM Event #3 triggered!
+[2025-10-30T07:57:01.063+0000] {docker.py:438} INFO - ✅ Cycle #3 completed in 64s
+[2025-10-30T07:57:01.064+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-30T07:57:01.064+0000] {docker.py:438} INFO - 
+[2025-10-30T07:57:01.064+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #4 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-30T07:57:01.067+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 64s
+[2025-10-30T07:57:01.067+0000] {docker.py:438} INFO - ⚠️ Not enough time for full cycle, stopping experiment
+[2025-10-30T07:57:01.068+0000] {docker.py:438} INFO - 
+[2025-10-30T07:57:01.068+0000] {docker.py:438} INFO - ============================================================
+[2025-10-30T07:57:01.069+0000] {docker.py:438} INFO - 🏁 REPEATED GRADUAL MEMORY STRESS COMPLETED!
+[2025-10-30T07:57:01.069+0000] {docker.py:438} INFO - ============================================================
+[2025-10-30T07:57:01.069+0000] {docker.py:438} INFO - 🔄 Total cycles performed: 4
+[2025-10-30T07:57:01.070+0000] {docker.py:438} INFO - 💥 Total OOM events: 3
+[2025-10-30T07:57:01.070+0000] {docker.py:438} INFO - ⏱️  Total experiment time: 236s
+[2025-10-30T07:57:01.071+0000] {docker.py:438} INFO - 📊 Average cycle time: 59s
+[2025-10-30T07:57:01.371+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-10-30T07:57:11.807+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-30T07:57:11.808+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=scheduled__2025-10-30T07:00:00+00:00, execution_date=20251030T070000, start_date=20251030T075243, end_date=20251030T075711
+[2025-10-30T07:57:11.904+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-30T07:57:11.933+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-30T07:57:11.950+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

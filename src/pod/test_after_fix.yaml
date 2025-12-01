@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: containerd-test
+  namespace: default
+spec:
+  mode: all
+  selector:
+    labelSelectors:
+      app: post-storage-service
+  stressors:
+    memory:
+      workers: 1
+      size: "100MB"
+      oomScoreAdj: 1000
+  duration: "10s"

@@ -1,0 +1,31 @@
+{
+    "version": "1.0.0",
+    "title": "Repeated Gradual Memory Stress Experiment",
+    "description": "Repeatedly perform gradual memory ramp to OOM over total duration",
+    "method": [
+        {
+            "name": "repeated-gradual-memory-stress",
+            "type": "action",
+            "provider": {
+                "type": "python",
+                "module": "memory_stress",
+                "func": "stress_memory_gradual_cycles",
+                "arguments": {
+                    "name": "gradual-oom-stress",
+                    "workers": 1,
+                    "start_size": "50MB",
+                    "max_size": "300MB",
+                    "increment_mb":80,
+                    "oom_score": 1000,
+                    "label_selectors": "app=post-storage-service",
+                    "mode": "all",
+                    "ns": "default",
+                    "interval": 10,
+                    "ramp_duration": 50,
+                    "total_duration": 600,
+                    "recovery_wait": 15
+                }
+            }
+        }
+    ]
+}

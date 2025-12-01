@@ -1,0 +1,371 @@
+[2025-11-20T10:19:41.176+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-20T10:19:41.230+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-20T10:19:38.444768+00:00 [queued]>
+[2025-11-20T10:19:41.256+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-20T10:19:38.444768+00:00 [queued]>
+[2025-11-20T10:19:41.256+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-20T10:19:41.300+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-11-20 10:19:38.444768+00:00
+[2025-11-20T10:19:41.315+0000] {standard_task_runner.py:72} INFO - Started process 550 to run task
+[2025-11-20T10:19:41.327+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Reinitialize_Application', 'apply_container_restart_docker', 'manual__2025-11-20T10:19:38.444768+00:00', '--job-id', '16619', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpdbre8e2q']
+[2025-11-20T10:19:41.329+0000] {standard_task_runner.py:105} INFO - Job 16619: Subtask apply_container_restart_docker
+[2025-11-20T10:19:41.439+0000] {task_command.py:467} INFO - Running <TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-20T10:19:38.444768+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-20T10:19:41.657+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reinitialize_Application' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T10:19:38.444768+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-20T10:19:38.444768+00:00'
+[2025-11-20T10:19:41.660+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-20T10:19:41.745+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-11-20T10:19:42.527+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-20T10:20:02.657+0000] {docker.py:438} INFO - 
+[2025-11-20T10:20:02.669+0000] {docker.py:438} INFO - total 11132
+[2025-11-20T10:20:02.670+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000     4096 Nov 11 11:35 .
+[2025-11-20T10:20:02.670+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root     4096 Sep 26 10:44 ..
+[2025-11-20T10:20:02.671+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1193 Sep  8 07:02 API_Latency.json
+[2025-11-20T10:20:02.672+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      729 Sep  9 10:30 API_Timeout.json
+[2025-11-20T10:20:02.673+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-11-20T10:20:02.673+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1665 Nov 11 09:21 Memory_Stress_Test_Azure.yaml
+[2025-11-20T10:20:02.674+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-11-20T10:20:02.674+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root     4096 Oct 29 06:31 __pycache__
+[2025-11-20T10:20:02.674+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000     4096 Oct 21 08:05 chaos_env
+[2025-11-20T10:20:02.676+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     8875 Sep 25 16:54 chaosk6_actions.py
+[2025-11-20T10:20:02.677+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 10734864 Nov 20 10:14 chaostoolkit.log
+[2025-11-20T10:20:02.677+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1421 Oct 23 09:34 check.py
+[2025-11-20T10:20:02.679+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3213 Sep  9 09:11 combined-sequential.json
+[2025-11-20T10:20:02.679+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000     1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-11-20T10:20:02.680+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      502 Sep 16 05:31 connection_test_experiment.json
+[2025-11-20T10:20:02.685+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      692 Oct 24 01:43 container_probe.json
+[2025-11-20T10:20:02.685+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     2533 Oct 23 09:28 container_probe.yaml
+[2025-11-20T10:20:02.686+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1420 Sep 24 06:53 container_restart.json
+[2025-11-20T10:20:02.687+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    16452 Sep 26 09:59 container_restart.py
+[2025-11-20T10:20:02.687+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1744 Nov 11 09:15 container_restart_Azure.yaml
+[2025-11-20T10:20:02.688+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1409 Sep 18 12:30 continuous_load_test.json
+[2025-11-20T10:20:02.688+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-11-20T10:20:02.691+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1637 Sep 25 04:39 cordon_test.json
+[2025-11-20T10:20:02.691+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1430 Nov 11 09:16 cordon_uncordon_node_Azure.yaml
+[2025-11-20T10:20:02.692+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-11-20T10:20:02.692+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1760 Oct 21 08:00 db_cleanup.json
+[2025-11-20T10:20:02.693+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     6399 Sep 24 07:40 db_cleanup.py
+[2025-11-20T10:20:02.693+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     5855 Oct 28 12:27 direct_memory_stress.py
+[2025-11-20T10:20:02.693+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3964 Nov 20 10:14 journal.json
+[2025-11-20T10:20:02.694+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000        0 Nov 11 11:31 json
+[2025-11-20T10:20:02.694+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root   364418 Nov 20 10:20 k6_continuous_load.log
+[2025-11-20T10:20:02.697+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3998 Nov 20 08:37 k6_continuous_summary.json
+[2025-11-20T10:20:02.697+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3433 Sep 25 09:28 k6_summary.json
+[2025-11-20T10:20:02.698+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      989 Sep 30 09:24 kubernetes_actions.json
+[2025-11-20T10:20:02.698+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    10961 Sep 30 09:23 kubernetes_actions.py
+[2025-11-20T10:20:02.698+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      945 Sep 21 16:40 load_test.json
+[2025-11-20T10:20:02.699+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      528 Sep 17 12:13 max_connection_experiment.json
+[2025-11-20T10:20:02.699+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-11-20T10:20:02.700+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1066 Oct 30 12:27 memory_stress.json
+[2025-11-20T10:20:02.700+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     6653 Oct 29 06:18 memory_stress.py
+[2025-11-20T10:20:02.701+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-11-20T10:20:02.701+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     7586 Sep 18 05:54 mongodb_actions.py
+[2025-11-20T10:20:02.701+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     2136 Sep 18 11:23 mongodb_connection.json
+[2025-11-20T10:20:02.702+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-11-20T10:20:02.702+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3657 Sep 18 05:42 mongodb_probes.py
+[2025-11-20T10:20:02.704+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     6161 Sep 12 08:04 pod_restart.py
+[2025-11-20T10:20:02.704+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1497 Sep 30 05:50 redis_config_faults.py
+[2025-11-20T10:20:02.706+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      862 Sep 30 05:50 redis_experiment.json
+[2025-11-20T10:20:02.706+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      945 Sep 18 06:53 redis_load.json
+[2025-11-20T10:20:02.706+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1634 Nov 11 09:16 redis_memory_stress_Azure.yaml
+[2025-11-20T10:20:02.707+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-11-20T10:20:02.707+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-11-20T10:20:02.709+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1307 Oct 27 10:33 sample_probe.yaml
+[2025-11-20T10:20:02.709+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000     4096 Oct 22 06:46 scripts
+[2025-11-20T10:20:02.710+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      272 Oct 27 08:51 simple-stress-test.yaml
+[2025-11-20T10:20:02.710+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000     4096 Sep 30 09:41 socialNetwork
+[2025-11-20T10:20:02.711+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      821 Sep 26 13:20 stress_test.json
+[2025-11-20T10:20:02.712+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-11-20T10:20:02.712+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      295 Oct 27 08:49 test_after_fix.yaml
+[2025-11-20T10:20:02.714+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      367 Sep 17 07:24 test_params.json
+[2025-11-20T10:20:02.715+0000] {docker.py:438} INFO - Starting Reinitializing the Social Networking Application...
+[2025-11-20T10:20:03.865+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:03 INFO] Validating the experiment's syntax
+[2025-11-20T10:20:04.994+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:04 INFO] Experiment looks valid
+[2025-11-20T10:20:04.995+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:04 INFO] Running experiment: Simple Social Network Reset
+[2025-11-20T10:20:05.006+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:05 INFO] Steady-state strategy: default
+[2025-11-20T10:20:05.009+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:05 INFO] Rollbacks strategy: default
+[2025-11-20T10:20:05.009+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:05 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-20T10:20:05.010+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:05 INFO] Playing your experiment's method now...
+[2025-11-20T10:20:05.012+0000] {docker.py:438} INFO - [32m[2025-11-20 10:20:05 INFO] Action: complete-reset-and-reinit
+[2025-11-20T10:20:05.013+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting complete reset and reinitialization...
+[2025-11-20T10:20:05.013+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting full social network reset...
+[2025-11-20T10:20:05.014+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Redis data...
+[2025-11-20T10:20:05.087+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:05.155+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:05.415+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-redis-64bd79b48b-gpwdg for deployment: social-graph-redis
+[2025-11-20T10:20:05.416+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-redis-64bd79b48b-gpwdg, container social-graph-redis: redis-cli FLUSHALL
+[2025-11-20T10:20:06.924+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-20T10:20:06.968+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:06.999+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:07.377+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: home-timeline-redis-744dd9998f-xqjsk for deployment: home-timeline-redis
+[2025-11-20T10:20:07.379+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod home-timeline-redis-744dd9998f-xqjsk, container home-timeline-redis: redis-cli FLUSHALL
+[2025-11-20T10:20:08.848+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-20T10:20:08.883+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:08.942+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:09.199+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-redis-7b8f6ff4fb-5s87m for deployment: user-timeline-redis
+[2025-11-20T10:20:09.200+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-redis-7b8f6ff4fb-5s87m, container user-timeline-redis: redis-cli FLUSHALL
+[2025-11-20T10:20:10.570+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-20T10:20:10.572+0000] {docker.py:438} INFO - 
+[2025-11-20T10:20:10.573+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Memcached data...
+[2025-11-20T10:20:10.622+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:10.662+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:10.934+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-memcached-67c6cc65cc-j4jdz for deployment: post-storage-memcached
+[2025-11-20T10:20:10.936+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-memcached-67c6cc65cc-j4jdz, container post-storage-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-11-20T10:20:12.365+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-11-20T10:20:12.398+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:12.432+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:12.728+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-memcached-56f89988c-kswck for deployment: user-memcached
+[2025-11-20T10:20:12.730+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-memcached-56f89988c-kswck, container user-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-11-20T10:20:14.142+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-11-20T10:20:14.145+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Dropping MongoDB databases...
+[2025-11-20T10:20:14.212+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:14.268+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:14.560+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-11-20T10:20:14.562+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('post').dropDatabase()
+[2025-11-20T10:20:16.500+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:16.500+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:16.501+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("ddf2b7b0-cdfa-4274-9a77-e1531b686373") }
+[2025-11-20T10:20:16.501+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:16.502+0000] {docker.py:438} INFO - { "dropped" : "post", "ok" : 1 }
+[2025-11-20T10:20:16.546+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:16.587+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:16.940+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-11-20T10:20:16.946+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-20T10:20:18.836+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:18.836+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:18.837+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("2e938bd8-7c00-415d-a59a-3599c023e1ae") }
+[2025-11-20T10:20:18.837+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:18.838+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-20T10:20:18.886+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:18.922+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:19.175+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-11-20T10:20:19.178+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('user').dropDatabase()
+[2025-11-20T10:20:20.647+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:20.648+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:20.648+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("6a97d5dd-3937-4fcb-a230-9948d7cdcfd9") }
+[2025-11-20T10:20:20.651+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:20.651+0000] {docker.py:438} INFO - { "dropped" : "user", "ok" : 1 }
+[2025-11-20T10:20:20.683+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:20.719+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:21.035+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-11-20T10:20:21.038+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-20T10:20:22.636+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:22.637+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:22.637+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("2be0e3e9-0880-4e57-a094-8e795edcd471") }
+[2025-11-20T10:20:22.640+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:22.640+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-20T10:20:22.684+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:22.730+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:22.982+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-11-20T10:20:22.984+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('social-graph').dropDatabase()
+[2025-11-20T10:20:24.444+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output:
+[2025-11-20T10:20:24.479+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:24.515+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:24.797+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-11-20T10:20:24.799+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-20T10:20:26.842+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:26.843+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:26.843+0000] {docker.py:438} INFO - Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+[2025-11-20T10:20:26.849+0000] {docker.py:438} INFO - connect@src/mongo/shell/mongo.js:374:17
+[2025-11-20T10:20:26.851+0000] {docker.py:438} INFO - @(connect):2:6
+[2025-11-20T10:20:26.852+0000] {docker.py:438} INFO - exception: connect failed
+[2025-11-20T10:20:26.852+0000] {docker.py:438} INFO - exiting with code 1
+[2025-11-20T10:20:26.900+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:26.942+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:27.322+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-bnf8b for deployment: user-timeline-mongodb
+[2025-11-20T10:20:27.322+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-bnf8b, container user-timeline-mongodb: mongo --eval db.getSiblingDB('user-timeline').dropDatabase()
+[2025-11-20T10:20:29.473+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:29.473+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:29.474+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("e67c641c-e408-4e89-9aa9-c2cba27fb6cb") }
+[2025-11-20T10:20:29.478+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:29.479+0000] {docker.py:438} INFO - { "dropped" : "user-timeline", "ok" : 1 }
+[2025-11-20T10:20:29.510+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:29.544+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:29.873+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-bnf8b for deployment: user-timeline-mongodb
+[2025-11-20T10:20:29.875+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-bnf8b, container user-timeline-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-20T10:20:31.778+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-20T10:20:31.779+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-20T10:20:31.779+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("c89e71a9-3066-4255-936d-cd9dada812b0") }
+[2025-11-20T10:20:31.784+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-20T10:20:31.784+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-20T10:20:31.787+0000] {docker.py:438} INFO - 
+[2025-11-20T10:20:31.787+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Full social network reset completed
+[2025-11-20T10:20:36.815+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-20T10:20:36.816+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: social-graph-service
+[2025-11-20T10:20:37.271+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted social-graph-service
+[2025-11-20T10:20:37.273+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-service
+[2025-11-20T10:20:37.453+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-service
+[2025-11-20T10:20:37.456+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: post-storage-service
+[2025-11-20T10:20:37.643+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted post-storage-service
+[2025-11-20T10:20:37.643+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: compose-post-service
+[2025-11-20T10:20:37.825+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted compose-post-service
+[2025-11-20T10:20:37.827+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: home-timeline-service
+[2025-11-20T10:20:38.034+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted home-timeline-service
+[2025-11-20T10:20:38.036+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-timeline-service
+[2025-11-20T10:20:38.246+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-timeline-service
+[2025-11-20T10:20:38.247+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: nginx-thrift
+[2025-11-20T10:20:38.497+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted nginx-thrift
+[2025-11-20T10:20:38.499+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: text-service
+[2025-11-20T10:20:38.712+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted text-service
+[2025-11-20T10:20:38.713+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: unique-id-service
+[2025-11-20T10:20:38.915+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted unique-id-service
+[2025-11-20T10:20:38.917+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-mention-service
+[2025-11-20T10:20:39.149+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-mention-service
+[2025-11-20T10:20:39.149+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Waiting 90 seconds for services to restart...
+[2025-11-20T10:22:09.152+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Reinitializing social network data...
+[2025-11-20T10:34:35.743+0000] {job.py:229} INFO - Heartbeat recovered after 20.56 seconds
+[2025-11-20T10:35:29.404+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 233, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/local_task_job_runner.py", line 284, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2358, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 872, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2344, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-11-20T10:35:29.638+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-11-20T10:35:34.677+0000] {job.py:229} INFO - Heartbeat recovered after 68.34 seconds
+[2025-11-20T10:36:52.586+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Social network reinitialization completed successfully
+[2025-11-20T10:36:52.589+0000] {docker.py:438} INFO - [32m[2025-11-20 10:36:52 INFO] Let's rollback...
+[2025-11-20T10:36:52.590+0000] {docker.py:438} INFO - [32m[2025-11-20 10:36:52 INFO] No declared rollbacks, let's move on.
+[2025-11-20T10:36:52.591+0000] {docker.py:438} INFO - [32m[2025-11-20 10:36:52 INFO] Experiment ended with status: completed
+[2025-11-20T10:36:52.944+0000] {docker.py:438} INFO - Reinitialized Social Networking APplication successfully
+[2025-11-20T10:36:53.635+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-20T10:36:53.636+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Reinitialize_Application, task_id=apply_container_restart_docker, run_id=manual__2025-11-20T10:19:38.444768+00:00, execution_date=20251120T101938, start_date=20251120T101941, end_date=20251120T103653
+[2025-11-20T10:36:53.716+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-20T10:36:53.741+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-20T10:36:53.745+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

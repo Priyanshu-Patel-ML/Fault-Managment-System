@@ -1,0 +1,50 @@
+[2025-10-21T08:13:40.655+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-21T08:13:40.678+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: DB_Cleanup.run_db_cleanup_docker manual__2025-10-21T08:13:38.567857+00:00 [queued]>
+[2025-10-21T08:13:40.690+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: DB_Cleanup.run_db_cleanup_docker manual__2025-10-21T08:13:38.567857+00:00 [queued]>
+[2025-10-21T08:13:40.690+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-21T08:13:40.716+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_db_cleanup_docker> on 2025-10-21 08:13:38.567857+00:00
+[2025-10-21T08:13:40.736+0000] {standard_task_runner.py:72} INFO - Started process 3025 to run task
+[2025-10-21T08:13:40.752+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'DB_Cleanup', 'run_db_cleanup_docker', 'manual__2025-10-21T08:13:38.567857+00:00', '--job-id', '10105', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp868t_80i']
+[2025-10-21T08:13:40.754+0000] {standard_task_runner.py:105} INFO - Job 10105: Subtask run_db_cleanup_docker
+[2025-10-21T08:13:40.836+0000] {task_command.py:467} INFO - Running <TaskInstance: DB_Cleanup.run_db_cleanup_docker manual__2025-10-21T08:13:38.567857+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-21T08:13:41.042+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='DB_Cleanup' AIRFLOW_CTX_TASK_ID='run_db_cleanup_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-10-21T08:13:38.567857+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-21T08:13:38.567857+00:00'
+[2025-10-21T08:13:41.053+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-21T08:13:41.134+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-10-21T08:13:41.724+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-21T08:14:00.096+0000] {docker.py:438} INFO - 
+[2025-10-21T08:14:00.103+0000] {docker.py:438} INFO - Starting database cleanup check...
+[2025-10-21T08:14:01.018+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Validating the experiment's syntax
+[2025-10-21T08:14:01.305+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Experiment looks valid
+[2025-10-21T08:14:01.307+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Running experiment: Database Cleanup Experiment
+[2025-10-21T08:14:01.312+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Steady-state strategy: default
+[2025-10-21T08:14:01.313+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Rollbacks strategy: default
+[2025-10-21T08:14:01.314+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-21T08:14:01.314+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Playing your experiment's method now...
+[2025-10-21T08:14:01.316+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Probe: Check current database size
+[2025-10-21T08:14:01.739+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] 📊 Total posts: 11915
+[2025-10-21T08:14:01.741+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] Action: Auto cleanup if records exceed threshold
+[2025-10-21T08:14:01.742+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] 🔍 Starting auto-cleanup check...
+[2025-10-21T08:14:01.743+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] 📋 Database: 20.3.50.187:27017/post.post
+[2025-10-21T08:14:01.744+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:01 INFO] 📊 Threshold: 10000, Keep count: 10000
+[2025-10-21T08:14:02.161+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:02 INFO] 📊 Total posts: 11935
+[2025-10-21T08:14:02.162+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:02 INFO] 📊 Current post count: 11935
+[2025-10-21T08:14:02.165+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:02 INFO] 🗑️ Post count (11935) exceeds threshold (10000)
+[2025-10-21T08:14:02.166+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:02 INFO] 🧹 Starting cleanup: will delete 1935 posts, keep latest 10000
+[2025-10-21T08:14:02.516+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:02 INFO] 📊 Total posts before cleanup: 11947
+[2025-10-21T08:14:03.436+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] ✅ Deleted 1947 posts, kept 10000 latest posts
+[2025-10-21T08:14:03.458+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] ✅ Auto-cleanup completed successfully!
+[2025-10-21T08:14:03.459+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] 📊 Deleted: 1947 posts
+[2025-10-21T08:14:03.460+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] 📊 Remaining: 10000 posts
+[2025-10-21T08:14:03.462+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] Probe: Verify final database size
+[2025-10-21T08:14:03.879+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] 📊 Total posts: 10025
+[2025-10-21T08:14:03.880+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] Let's rollback...
+[2025-10-21T08:14:03.880+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] Rollback: Final verification after cleanup
+[2025-10-21T08:14:03.881+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:03 INFO] Probe: Final verification after cleanup
+[2025-10-21T08:14:04.286+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:04 INFO] 📊 Total posts: 10037
+[2025-10-21T08:14:04.287+0000] {docker.py:438} INFO - [32m[2025-10-21 08:14:04 INFO] Experiment ended with status: completed
+[2025-10-21T08:14:04.838+0000] {docker.py:438} INFO - Database cleanup completed successfully
+[2025-10-21T08:14:05.310+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-21T08:14:05.311+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=DB_Cleanup, task_id=run_db_cleanup_docker, run_id=manual__2025-10-21T08:13:38.567857+00:00, execution_date=20251021T081338, start_date=20251021T081340, end_date=20251021T081405
+[2025-10-21T08:14:05.373+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-21T08:14:05.398+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-21T08:14:05.401+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

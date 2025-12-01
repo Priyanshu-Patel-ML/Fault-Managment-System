@@ -1,0 +1,40 @@
+{{- if .Values.rbac.create -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "chaos-platform.fullname" . }}-role
+rules:
+# Pod permissions
+- apiGroups: [""]
+  resources: ["pods", "pods/status", "pods/log"]
+  verbs: ["get", "list", "watch", "create", "patch", "delete"]
+- apiGroups: [""]
+  resources: ["pods/exec"]   # subresource for exec
+  verbs: ["create"]
+# Deployments & ReplicaSets
+- apiGroups: ["apps"]
+  resources: ["deployments", "replicasets"]
+  verbs: ["get", "list", "patch", "delete"]
+# Services & Endpoints
+- apiGroups: [""]
+  resources: ["services", "endpoints"]
+  verbs: ["get", "list"]
+# Nodes
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["get", "list", "patch", "update"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "chaos-platform.fullname" . }}-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "chaos-platform.fullname" . }}-role
+subjects:
+- kind: ServiceAccount
+  name: {{ include "chaos-platform.serviceAccountName" . }}
+  namespace: chaos-ops
+{{- end }}

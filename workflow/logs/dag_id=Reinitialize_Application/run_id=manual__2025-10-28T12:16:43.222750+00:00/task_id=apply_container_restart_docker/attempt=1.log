@@ -1,0 +1,218 @@
+[2025-10-28T12:16:45.114+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-28T12:16:45.139+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-10-28T12:16:43.222750+00:00 [queued]>
+[2025-10-28T12:16:45.150+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-10-28T12:16:43.222750+00:00 [queued]>
+[2025-10-28T12:16:45.150+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-10-28T12:16:45.175+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-10-28 12:16:43.222750+00:00
+[2025-10-28T12:16:45.189+0000] {standard_task_runner.py:72} INFO - Started process 3901 to run task
+[2025-10-28T12:16:45.199+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Reinitialize_Application', 'apply_container_restart_docker', 'manual__2025-10-28T12:16:43.222750+00:00', '--job-id', '11280', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpbwh61ke_']
+[2025-10-28T12:16:45.202+0000] {standard_task_runner.py:105} INFO - Job 11280: Subtask apply_container_restart_docker
+[2025-10-28T12:16:45.349+0000] {task_command.py:467} INFO - Running <TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-10-28T12:16:43.222750+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-28T12:16:45.528+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reinitialize_Application' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-10-28T12:16:43.222750+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-28T12:16:43.222750+00:00'
+[2025-10-28T12:16:45.533+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-28T12:16:45.588+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-10-28T12:16:46.130+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-28T12:17:04.784+0000] {docker.py:438} INFO - 
+[2025-10-28T12:17:04.821+0000] {docker.py:438} INFO - total 2720
+[2025-10-28T12:17:04.822+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000    4096 Oct 28 12:16 .
+[2025-10-28T12:17:04.823+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-10-28T12:17:04.823+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1024 Oct 28 12:16 .direct_memory_stress.py.swp
+[2025-10-28T12:17:04.824+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-10-28T12:17:04.824+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-10-28T12:17:04.824+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-10-28T12:17:04.825+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1639 Oct 27 04:49 Memory_Stress_Test_Azure.yaml
+[2025-10-28T12:17:04.825+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-10-28T12:17:04.826+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct 28 11:34 __pycache__
+[2025-10-28T12:17:04.826+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000    4096 Oct 21 08:05 chaos_env
+[2025-10-28T12:17:04.827+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-10-28T12:17:04.828+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 2461336 Oct 28 12:14 chaostoolkit.log
+[2025-10-28T12:17:04.828+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1421 Oct 23 09:34 check.py
+[2025-10-28T12:17:04.831+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-10-28T12:17:04.831+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000    1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-10-28T12:17:04.832+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-10-28T12:17:04.833+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     692 Oct 24 01:43 container_probe.json
+[2025-10-28T12:17:04.833+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    2533 Oct 23 09:28 container_probe.yaml
+[2025-10-28T12:17:04.834+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-10-28T12:17:04.835+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-10-28T12:17:04.835+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1718 Oct 27 05:00 container_restart_Azure.yaml
+[2025-10-28T12:17:04.835+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-10-28T12:17:04.837+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-10-28T12:17:04.837+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-10-28T12:17:04.838+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1403 Oct 27 05:05 cordon_uncordon_node_Azure.yaml
+[2025-10-28T12:17:04.838+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-10-28T12:17:04.838+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1760 Oct 21 08:00 db_cleanup.json
+[2025-10-28T12:17:04.840+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-10-28T12:17:04.840+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2104 Oct 28 12:14 journal.json
+[2025-10-28T12:17:04.841+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root   28016 Oct 28 10:59 k6_continuous_load.log
+[2025-10-28T12:17:04.841+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3951 Oct 28 10:45 k6_continuous_summary.json
+[2025-10-28T12:17:04.841+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-10-28T12:17:04.842+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-10-28T12:17:04.843+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-10-28T12:17:04.843+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-10-28T12:17:04.844+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-10-28T12:17:04.845+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-10-28T12:17:04.846+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     986 Oct 28 12:13 memory_stress.json
+[2025-10-28T12:17:04.846+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    4646 Oct 28 12:12 memory_stress.py
+[2025-10-28T12:17:04.846+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-10-28T12:17:04.848+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-10-28T12:17:04.848+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-10-28T12:17:04.849+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-10-28T12:17:04.849+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-10-28T12:17:04.850+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-10-28T12:17:04.850+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-10-28T12:17:04.850+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-10-28T12:17:04.852+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-10-28T12:17:04.852+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1609 Oct 27 05:10 redis_memory_stress_Azure.yaml
+[2025-10-28T12:17:04.853+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-10-28T12:17:04.853+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-10-28T12:17:04.854+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1307 Oct 27 10:33 sample_probe.yaml
+[2025-10-28T12:17:04.854+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct 22 06:46 scripts
+[2025-10-28T12:17:04.854+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     272 Oct 27 08:51 simple-stress-test.yaml
+[2025-10-28T12:17:04.857+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-10-28T12:17:04.857+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-10-28T12:17:04.860+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-10-28T12:17:04.860+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     295 Oct 27 08:49 test_after_fix.yaml
+[2025-10-28T12:17:04.860+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-10-28T12:17:04.861+0000] {docker.py:438} INFO - Starting Reinitializing the Social Networking Application...
+[2025-10-28T12:17:05.910+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:05 INFO] Validating the experiment's syntax
+[2025-10-28T12:17:06.787+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Experiment looks valid
+[2025-10-28T12:17:06.789+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Running experiment: Simple Social Network Reset
+[2025-10-28T12:17:06.794+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Steady-state strategy: default
+[2025-10-28T12:17:06.795+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Rollbacks strategy: default
+[2025-10-28T12:17:06.796+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-28T12:17:06.797+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Playing your experiment's method now...
+[2025-10-28T12:17:06.798+0000] {docker.py:438} INFO - [32m[2025-10-28 12:17:06 INFO] Action: complete-reset-and-reinit
+[2025-10-28T12:17:06.799+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting complete reset and reinitialization...
+[2025-10-28T12:17:06.800+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting full social network reset...
+[2025-10-28T12:17:06.801+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Redis data...
+[2025-10-28T12:17:06.835+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:06.854+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:07.138+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-redis-64bd79b48b-gpwdg for deployment: social-graph-redis
+[2025-10-28T12:17:07.139+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-redis-64bd79b48b-gpwdg, container social-graph-redis: redis-cli FLUSHALL
+[2025-10-28T12:17:08.556+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-10-28T12:17:08.573+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:08.590+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:08.890+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: home-timeline-redis-744dd9998f-n7vt8 for deployment: home-timeline-redis
+[2025-10-28T12:17:08.892+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod home-timeline-redis-744dd9998f-n7vt8, container home-timeline-redis: redis-cli FLUSHALL
+[2025-10-28T12:17:10.707+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-10-28T12:17:10.724+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:10.742+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:11.011+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-redis-7b8f6ff4fb-5s87m for deployment: user-timeline-redis
+[2025-10-28T12:17:11.013+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-redis-7b8f6ff4fb-5s87m, container user-timeline-redis: redis-cli FLUSHALL
+[2025-10-28T12:17:12.454+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-10-28T12:17:12.455+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Memcached data...
+[2025-10-28T12:17:12.475+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:12.492+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:12.773+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-memcached-67c6cc65cc-j4jdz for deployment: post-storage-memcached
+[2025-10-28T12:17:12.774+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-memcached-67c6cc65cc-j4jdz, container post-storage-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-10-28T12:17:14.151+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-10-28T12:17:14.167+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:14.186+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:14.534+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-memcached-56f89988c-nxdzl for deployment: user-memcached
+[2025-10-28T12:17:14.535+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-memcached-56f89988c-nxdzl, container user-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-10-28T12:17:16.096+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-10-28T12:17:16.097+0000] {docker.py:438} INFO - 
+[2025-10-28T12:17:16.097+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Dropping MongoDB databases...
+[2025-10-28T12:17:16.113+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:16.149+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:16.457+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-10-28T12:17:16.458+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('post').dropDatabase()
+[2025-10-28T12:17:18.106+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:18.107+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:18.107+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("848451e5-ae77-4da5-ab84-3e113b215b70") }
+[2025-10-28T12:17:18.108+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:18.108+0000] {docker.py:438} INFO - { "dropped" : "post", "ok" : 1 }
+[2025-10-28T12:17:18.125+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:18.148+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:18.469+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-10-28T12:17:18.470+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-10-28T12:17:20.012+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:20.013+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:20.013+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("905c3704-8da5-4f3a-80ba-a22d832e7074") }
+[2025-10-28T12:17:20.016+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:20.016+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-10-28T12:17:20.044+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:20.122+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:20.398+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-10-28T12:17:20.399+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('user').dropDatabase()
+[2025-10-28T12:17:21.946+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:21.947+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:21.948+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("19cc8d5d-f569-41a8-a063-f40b2af91056") }
+[2025-10-28T12:17:21.948+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:21.948+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-10-28T12:17:21.998+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:22.029+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:22.295+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-10-28T12:17:22.296+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-10-28T12:17:23.848+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:23.849+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:23.849+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("ef6a57fe-8dd1-4719-a590-177376e76ab6") }
+[2025-10-28T12:17:23.850+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:23.850+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-10-28T12:17:23.867+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:23.886+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:24.182+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-10-28T12:17:24.184+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('social-graph').dropDatabase()
+[2025-10-28T12:17:25.736+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output:
+[2025-10-28T12:17:25.753+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:25.771+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:26.023+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-10-28T12:17:26.025+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-10-28T12:17:28.139+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:28.139+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:28.140+0000] {docker.py:438} INFO - Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+[2025-10-28T12:17:28.140+0000] {docker.py:438} INFO - connect@src/mongo/shell/mongo.js:374:17
+[2025-10-28T12:17:28.141+0000] {docker.py:438} INFO - @(connect):2:6
+[2025-10-28T12:17:28.141+0000] {docker.py:438} INFO - exception: connect failed
+[2025-10-28T12:17:28.142+0000] {docker.py:438} INFO - exiting with code 1
+[2025-10-28T12:17:28.158+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:28.175+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:28.464+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-lz2wj for deployment: user-timeline-mongodb
+[2025-10-28T12:17:28.466+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-lz2wj, container user-timeline-mongodb: mongo --eval db.getSiblingDB('user-timeline').dropDatabase()
+[2025-10-28T12:17:30.891+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:30.892+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:30.895+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("a79988a3-40e9-4338-bd88-5479df34a366") }
+[2025-10-28T12:17:30.895+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:30.898+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-10-28T12:17:30.913+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:30.931+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:31.189+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-lz2wj for deployment: user-timeline-mongodb
+[2025-10-28T12:17:31.191+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-lz2wj, container user-timeline-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-10-28T12:17:33.483+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-10-28T12:17:33.483+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-10-28T12:17:33.485+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("62203877-f4fd-46b7-af3d-039026fe8c4c") }
+[2025-10-28T12:17:33.485+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-10-28T12:17:33.487+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-10-28T12:17:33.489+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Full social network reset completed
+[2025-10-28T12:17:38.503+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-10-28T12:17:38.504+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: social-graph-service
+[2025-10-28T12:17:38.946+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted social-graph-service
+[2025-10-28T12:17:38.947+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-service
+[2025-10-28T12:17:39.188+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-service
+[2025-10-28T12:17:39.188+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: post-storage-service
+[2025-10-28T12:17:39.425+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted post-storage-service
+[2025-10-28T12:17:39.426+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: compose-post-service
+[2025-10-28T12:17:39.654+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted compose-post-service
+[2025-10-28T12:17:39.655+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: home-timeline-service
+[2025-10-28T12:17:39.843+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted home-timeline-service
+[2025-10-28T12:17:39.844+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-timeline-service
+[2025-10-28T12:17:40.085+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-timeline-service
+[2025-10-28T12:17:40.086+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: nginx-thrift
+[2025-10-28T12:17:40.458+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted nginx-thrift
+[2025-10-28T12:17:40.459+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: text-service
+[2025-10-28T12:17:40.678+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted text-service
+[2025-10-28T12:17:40.679+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: unique-id-service
+[2025-10-28T12:17:40.879+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted unique-id-service
+[2025-10-28T12:17:40.880+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-mention-service
+[2025-10-28T12:17:41.162+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-mention-service
+[2025-10-28T12:17:41.164+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Waiting 90 seconds for services to restart...
+[2025-10-28T12:19:11.167+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Reinitializing social network data...
+[2025-10-28T12:26:00.729+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Social network reinitialization completed successfully
+[2025-10-28T12:26:00.730+0000] {docker.py:438} INFO - [32m[2025-10-28 12:26:00 INFO] Let's rollback...
+[2025-10-28T12:26:00.730+0000] {docker.py:438} INFO - [32m[2025-10-28 12:26:00 INFO] No declared rollbacks, let's move on.
+[2025-10-28T12:26:00.731+0000] {docker.py:438} INFO - [32m[2025-10-28 12:26:00 INFO] Experiment ended with status: completed
+[2025-10-28T12:26:00.972+0000] {docker.py:438} INFO - Reinitialized Social Networking APplication successfully
+[2025-10-28T12:26:01.333+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-28T12:26:01.334+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Reinitialize_Application, task_id=apply_container_restart_docker, run_id=manual__2025-10-28T12:16:43.222750+00:00, execution_date=20251028T121643, start_date=20251028T121645, end_date=20251028T122601
+[2025-10-28T12:26:01.401+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-28T12:26:01.433+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-28T12:26:01.437+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

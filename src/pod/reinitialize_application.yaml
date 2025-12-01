@@ -1,0 +1,40 @@
+Reinitialize_Application:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: "Reinitialize the Social Network Application"
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 0
+  tasks:
+    - task_id: apply_container_restart_docker
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "priyanshu01ce/airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/azureuser/fault-injector/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/home/azureuser/.kube/config"
+          target: "/root/.kube/config"
+          type: "bind"
+          read_only: true
+      environment:
+        KUBECONFIG: "/root/.kube/config"
+        PYTHONPATH: "/opt/airflow/src/pod"
+      command: >
+        bash -c '
+        cd /opt/airflow/src/pod &&
+        ls -la &&
+        echo "Starting Reinitializing the Social Networking Application..." &&
+        chaos run kubernetes_actions.json &&
+        echo "Reinitialized Social Networking APplication successfully"'
+      container_name: "reinitialize_application"

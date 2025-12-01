@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "title": "Verify Pods Running Probe",
+    "description": "Verifies that the target pods are in Running phase after chaos experiment.",
+    "tags": ["probe", "kubernetes", "stability-check"],
+    "method": [
+        {
+            "name": "verify-pods-running",
+            "type": "probe",
+            "provider": {
+                "type": "python",
+                "module": "chaosk8s.pod.probes",
+                "func": "pods_in_phase",
+                "arguments": {
+                    "label_selector": "app=compose-post-service",
+                    "phase": "Running",
+                    "ns": "default"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,238 @@
+[2025-10-13T06:00:05.398+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-13T06:00:05.460+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Cordon_Uncordon_Node.apply_cordon_uncordon_node scheduled__2025-10-13T03:00:00+00:00 [queued]>
+[2025-10-13T06:00:05.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Cordon_Uncordon_Node.apply_cordon_uncordon_node scheduled__2025-10-13T03:00:00+00:00 [queued]>
+[2025-10-13T06:00:05.511+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-10-13T06:00:05.591+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_cordon_uncordon_node> on 2025-10-13 03:00:00+00:00
+[2025-10-13T06:00:05.628+0000] {standard_task_runner.py:72} INFO - Started process 956 to run task
+[2025-10-13T06:00:05.727+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Cordon_Uncordon_Node', 'apply_cordon_uncordon_node', 'scheduled__2025-10-13T03:00:00+00:00', '--job-id', '7994', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp5a5iho06']
+[2025-10-13T06:00:05.735+0000] {standard_task_runner.py:105} INFO - Job 7994: Subtask apply_cordon_uncordon_node
+[2025-10-13T06:00:06.004+0000] {task_command.py:467} INFO - Running <TaskInstance: Cordon_Uncordon_Node.apply_cordon_uncordon_node scheduled__2025-10-13T03:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-13T06:00:06.495+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Cordon_Uncordon_Node' AIRFLOW_CTX_TASK_ID='apply_cordon_uncordon_node' AIRFLOW_CTX_EXECUTION_DATE='2025-10-13T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-13T03:00:00+00:00'
+[2025-10-13T06:00:06.503+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-13T06:00:06.619+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-13T06:00:07.753+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-13T06:00:49.584+0000] {docker.py:438} INFO - 
+[2025-10-13T06:00:51.229+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:51 INFO] Validating the experiment's syntax
+[2025-10-13T06:00:53.012+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Experiment looks valid
+[2025-10-13T06:00:53.016+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Running experiment: Cordon-Pod Restart Combined Experiment
+[2025-10-13T06:00:53.041+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Steady-state strategy: default
+[2025-10-13T06:00:53.042+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Rollbacks strategy: default
+[2025-10-13T06:00:53.043+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-13T06:00:53.044+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Playing your experiment's method now...
+[2025-10-13T06:00:53.045+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:53 INFO] Action: cordon-nodes
+[2025-10-13T06:00:54.084+0000] {docker.py:438} INFO - [32m[2025-10-13 06:00:54 INFO] Action: continuous-pod-restart-during-cordon
+[2025-10-13T06:05:39.546+0000] {docker.py:438} INFO - 🚀 Starting continuous pod restart experiment
+[2025-10-13T06:05:39.548+0000] {docker.py:438} INFO - 📅 Interval: 20 seconds
+[2025-10-13T06:05:39.548+0000] {docker.py:438} INFO - ⏱️  Duration: 300 seconds
+[2025-10-13T06:05:39.549+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-10-13T06:05:39.549+0000] {docker.py:438} INFO - 📍 Namespace: default
+[2025-10-13T06:05:39.550+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.550+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.551+0000] {docker.py:438} INFO - 🔄 Restart #1 at 2025-10-13 06:00:54
+[2025-10-13T06:05:39.551+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.551+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.552+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.552+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.553+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.553+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-glj5p
+[2025-10-13T06:05:39.554+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-glj5p']
+[2025-10-13T06:05:39.554+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-glj5p']
+[2025-10-13T06:05:39.554+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.555+0000] {docker.py:438} INFO - 📊 Time remaining: 300 seconds
+[2025-10-13T06:05:39.556+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.556+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.557+0000] {docker.py:438} INFO - 🔄 Restart #2 at 2025-10-13 06:01:14
+[2025-10-13T06:05:39.557+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.557+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.558+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.558+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.559+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.559+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-wn57f
+[2025-10-13T06:05:39.559+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-wn57f']
+[2025-10-13T06:05:39.560+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-wn57f']
+[2025-10-13T06:05:39.560+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.561+0000] {docker.py:438} INFO - 📊 Time remaining: 279 seconds
+[2025-10-13T06:05:39.561+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.561+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.562+0000] {docker.py:438} INFO - 🔄 Restart #3 at 2025-10-13 06:01:34
+[2025-10-13T06:05:39.562+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.563+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.563+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.564+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.564+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.564+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-nt96c
+[2025-10-13T06:05:39.565+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-nt96c']
+[2025-10-13T06:05:39.565+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-nt96c']
+[2025-10-13T06:05:39.566+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.566+0000] {docker.py:438} INFO - 📊 Time remaining: 259 seconds
+[2025-10-13T06:05:39.566+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.567+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.567+0000] {docker.py:438} INFO - 🔄 Restart #4 at 2025-10-13 06:01:55
+[2025-10-13T06:05:39.568+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.568+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.568+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.569+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.569+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.570+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-nm776
+[2025-10-13T06:05:39.570+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-nm776']
+[2025-10-13T06:05:39.570+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-nm776']
+[2025-10-13T06:05:39.571+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.571+0000] {docker.py:438} INFO - 📊 Time remaining: 238 seconds
+[2025-10-13T06:05:39.572+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.572+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.574+0000] {docker.py:438} INFO - 🔄 Restart #5 at 2025-10-13 06:02:15
+[2025-10-13T06:05:39.574+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.574+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.575+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.576+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.579+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.580+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-f5svk
+[2025-10-13T06:05:39.580+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-f5svk']
+[2025-10-13T06:05:39.580+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-f5svk']
+[2025-10-13T06:05:39.581+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.581+0000] {docker.py:438} INFO - 📊 Time remaining: 218 seconds
+[2025-10-13T06:05:39.582+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.582+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.582+0000] {docker.py:438} INFO - 🔄 Restart #6 at 2025-10-13 06:02:35
+[2025-10-13T06:05:39.583+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.583+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.584+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.584+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.584+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.585+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-br78j
+[2025-10-13T06:05:39.585+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-br78j']
+[2025-10-13T06:05:39.586+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-br78j']
+[2025-10-13T06:05:39.586+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.587+0000] {docker.py:438} INFO - 📊 Time remaining: 198 seconds
+[2025-10-13T06:05:39.587+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.587+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.588+0000] {docker.py:438} INFO - 🔄 Restart #7 at 2025-10-13 06:02:56
+[2025-10-13T06:05:39.588+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.589+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.589+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.589+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.590+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.590+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-rsrlk
+[2025-10-13T06:05:39.591+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-rsrlk']
+[2025-10-13T06:05:39.591+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-rsrlk']
+[2025-10-13T06:05:39.592+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.592+0000] {docker.py:438} INFO - 📊 Time remaining: 177 seconds
+[2025-10-13T06:05:39.592+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.593+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.593+0000] {docker.py:438} INFO - 🔄 Restart #8 at 2025-10-13 06:03:16
+[2025-10-13T06:05:39.594+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.594+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.594+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.595+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.595+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.596+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-bj75g
+[2025-10-13T06:05:39.596+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-bj75g']
+[2025-10-13T06:05:39.597+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-bj75g']
+[2025-10-13T06:05:39.597+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.597+0000] {docker.py:438} INFO - 📊 Time remaining: 157 seconds
+[2025-10-13T06:05:39.598+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.598+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.598+0000] {docker.py:438} INFO - 🔄 Restart #9 at 2025-10-13 06:03:37
+[2025-10-13T06:05:39.599+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.599+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.600+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.600+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.601+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.601+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-xjs2s
+[2025-10-13T06:05:39.601+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-xjs2s']
+[2025-10-13T06:05:39.602+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-xjs2s']
+[2025-10-13T06:05:39.602+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.603+0000] {docker.py:438} INFO - 📊 Time remaining: 137 seconds
+[2025-10-13T06:05:39.603+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.603+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.604+0000] {docker.py:438} INFO - 🔄 Restart #10 at 2025-10-13 06:03:57
+[2025-10-13T06:05:39.604+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.605+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.605+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.605+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.606+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.606+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-cvlf8
+[2025-10-13T06:05:39.607+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-cvlf8']
+[2025-10-13T06:05:39.607+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-cvlf8']
+[2025-10-13T06:05:39.607+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.608+0000] {docker.py:438} INFO - 📊 Time remaining: 116 seconds
+[2025-10-13T06:05:39.608+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.609+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.609+0000] {docker.py:438} INFO - 🔄 Restart #11 at 2025-10-13 06:04:17
+[2025-10-13T06:05:39.610+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.610+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.610+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.611+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.611+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.612+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-gq5tc
+[2025-10-13T06:05:39.612+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-gq5tc']
+[2025-10-13T06:05:39.612+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-gq5tc']
+[2025-10-13T06:05:39.613+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.613+0000] {docker.py:438} INFO - 📊 Time remaining: 96 seconds
+[2025-10-13T06:05:39.614+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.614+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.614+0000] {docker.py:438} INFO - 🔄 Restart #12 at 2025-10-13 06:04:38
+[2025-10-13T06:05:39.615+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.615+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.616+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.616+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.616+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.617+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-ct64k
+[2025-10-13T06:05:39.617+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-ct64k']
+[2025-10-13T06:05:39.618+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-ct64k']
+[2025-10-13T06:05:39.618+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.619+0000] {docker.py:438} INFO - 📊 Time remaining: 75 seconds
+[2025-10-13T06:05:39.619+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.619+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.620+0000] {docker.py:438} INFO - 🔄 Restart #13 at 2025-10-13 06:04:58
+[2025-10-13T06:05:39.620+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.621+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.621+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.621+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.622+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.622+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-hhdsv
+[2025-10-13T06:05:39.623+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-hhdsv']
+[2025-10-13T06:05:39.623+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-hhdsv']
+[2025-10-13T06:05:39.624+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.624+0000] {docker.py:438} INFO - 📊 Time remaining: 55 seconds
+[2025-10-13T06:05:39.626+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.626+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.627+0000] {docker.py:438} INFO - 🔄 Restart #14 at 2025-10-13 06:05:19
+[2025-10-13T06:05:39.627+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.630+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.630+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.630+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:39.631+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:39.631+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-g54fj
+[2025-10-13T06:05:39.632+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-g54fj']
+[2025-10-13T06:05:39.632+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-g54fj']
+[2025-10-13T06:05:39.633+0000] {docker.py:438} INFO - ⏳ Waiting 20 seconds until next restart...
+[2025-10-13T06:05:39.633+0000] {docker.py:438} INFO - 📊 Time remaining: 35 seconds
+[2025-10-13T06:05:39.633+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:39.635+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.635+0000] {docker.py:438} INFO - 🔄 Restart #15 at 2025-10-13 06:05:39
+[2025-10-13T06:05:39.635+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:39.636+0000] {docker.py:438} INFO - Hello world - terminate function started!
+[2025-10-13T06:05:39.636+0000] {docker.py:438} INFO - Selecting pods with label_selector: app=post-storage-service
+[2025-10-13T06:05:39.935+0000] {docker.py:438} INFO - [32m[2025-10-13 06:05:39 INFO] Let's rollback...
+[2025-10-13T06:05:39.938+0000] {docker.py:438} INFO - [32m[2025-10-13 06:05:39 INFO] Rollback: uncordon-all-nodes
+[2025-10-13T06:05:39.939+0000] {docker.py:438} INFO - [32m[2025-10-13 06:05:39 INFO] Action: uncordon-all-nodes
+[2025-10-13T06:05:40.892+0000] {docker.py:438} INFO - [32m[2025-10-13 06:05:40 INFO] Experiment ended with status: completed
+[2025-10-13T06:05:40.893+0000] {docker.py:438} INFO - Found 1 pods initially
+[2025-10-13T06:05:40.894+0000] {docker.py:438} INFO - Random selection: 1 pods
+[2025-10-13T06:05:40.894+0000] {docker.py:438} INFO - Deleting pod: post-storage-service-6cbbf5f9fb-76xr9
+[2025-10-13T06:05:40.895+0000] {docker.py:438} INFO - Deleted 1 pods: ['post-storage-service-6cbbf5f9fb-76xr9']
+[2025-10-13T06:05:40.895+0000] {docker.py:438} INFO - ✅ Successfully restarted pods: ['post-storage-service-6cbbf5f9fb-76xr9']
+[2025-10-13T06:05:40.896+0000] {docker.py:438} INFO - ⏰ Less than 20 seconds remaining, stopping experiment
+[2025-10-13T06:05:40.896+0000] {docker.py:438} INFO - 
+[2025-10-13T06:05:40.896+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:40.899+0000] {docker.py:438} INFO - 🏁 Experiment Completed!
+[2025-10-13T06:05:40.899+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:05:40.900+0000] {docker.py:438} INFO - 📈 Total restarts performed: 15
+[2025-10-13T06:05:40.900+0000] {docker.py:438} INFO - ⏱️  Total duration: 286 seconds
+[2025-10-13T06:05:40.900+0000] {docker.py:438} INFO - 📊 Average interval: 19.1 seconds
+[2025-10-13T06:05:41.620+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-13T06:05:41.620+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Cordon_Uncordon_Node, task_id=apply_cordon_uncordon_node, run_id=scheduled__2025-10-13T03:00:00+00:00, execution_date=20251013T030000, start_date=20251013T060005, end_date=20251013T060541
+[2025-10-13T06:05:41.666+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-13T06:05:41.694+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-13T06:05:41.699+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

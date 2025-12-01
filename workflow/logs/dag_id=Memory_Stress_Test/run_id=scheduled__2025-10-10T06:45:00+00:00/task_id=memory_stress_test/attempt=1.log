@@ -1,0 +1,1058 @@
+[2025-10-10T07:15:22.848+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-10T07:15:22.881+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-10T06:45:00+00:00 [queued]>
+[2025-10-10T07:15:22.898+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-10T06:45:00+00:00 [queued]>
+[2025-10-10T07:15:22.899+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-10T07:15:22.931+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-10-10 06:45:00+00:00
+[2025-10-10T07:15:22.946+0000] {standard_task_runner.py:72} INFO - Started process 354 to run task
+[2025-10-10T07:15:22.960+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'scheduled__2025-10-10T06:45:00+00:00', '--job-id', '7236', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmplt4hes3y']
+[2025-10-10T07:15:22.964+0000] {standard_task_runner.py:105} INFO - Job 7236: Subtask memory_stress_test
+[2025-10-10T07:15:23.107+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-10T06:45:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-10T07:15:23.305+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-10T06:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-10T06:45:00+00:00'
+[2025-10-10T07:15:23.308+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-10T07:15:23.376+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-10T07:15:24.319+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-10T07:15:58.983+0000] {docker.py:438} INFO - 
+[2025-10-10T07:16:01.602+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:01 INFO] Validating the experiment's syntax
+[2025-10-10T07:16:02.955+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Experiment looks valid
+[2025-10-10T07:16:02.959+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Running experiment: Continuous Memory Stress Experiment
+[2025-10-10T07:16:02.974+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Steady-state strategy: default
+[2025-10-10T07:16:02.976+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Rollbacks strategy: default
+[2025-10-10T07:16:02.977+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-10T07:16:02.977+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Playing your experiment's method now...
+[2025-10-10T07:16:02.978+0000] {docker.py:438} INFO - [32m[2025-10-10 07:16:02 INFO] Action: continuous-memory-stress
+[2025-10-10T07:18:14.544+0000] {docker.py:438} INFO - 🚀 Starting continuous memory stress experiment
+[2025-10-10T07:18:14.544+0000] {docker.py:438} INFO - 📅 Interval: 5 seconds
+[2025-10-10T07:18:14.545+0000] {docker.py:438} INFO - ⏱️  Duration: 300 seconds
+[2025-10-10T07:18:14.545+0000] {docker.py:438} INFO - 💾 Memory size: 512MB
+[2025-10-10T07:18:14.545+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-10-10T07:18:14.546+0000] {docker.py:438} INFO - 📍 Namespace: default
+[2025-10-10T07:18:14.546+0000] {docker.py:438} INFO - ⚡ OOM Score: 1000
+[2025-10-10T07:18:14.549+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.549+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.549+0000] {docker.py:438} INFO - 🔥 Memory Stress #1 at 2025-10-10 07:16:02
+[2025-10-10T07:18:14.550+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.550+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-1
+[2025-10-10T07:18:14.550+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.551+0000] {docker.py:438} INFO - 📊 Time remaining: 300 seconds
+[2025-10-10T07:18:14.551+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.552+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.552+0000] {docker.py:438} INFO - 🔥 Memory Stress #2 at 2025-10-10 07:16:08
+[2025-10-10T07:18:14.553+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.553+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-1
+[2025-10-10T07:18:14.553+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-2
+[2025-10-10T07:18:14.555+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.555+0000] {docker.py:438} INFO - 📊 Time remaining: 294 seconds
+[2025-10-10T07:18:14.555+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.556+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.556+0000] {docker.py:438} INFO - 🔥 Memory Stress #3 at 2025-10-10 07:16:14
+[2025-10-10T07:18:14.556+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.557+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-2
+[2025-10-10T07:18:14.557+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-3
+[2025-10-10T07:18:14.557+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.558+0000] {docker.py:438} INFO - 📊 Time remaining: 288 seconds
+[2025-10-10T07:18:14.558+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.560+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.560+0000] {docker.py:438} INFO - 🔥 Memory Stress #4 at 2025-10-10 07:16:19
+[2025-10-10T07:18:14.560+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.563+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-3
+[2025-10-10T07:18:14.563+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-4
+[2025-10-10T07:18:14.563+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.564+0000] {docker.py:438} INFO - 📊 Time remaining: 282 seconds
+[2025-10-10T07:18:14.564+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.564+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.565+0000] {docker.py:438} INFO - 🔥 Memory Stress #5 at 2025-10-10 07:16:25
+[2025-10-10T07:18:14.565+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.565+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-4
+[2025-10-10T07:18:14.566+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-5
+[2025-10-10T07:18:14.566+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.568+0000] {docker.py:438} INFO - 📊 Time remaining: 277 seconds
+[2025-10-10T07:18:14.569+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.569+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.571+0000] {docker.py:438} INFO - 🔥 Memory Stress #6 at 2025-10-10 07:16:31
+[2025-10-10T07:18:14.571+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.572+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-5
+[2025-10-10T07:18:14.572+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-6
+[2025-10-10T07:18:14.572+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.573+0000] {docker.py:438} INFO - 📊 Time remaining: 271 seconds
+[2025-10-10T07:18:14.573+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.573+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.574+0000] {docker.py:438} INFO - 🔥 Memory Stress #7 at 2025-10-10 07:16:37
+[2025-10-10T07:18:14.574+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.575+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-6
+[2025-10-10T07:18:14.576+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-7
+[2025-10-10T07:18:14.576+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.576+0000] {docker.py:438} INFO - 📊 Time remaining: 265 seconds
+[2025-10-10T07:18:14.577+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.577+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.577+0000] {docker.py:438} INFO - 🔥 Memory Stress #8 at 2025-10-10 07:16:42
+[2025-10-10T07:18:14.578+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.578+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-7
+[2025-10-10T07:18:14.579+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-8
+[2025-10-10T07:18:14.580+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.580+0000] {docker.py:438} INFO - 📊 Time remaining: 259 seconds
+[2025-10-10T07:18:14.580+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.581+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.581+0000] {docker.py:438} INFO - 🔥 Memory Stress #9 at 2025-10-10 07:16:48
+[2025-10-10T07:18:14.581+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.583+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-8
+[2025-10-10T07:18:14.583+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-9
+[2025-10-10T07:18:14.583+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.585+0000] {docker.py:438} INFO - 📊 Time remaining: 254 seconds
+[2025-10-10T07:18:14.585+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.585+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.586+0000] {docker.py:438} INFO - 🔥 Memory Stress #10 at 2025-10-10 07:16:54
+[2025-10-10T07:18:14.586+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.586+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-9
+[2025-10-10T07:18:14.587+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-10
+[2025-10-10T07:18:14.587+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.587+0000] {docker.py:438} INFO - 📊 Time remaining: 248 seconds
+[2025-10-10T07:18:14.588+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.588+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.590+0000] {docker.py:438} INFO - 🔥 Memory Stress #11 at 2025-10-10 07:17:00
+[2025-10-10T07:18:14.591+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.591+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-10
+[2025-10-10T07:18:14.592+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-11
+[2025-10-10T07:18:14.592+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.592+0000] {docker.py:438} INFO - 📊 Time remaining: 242 seconds
+[2025-10-10T07:18:14.593+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.593+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.593+0000] {docker.py:438} INFO - 🔥 Memory Stress #12 at 2025-10-10 07:17:05
+[2025-10-10T07:18:14.595+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.595+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-11
+[2025-10-10T07:18:14.595+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-12
+[2025-10-10T07:18:14.596+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.596+0000] {docker.py:438} INFO - 📊 Time remaining: 236 seconds
+[2025-10-10T07:18:14.597+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.598+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.598+0000] {docker.py:438} INFO - 🔥 Memory Stress #13 at 2025-10-10 07:17:11
+[2025-10-10T07:18:14.598+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.599+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-12
+[2025-10-10T07:18:14.599+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-13
+[2025-10-10T07:18:14.599+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.600+0000] {docker.py:438} INFO - 📊 Time remaining: 231 seconds
+[2025-10-10T07:18:14.600+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.603+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.603+0000] {docker.py:438} INFO - 🔥 Memory Stress #14 at 2025-10-10 07:17:17
+[2025-10-10T07:18:14.603+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.604+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-13
+[2025-10-10T07:18:14.604+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-14
+[2025-10-10T07:18:14.604+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.605+0000] {docker.py:438} INFO - 📊 Time remaining: 225 seconds
+[2025-10-10T07:18:14.605+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.605+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.606+0000] {docker.py:438} INFO - 🔥 Memory Stress #15 at 2025-10-10 07:17:23
+[2025-10-10T07:18:14.606+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.607+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-14
+[2025-10-10T07:18:14.607+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-15
+[2025-10-10T07:18:14.607+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.608+0000] {docker.py:438} INFO - 📊 Time remaining: 219 seconds
+[2025-10-10T07:18:14.608+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.611+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.611+0000] {docker.py:438} INFO - 🔥 Memory Stress #16 at 2025-10-10 07:17:28
+[2025-10-10T07:18:14.611+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.612+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-15
+[2025-10-10T07:18:14.612+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-16
+[2025-10-10T07:18:14.612+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.613+0000] {docker.py:438} INFO - 📊 Time remaining: 213 seconds
+[2025-10-10T07:18:14.613+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.613+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.614+0000] {docker.py:438} INFO - 🔥 Memory Stress #17 at 2025-10-10 07:17:34
+[2025-10-10T07:18:14.614+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.614+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-16
+[2025-10-10T07:18:14.616+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-17
+[2025-10-10T07:18:14.616+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.617+0000] {docker.py:438} INFO - 📊 Time remaining: 208 seconds
+[2025-10-10T07:18:14.617+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.617+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.619+0000] {docker.py:438} INFO - 🔥 Memory Stress #18 at 2025-10-10 07:17:40
+[2025-10-10T07:18:14.619+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.619+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-17
+[2025-10-10T07:18:14.620+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-18
+[2025-10-10T07:18:14.620+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.620+0000] {docker.py:438} INFO - 📊 Time remaining: 202 seconds
+[2025-10-10T07:18:14.623+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.623+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.623+0000] {docker.py:438} INFO - 🔥 Memory Stress #19 at 2025-10-10 07:17:46
+[2025-10-10T07:18:14.624+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.624+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-18
+[2025-10-10T07:18:14.625+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-19
+[2025-10-10T07:18:14.625+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.625+0000] {docker.py:438} INFO - 📊 Time remaining: 196 seconds
+[2025-10-10T07:18:14.626+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.626+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.626+0000] {docker.py:438} INFO - 🔥 Memory Stress #20 at 2025-10-10 07:17:51
+[2025-10-10T07:18:14.627+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.627+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-19
+[2025-10-10T07:18:14.627+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-20
+[2025-10-10T07:18:14.628+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.628+0000] {docker.py:438} INFO - 📊 Time remaining: 191 seconds
+[2025-10-10T07:18:14.630+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.631+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.631+0000] {docker.py:438} INFO - 🔥 Memory Stress #21 at 2025-10-10 07:17:57
+[2025-10-10T07:18:14.632+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.632+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-20
+[2025-10-10T07:18:14.632+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-21
+[2025-10-10T07:18:14.633+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.633+0000] {docker.py:438} INFO - 📊 Time remaining: 185 seconds
+[2025-10-10T07:18:14.633+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.634+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.634+0000] {docker.py:438} INFO - 🔥 Memory Stress #22 at 2025-10-10 07:18:03
+[2025-10-10T07:18:14.634+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.636+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-21
+[2025-10-10T07:18:14.637+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-22
+[2025-10-10T07:18:14.637+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.637+0000] {docker.py:438} INFO - 📊 Time remaining: 179 seconds
+[2025-10-10T07:18:14.638+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.638+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.638+0000] {docker.py:438} INFO - 🔥 Memory Stress #23 at 2025-10-10 07:18:08
+[2025-10-10T07:18:14.639+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.639+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-22
+[2025-10-10T07:18:14.639+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-23
+[2025-10-10T07:18:14.642+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:18:14.642+0000] {docker.py:438} INFO - 📊 Time remaining: 173 seconds
+[2025-10-10T07:18:14.642+0000] {docker.py:438} INFO - 
+[2025-10-10T07:18:14.643+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:18:14.643+0000] {docker.py:438} INFO - 🔥 Memory Stress #24 at 2025-10-10 07:18:14
+[2025-10-10T07:18:14.643+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.072+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-23
+[2025-10-10T07:20:32.074+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-24
+[2025-10-10T07:20:32.076+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.077+0000] {docker.py:438} INFO - 📊 Time remaining: 168 seconds
+[2025-10-10T07:20:32.077+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.078+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.078+0000] {docker.py:438} INFO - 🔥 Memory Stress #25 at 2025-10-10 07:18:20
+[2025-10-10T07:20:32.078+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.079+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-24
+[2025-10-10T07:20:32.079+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-25
+[2025-10-10T07:20:32.079+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.080+0000] {docker.py:438} INFO - 📊 Time remaining: 162 seconds
+[2025-10-10T07:20:32.080+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.084+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.084+0000] {docker.py:438} INFO - 🔥 Memory Stress #26 at 2025-10-10 07:18:26
+[2025-10-10T07:20:32.085+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.085+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-25
+[2025-10-10T07:20:32.085+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-26
+[2025-10-10T07:20:32.089+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.089+0000] {docker.py:438} INFO - 📊 Time remaining: 156 seconds
+[2025-10-10T07:20:32.090+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.090+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.090+0000] {docker.py:438} INFO - 🔥 Memory Stress #27 at 2025-10-10 07:18:31
+[2025-10-10T07:20:32.091+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.091+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-26
+[2025-10-10T07:20:32.091+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-27
+[2025-10-10T07:20:32.093+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.094+0000] {docker.py:438} INFO - 📊 Time remaining: 150 seconds
+[2025-10-10T07:20:32.094+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.096+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.096+0000] {docker.py:438} INFO - 🔥 Memory Stress #28 at 2025-10-10 07:18:37
+[2025-10-10T07:20:32.096+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.097+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-27
+[2025-10-10T07:20:32.097+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-28
+[2025-10-10T07:20:32.097+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.098+0000] {docker.py:438} INFO - 📊 Time remaining: 145 seconds
+[2025-10-10T07:20:32.098+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.098+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.102+0000] {docker.py:438} INFO - 🔥 Memory Stress #29 at 2025-10-10 07:18:43
+[2025-10-10T07:20:32.102+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.103+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-28
+[2025-10-10T07:20:32.103+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-29
+[2025-10-10T07:20:32.103+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.105+0000] {docker.py:438} INFO - 📊 Time remaining: 139 seconds
+[2025-10-10T07:20:32.106+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.106+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.106+0000] {docker.py:438} INFO - 🔥 Memory Stress #30 at 2025-10-10 07:18:49
+[2025-10-10T07:20:32.107+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.107+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-29
+[2025-10-10T07:20:32.109+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-30
+[2025-10-10T07:20:32.109+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.109+0000] {docker.py:438} INFO - 📊 Time remaining: 133 seconds
+[2025-10-10T07:20:32.111+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.111+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.112+0000] {docker.py:438} INFO - 🔥 Memory Stress #31 at 2025-10-10 07:18:54
+[2025-10-10T07:20:32.113+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.113+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-30
+[2025-10-10T07:20:32.114+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-31
+[2025-10-10T07:20:32.114+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.114+0000] {docker.py:438} INFO - 📊 Time remaining: 127 seconds
+[2025-10-10T07:20:32.116+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.116+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.117+0000] {docker.py:438} INFO - 🔥 Memory Stress #32 at 2025-10-10 07:19:00
+[2025-10-10T07:20:32.118+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.118+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-31
+[2025-10-10T07:20:32.120+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-32
+[2025-10-10T07:20:32.120+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.120+0000] {docker.py:438} INFO - 📊 Time remaining: 122 seconds
+[2025-10-10T07:20:32.121+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.121+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.123+0000] {docker.py:438} INFO - 🔥 Memory Stress #33 at 2025-10-10 07:19:06
+[2025-10-10T07:20:32.123+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.123+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-32
+[2025-10-10T07:20:32.124+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-33
+[2025-10-10T07:20:32.124+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.127+0000] {docker.py:438} INFO - 📊 Time remaining: 116 seconds
+[2025-10-10T07:20:32.127+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.127+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.127+0000] {docker.py:438} INFO - 🔥 Memory Stress #34 at 2025-10-10 07:19:12
+[2025-10-10T07:20:32.128+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.128+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-33
+[2025-10-10T07:20:32.129+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-34
+[2025-10-10T07:20:32.130+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.130+0000] {docker.py:438} INFO - 📊 Time remaining: 110 seconds
+[2025-10-10T07:20:32.130+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.133+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.133+0000] {docker.py:438} INFO - 🔥 Memory Stress #35 at 2025-10-10 07:19:17
+[2025-10-10T07:20:32.133+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.134+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-34
+[2025-10-10T07:20:32.134+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-35
+[2025-10-10T07:20:32.136+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.136+0000] {docker.py:438} INFO - 📊 Time remaining: 104 seconds
+[2025-10-10T07:20:32.137+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.137+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.139+0000] {docker.py:438} INFO - 🔥 Memory Stress #36 at 2025-10-10 07:19:23
+[2025-10-10T07:20:32.139+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.139+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-35
+[2025-10-10T07:20:32.140+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-36
+[2025-10-10T07:20:32.140+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.142+0000] {docker.py:438} INFO - 📊 Time remaining: 99 seconds
+[2025-10-10T07:20:32.142+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.142+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.143+0000] {docker.py:438} INFO - 🔥 Memory Stress #37 at 2025-10-10 07:19:29
+[2025-10-10T07:20:32.143+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.144+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-36
+[2025-10-10T07:20:32.145+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-37
+[2025-10-10T07:20:32.147+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.147+0000] {docker.py:438} INFO - 📊 Time remaining: 93 seconds
+[2025-10-10T07:20:32.147+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.148+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.148+0000] {docker.py:438} INFO - 🔥 Memory Stress #38 at 2025-10-10 07:19:34
+[2025-10-10T07:20:32.149+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.149+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-37
+[2025-10-10T07:20:32.149+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-38
+[2025-10-10T07:20:32.151+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.152+0000] {docker.py:438} INFO - 📊 Time remaining: 87 seconds
+[2025-10-10T07:20:32.152+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.153+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.153+0000] {docker.py:438} INFO - 🔥 Memory Stress #39 at 2025-10-10 07:19:40
+[2025-10-10T07:20:32.153+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.154+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-38
+[2025-10-10T07:20:32.154+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-39
+[2025-10-10T07:20:32.154+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.155+0000] {docker.py:438} INFO - 📊 Time remaining: 82 seconds
+[2025-10-10T07:20:32.155+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.155+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.156+0000] {docker.py:438} INFO - 🔥 Memory Stress #40 at 2025-10-10 07:19:46
+[2025-10-10T07:20:32.156+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.158+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-39
+[2025-10-10T07:20:32.159+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-40
+[2025-10-10T07:20:32.159+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.159+0000] {docker.py:438} INFO - 📊 Time remaining: 76 seconds
+[2025-10-10T07:20:32.160+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.160+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.160+0000] {docker.py:438} INFO - 🔥 Memory Stress #41 at 2025-10-10 07:19:52
+[2025-10-10T07:20:32.161+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.161+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-40
+[2025-10-10T07:20:32.162+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-41
+[2025-10-10T07:20:32.162+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.162+0000] {docker.py:438} INFO - 📊 Time remaining: 70 seconds
+[2025-10-10T07:20:32.164+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.165+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.165+0000] {docker.py:438} INFO - 🔥 Memory Stress #42 at 2025-10-10 07:19:57
+[2025-10-10T07:20:32.165+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.166+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-41
+[2025-10-10T07:20:32.166+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-42
+[2025-10-10T07:20:32.167+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.167+0000] {docker.py:438} INFO - 📊 Time remaining: 65 seconds
+[2025-10-10T07:20:32.167+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.168+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.168+0000] {docker.py:438} INFO - 🔥 Memory Stress #43 at 2025-10-10 07:20:03
+[2025-10-10T07:20:32.170+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.171+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-42
+[2025-10-10T07:20:32.171+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-43
+[2025-10-10T07:20:32.172+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.172+0000] {docker.py:438} INFO - 📊 Time remaining: 59 seconds
+[2025-10-10T07:20:32.172+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.173+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.173+0000] {docker.py:438} INFO - 🔥 Memory Stress #44 at 2025-10-10 07:20:09
+[2025-10-10T07:20:32.173+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.174+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-43
+[2025-10-10T07:20:32.174+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-44
+[2025-10-10T07:20:32.175+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.175+0000] {docker.py:438} INFO - 📊 Time remaining: 53 seconds
+[2025-10-10T07:20:32.175+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.176+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.176+0000] {docker.py:438} INFO - 🔥 Memory Stress #45 at 2025-10-10 07:20:15
+[2025-10-10T07:20:32.176+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.178+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-44
+[2025-10-10T07:20:32.178+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-45
+[2025-10-10T07:20:32.179+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.179+0000] {docker.py:438} INFO - 📊 Time remaining: 47 seconds
+[2025-10-10T07:20:32.179+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.181+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.181+0000] {docker.py:438} INFO - 🔥 Memory Stress #46 at 2025-10-10 07:20:20
+[2025-10-10T07:20:32.181+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.182+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-45
+[2025-10-10T07:20:32.182+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-46
+[2025-10-10T07:20:32.182+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.183+0000] {docker.py:438} INFO - 📊 Time remaining: 42 seconds
+[2025-10-10T07:20:32.183+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.183+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.184+0000] {docker.py:438} INFO - 🔥 Memory Stress #47 at 2025-10-10 07:20:26
+[2025-10-10T07:20:32.184+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.184+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-46
+[2025-10-10T07:20:32.187+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-47
+[2025-10-10T07:20:32.187+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:20:32.187+0000] {docker.py:438} INFO - 📊 Time remaining: 36 seconds
+[2025-10-10T07:20:32.188+0000] {docker.py:438} INFO - 
+[2025-10-10T07:20:32.188+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:20:32.189+0000] {docker.py:438} INFO - 🔥 Memory Stress #48 at 2025-10-10 07:20:32
+[2025-10-10T07:21:01.696+0000] {docker.py:438} INFO - [32m[2025-10-10 07:21:01 INFO] Let's rollback...
+[2025-10-10T07:21:01.697+0000] {docker.py:438} INFO - [32m[2025-10-10 07:21:01 INFO] No declared rollbacks, let's move on.
+[2025-10-10T07:21:01.698+0000] {docker.py:438} INFO - [32m[2025-10-10 07:21:01 INFO] Experiment ended with status: completed
+[2025-10-10T07:21:01.717+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.717+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-47
+[2025-10-10T07:21:01.718+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-48
+[2025-10-10T07:21:01.718+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:21:01.718+0000] {docker.py:438} INFO - 📊 Time remaining: 30 seconds
+[2025-10-10T07:21:01.719+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.719+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.720+0000] {docker.py:438} INFO - 🔥 Memory Stress #49 at 2025-10-10 07:20:37
+[2025-10-10T07:21:01.720+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.720+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-48
+[2025-10-10T07:21:01.722+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-49
+[2025-10-10T07:21:01.722+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:21:01.722+0000] {docker.py:438} INFO - 📊 Time remaining: 24 seconds
+[2025-10-10T07:21:01.723+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.723+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.727+0000] {docker.py:438} INFO - 🔥 Memory Stress #50 at 2025-10-10 07:20:43
+[2025-10-10T07:21:01.727+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.728+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-49
+[2025-10-10T07:21:01.728+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-50
+[2025-10-10T07:21:01.728+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:21:01.732+0000] {docker.py:438} INFO - 📊 Time remaining: 19 seconds
+[2025-10-10T07:21:01.732+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.732+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.733+0000] {docker.py:438} INFO - 🔥 Memory Stress #51 at 2025-10-10 07:20:49
+[2025-10-10T07:21:01.733+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.734+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-50
+[2025-10-10T07:21:01.737+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-51
+[2025-10-10T07:21:01.737+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:21:01.737+0000] {docker.py:438} INFO - 📊 Time remaining: 13 seconds
+[2025-10-10T07:21:01.738+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.738+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.738+0000] {docker.py:438} INFO - 🔥 Memory Stress #52 at 2025-10-10 07:20:55
+[2025-10-10T07:21:01.739+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.739+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-51
+[2025-10-10T07:21:01.740+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-52
+[2025-10-10T07:21:01.740+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-10T07:21:01.740+0000] {docker.py:438} INFO - 📊 Time remaining: 7 seconds
+[2025-10-10T07:21:01.741+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.741+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.741+0000] {docker.py:438} INFO - 🔥 Memory Stress #53 at 2025-10-10 07:21:00
+[2025-10-10T07:21:01.741+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.742+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-52
+[2025-10-10T07:21:01.742+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-53
+[2025-10-10T07:21:01.743+0000] {docker.py:438} INFO - ⏰ Less than 5 seconds remaining, stopping experiment
+[2025-10-10T07:21:01.743+0000] {docker.py:438} INFO - 🧹 Final cleanup: oom-stress-cycle-53
+[2025-10-10T07:21:01.743+0000] {docker.py:438} INFO - 
+[2025-10-10T07:21:01.745+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.745+0000] {docker.py:438} INFO - 🏁 Memory Stress Experiment Completed!
+[2025-10-10T07:21:01.745+0000] {docker.py:438} INFO - ==================================================
+[2025-10-10T07:21:01.746+0000] {docker.py:438} INFO - 📈 Total stress cycles performed: 53
+[2025-10-10T07:21:01.746+0000] {docker.py:438} INFO - ⏱️  Total duration: 299 seconds
+[2025-10-10T07:21:01.746+0000] {docker.py:438} INFO - 📊 Average interval: 5.6 seconds
+[2025-10-10T07:21:02.190+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-10-10T07:21:12.388+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3638, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/xcom.py", line 224, in set
+    dag_run_id = session.query(DagRun.id).filter_by(dag_id=dag_id, run_id=run_id).scalar()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-10T07:21:12.396+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-10T07:21:12.397+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 7236 for task memory_stress_test ((psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 354)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3638, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/xcom.py", line 224, in set
+    dag_run_id = session.query(DagRun.id).filter_by(dag_id=dag_id, run_id=run_id).scalar()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 336, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3427, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1215, in _handle_failure
+    failure_context = TaskInstance.fetch_handle_failure_context(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3314, in fetch_handle_failure_context
+    ti.refresh_from_db(session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2358, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 872, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2344, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-10T07:21:12.425+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-10-10T07:21:12.428+0000] {taskinstance.py:3906} WARNING - Skipping mini scheduling run due to exception: None
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3855, in _schedule_downstream_tasks
+    ).one_or_none()
+      ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-10T07:21:12.433+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

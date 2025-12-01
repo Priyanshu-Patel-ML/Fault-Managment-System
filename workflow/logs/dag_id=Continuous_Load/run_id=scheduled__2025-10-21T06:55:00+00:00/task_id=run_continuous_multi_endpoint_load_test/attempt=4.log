@@ -1,0 +1,32 @@
+[2025-10-21T07:28:19.009+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-21T07:28:19.033+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-21T06:55:00+00:00 [queued]>
+[2025-10-21T07:28:19.044+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-21T06:55:00+00:00 [queued]>
+[2025-10-21T07:28:19.044+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 4
+[2025-10-21T07:28:19.066+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_continuous_multi_endpoint_load_test> on 2025-10-21 06:55:00+00:00
+[2025-10-21T07:28:19.082+0000] {standard_task_runner.py:72} INFO - Started process 2995 to run task
+[2025-10-21T07:28:19.099+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Continuous_Load', 'run_continuous_multi_endpoint_load_test', 'scheduled__2025-10-21T06:55:00+00:00', '--job-id', '10064', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp8zjgm26z']
+[2025-10-21T07:28:19.100+0000] {standard_task_runner.py:105} INFO - Job 10064: Subtask run_continuous_multi_endpoint_load_test
+[2025-10-21T07:28:19.212+0000] {task_command.py:467} INFO - Running <TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-21T06:55:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-21T07:28:19.373+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Continuous_Load' AIRFLOW_CTX_TASK_ID='run_continuous_multi_endpoint_load_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-21T06:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-21T06:55:00+00:00'
+[2025-10-21T07:28:19.376+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-21T07:28:19.442+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-21T07:28:19.936+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-21T07:28:37.783+0000] {docker.py:438} INFO - 
+[2025-10-21T07:28:37.788+0000] {docker.py:438} INFO - Starting Continuous Multi-Endpoint Load Test...
+[2025-10-21T07:28:38.751+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Validating the experiment's syntax
+[2025-10-21T07:28:38.959+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Experiment looks valid
+[2025-10-21T07:28:38.964+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Running experiment: Continuous Load Test - POST Compose & GET Timeline APIs
+[2025-10-21T07:28:38.992+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Steady-state strategy: default
+[2025-10-21T07:28:38.996+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Rollbacks strategy: default
+[2025-10-21T07:28:38.997+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-21T07:28:38.998+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Playing your experiment's method now...
+[2025-10-21T07:28:39.000+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:38 INFO] Action: Continuous multi-endpoint load test
+[2025-10-21T07:28:39.154+0000] {docker.py:438} INFO - [32m[2025-10-21 07:28:39 INFO] ✅ Obtained login_token (JWT): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lc3RhbXAiOiIxNzYxMDMxNzE5IiwidHRsIjoiMzYwMCIsInVzZXJfaWQiOiI0MDA0Njk5MjM2MjAwOTUxODA4IiwidXNlcm5hbWUiOiJqYWdhbiJ9.0HoKOv-rGk1_IFw1Dh0vRhuQf1oG7VJmVfWBr2zz71Y
+[2025-10-21T07:30:55.851+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-10-21T07:30:55.855+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-10-21T07:30:55.857+0000] {process_utils.py:132} INFO - Sending 15 to group 2995. PIDs of all processes in the group: [2995]
+[2025-10-21T07:30:55.858+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2995
+[2025-10-21T07:30:55.858+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-10-21T07:30:55.859+0000] {docker.py:533} INFO - Stopping docker container
+[2025-10-21T07:30:56.225+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-21T07:30:56.280+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2995, status='terminated', exitcode=0, started='07:28:19') (2995) terminated with exit code 0

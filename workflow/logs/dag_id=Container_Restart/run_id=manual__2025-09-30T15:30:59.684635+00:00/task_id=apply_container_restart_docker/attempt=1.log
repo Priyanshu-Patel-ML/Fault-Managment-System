@@ -1,0 +1,196 @@
+[2025-09-30T15:31:02.117+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-09-30T15:31:02.134+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-09-30T15:30:59.684635+00:00 [queued]>
+[2025-09-30T15:31:02.142+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-09-30T15:30:59.684635+00:00 [queued]>
+[2025-09-30T15:31:02.143+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-09-30T15:31:02.157+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-09-30 15:30:59.684635+00:00
+[2025-09-30T15:31:02.166+0000] {standard_task_runner.py:72} INFO - Started process 50 to run task
+[2025-09-30T15:31:02.170+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Container_Restart', 'apply_container_restart_docker', 'manual__2025-09-30T15:30:59.684635+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp9m371bqh']
+[2025-09-30T15:31:02.173+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask apply_container_restart_docker
+[2025-09-30T15:31:02.225+0000] {task_command.py:467} INFO - Running <TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-09-30T15:30:59.684635+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-09-30T15:31:02.324+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Container_Restart' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-09-30T15:30:59.684635+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-30T15:30:59.684635+00:00'
+[2025-09-30T15:31:02.326+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-09-30T15:31:02.367+0000] {docker.py:496} INFO - ::group::Pulling docker image priyanshu01ce/***_chaos:latest
+[2025-09-30T15:31:02.536+0000] {docker.py:510} INFO - latest: Pulling from priyanshu01ce/***_chaos
+[2025-09-30T15:31:02.537+0000] {docker.py:510} INFO - a2318d6c47ec: Already exists
+[2025-09-30T15:31:02.538+0000] {docker.py:510} INFO - 40d734479f14: Already exists
+[2025-09-30T15:31:02.539+0000] {docker.py:510} INFO - 0b61b7b259eb: Already exists
+[2025-09-30T15:31:02.553+0000] {docker.py:510} INFO - 081a3493c0e7: Already exists
+[2025-09-30T15:31:02.567+0000] {docker.py:510} INFO - 332917e512c9: Already exists
+[2025-09-30T15:31:02.588+0000] {docker.py:510} INFO - 9790877f5d0b: Already exists
+[2025-09-30T15:31:02.597+0000] {docker.py:510} INFO - 60733238f480: Already exists
+[2025-09-30T15:31:02.614+0000] {docker.py:510} INFO - 912db49903ce: Already exists
+[2025-09-30T15:31:02.623+0000] {docker.py:510} INFO - e8c4efcb1e40: Already exists
+[2025-09-30T15:31:02.640+0000] {docker.py:510} INFO - 76770aa20816: Already exists
+[2025-09-30T15:31:02.649+0000] {docker.py:510} INFO - 8ce8ede5cb2e: Already exists
+[2025-09-30T15:31:02.666+0000] {docker.py:510} INFO - 7a297fdec1fb: Already exists
+[2025-09-30T15:31:02.681+0000] {docker.py:510} INFO - 61a80f0de322: Already exists
+[2025-09-30T15:31:02.693+0000] {docker.py:510} INFO - 32083154ce5b: Already exists
+[2025-09-30T15:31:02.707+0000] {docker.py:510} INFO - 830e791b3610: Already exists
+[2025-09-30T15:31:02.720+0000] {docker.py:510} INFO - fac2c076a4c7: Already exists
+[2025-09-30T15:31:02.729+0000] {docker.py:510} INFO - e68cae9985ed: Already exists
+[2025-09-30T15:31:02.740+0000] {docker.py:510} INFO - 2da0f7543494: Already exists
+[2025-09-30T15:31:02.753+0000] {docker.py:510} INFO - 74c98c9dccd8: Already exists
+[2025-09-30T15:31:02.765+0000] {docker.py:510} INFO - 1a9f62b0effe: Already exists
+[2025-09-30T15:31:02.774+0000] {docker.py:510} INFO - 4f4fb700ef54: Already exists
+[2025-09-30T15:31:02.785+0000] {docker.py:510} INFO - 18ad9445f0f5: Pulling fs layer
+[2025-09-30T15:31:02.786+0000] {docker.py:510} INFO - bab13ab5ad5d: Pulling fs layer
+[2025-09-30T15:31:02.786+0000] {docker.py:510} INFO - 0546fd497c22: Pulling fs layer
+[2025-09-30T15:31:02.787+0000] {docker.py:510} INFO - 5fa2667e7b2a: Pulling fs layer
+[2025-09-30T15:31:02.788+0000] {docker.py:510} INFO - 3998c3aeccee: Pulling fs layer
+[2025-09-30T15:31:02.788+0000] {docker.py:510} INFO - 80dac6da2e53: Pulling fs layer
+[2025-09-30T15:31:02.790+0000] {docker.py:510} INFO - 4225669daae1: Pulling fs layer
+[2025-09-30T15:31:02.790+0000] {docker.py:510} INFO - 4225669daae1: Download complete
+[2025-09-30T15:31:02.791+0000] {docker.py:510} INFO - 18ad9445f0f5: Extracting
+[2025-09-30T15:31:02.791+0000] {docker.py:510} INFO - bab13ab5ad5d: Downloading
+[2025-09-30T15:31:02.791+0000] {docker.py:510} INFO - 0546fd497c22: Download complete
+[2025-09-30T15:31:02.791+0000] {docker.py:510} INFO - 5fa2667e7b2a: Download complete
+[2025-09-30T15:31:02.792+0000] {docker.py:510} INFO - 3998c3aeccee: Download complete
+[2025-09-30T15:31:02.792+0000] {docker.py:510} INFO - 80dac6da2e53: Download complete
+[2025-09-30T15:31:03.498+0000] {docker.py:510} INFO - bab13ab5ad5d: Verifying Checksum
+[2025-09-30T15:31:03.499+0000] {docker.py:510} INFO - bab13ab5ad5d: Download complete
+[2025-09-30T15:31:11.039+0000] {docker.py:510} INFO - 18ad9445f0f5: Pull complete
+[2025-09-30T15:31:11.096+0000] {docker.py:510} INFO - bab13ab5ad5d: Extracting
+[2025-09-30T15:31:23.695+0000] {docker.py:510} INFO - bab13ab5ad5d: Pull complete
+[2025-09-30T15:31:23.719+0000] {docker.py:510} INFO - 0546fd497c22: Extracting
+[2025-09-30T15:31:24.492+0000] {docker.py:510} INFO - 0546fd497c22: Pull complete
+[2025-09-30T15:31:24.528+0000] {docker.py:510} INFO - 5fa2667e7b2a: Extracting
+[2025-09-30T15:31:25.251+0000] {docker.py:510} INFO - 5fa2667e7b2a: Pull complete
+[2025-09-30T15:31:25.260+0000] {docker.py:510} INFO - 3998c3aeccee: Extracting
+[2025-09-30T15:31:26.159+0000] {docker.py:510} INFO - 3998c3aeccee: Pull complete
+[2025-09-30T15:31:26.168+0000] {docker.py:510} INFO - 80dac6da2e53: Extracting
+[2025-09-30T15:31:26.231+0000] {docker.py:510} INFO - 80dac6da2e53: Pull complete
+[2025-09-30T15:31:26.238+0000] {docker.py:510} INFO - 4225669daae1: Extracting
+[2025-09-30T15:31:26.311+0000] {docker.py:510} INFO - 4225669daae1: Pull complete
+[2025-09-30T15:31:26.335+0000] {docker.py:505} INFO - Digest: sha256:8ca3392fd4d879cb6b3487fdfb9be8b48d5fcdc1a433522bf682fcdc259f46cc
+[2025-09-30T15:31:26.340+0000] {docker.py:505} INFO - Status: Image is up to date for priyanshu01ce/***_chaos:latest
+[2025-09-30T15:31:26.352+0000] {docker.py:512} INFO - ::endgroup::
+[2025-09-30T15:31:26.352+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-09-30T15:31:26.359+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.51/containers/create?name=container_restart_chaos
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.51/containers/create?name=container_restart_chaos: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /home/priyanshupatel/fault-injector/src/pod")
+[2025-09-30T15:31:26.379+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=Container_Restart, task_id=apply_container_restart_docker, run_id=manual__2025-09-30T15:30:59.684635+00:00, execution_date=20250930T153059, start_date=20250930T153102, end_date=20250930T153126
+[2025-09-30T15:31:26.404+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-09-30T15:31:26.405+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 5 for task apply_container_restart_docker (400 Client Error for http+docker://localhost/v1.51/containers/create?name=container_restart_chaos: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /home/priyanshupatel/fault-injector/src/pod"); 50)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.51/containers/create?name=container_restart_chaos
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.51/containers/create?name=container_restart_chaos: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /home/priyanshupatel/fault-injector/src/pod")
+[2025-09-30T15:31:26.476+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-09-30T15:31:26.498+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-30T15:31:26.502+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,76 @@
+Container_Probe_Verification:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: "Kubernetes Pod Health Verification Probe"
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  tags: ["target:compose-post-service", "severity:low", "frequency:high", "team:sre"]
+  doc_md: |
+    # 🔍 Kubernetes Pod Health Verification Probe
+
+    ## 🎯 Purpose
+    Continuously verifies that target pods are in healthy Running state.
+
+    ## 📊 What It Checks
+    - **Target**: Pods with label `app=compose-post-service`
+    - **Namespace**: `default`
+    - **Expected State**: `Running`
+
+    ## 🏷️ Environment Tags
+    - **Environment**: `dev`
+    - **Type**: `probe`
+    - **Impact Level**: `low`
+    - **Target Service**: `compose-post-service`
+
+    ## ✅ Success Criteria
+    - All targeted pods are in Running phase
+    - No pod restart loops detected
+    - Service endpoints are healthy
+
+    ## 🚨 Failure Scenarios
+    - Pods in Pending/Failed/CrashLoopBackOff state
+    - Missing pods (scaled down unexpectedly)
+    - Container restart count increasing
+
+    ## 📈 Monitoring Integration
+    - Integrates with Prometheus alerts
+    - Sends notifications to SRE team on failures
+    - Updates service health dashboard
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 2
+    retry_delay: "timedelta(minutes=1)"
+  tasks:
+    - task_id: verify_pod_health_probe
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "priyanshu01ce/airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/azureuser/fault-injector/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/home/azureuser/.kube/config"
+          target: "/root/.kube/config"
+          type: "bind"
+          read_only: true
+      environment:
+        KUBECONFIG: "/root/.kube/config"
+        PYTHONPATH: "/opt/airflow/src/pod"
+        CHAOS_ENV: "dev"
+        TARGET_SERVICE: "compose-post-service"
+      command: >
+        bash -c '
+        cd /opt/airflow/src/pod &&
+        echo "🔍 Starting Kubernetes pod health verification..." &&
+        echo "Environment: $CHAOS_ENV" &&
+        echo "Target Service: $TARGET_SERVICE" &&
+        chaos run container_probe.json &&
+        echo "✅ Pod health verification completed successfully"'
+      container_name: "pod_health_probe"

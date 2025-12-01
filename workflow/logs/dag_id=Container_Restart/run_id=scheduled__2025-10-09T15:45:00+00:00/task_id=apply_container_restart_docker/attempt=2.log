@@ -1,0 +1,900 @@
+[2025-10-09T16:31:55.376+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-09T16:31:55.452+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T15:45:00+00:00 [queued]>
+[2025-10-09T16:31:55.493+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T15:45:00+00:00 [queued]>
+[2025-10-09T16:31:55.493+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 1
+[2025-10-09T16:31:55.556+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-10-09 15:45:00+00:00
+[2025-10-09T16:31:55.574+0000] {standard_task_runner.py:72} INFO - Started process 2071 to run task
+[2025-10-09T16:31:55.589+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Container_Restart', 'apply_container_restart_docker', 'scheduled__2025-10-09T15:45:00+00:00', '--job-id', '7053', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpsnkadbxs']
+[2025-10-09T16:31:55.595+0000] {standard_task_runner.py:105} INFO - Job 7053: Subtask apply_container_restart_docker
+[2025-10-09T16:31:55.747+0000] {task_command.py:467} INFO - Running <TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T15:45:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-09T16:31:56.137+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Container_Restart' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-10-09T15:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-09T15:45:00+00:00'
+[2025-10-09T16:31:56.142+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-09T16:31:56.245+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-10-09T16:31:57.261+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-09T16:32:56.141+0000] {job.py:229} INFO - Heartbeat recovered after 24.89 seconds
+[2025-10-09T16:33:36.861+0000] {job.py:229} INFO - Heartbeat recovered after 40.86 seconds
+[2025-10-09T16:34:00.695+0000] {job.py:229} INFO - Heartbeat recovered after 24.10 seconds
+[2025-10-09T16:34:34.894+0000] {job.py:229} INFO - Heartbeat recovered after 34.33 seconds
+[2025-10-09T16:34:58.850+0000] {job.py:229} INFO - Heartbeat recovered after 24.26 seconds
+[2025-10-09T16:35:28.588+0000] {job.py:229} INFO - Heartbeat recovered after 29.99 seconds
+[2025-10-09T16:35:56.788+0000] {job.py:229} INFO - Heartbeat recovered after 28.45 seconds
+[2025-10-09T16:36:36.345+0000] {job.py:229} INFO - Heartbeat recovered after 40.55 seconds
+[2025-10-09T16:38:03.634+0000] {job.py:229} INFO - Heartbeat recovered after 87.84 seconds
+[2025-10-09T16:40:11.848+0000] {job.py:229} INFO - Heartbeat recovered after 129.51 seconds
+[2025-10-09T16:41:05.783+0000] {job.py:229} INFO - Heartbeat recovered after 54.09 seconds
+[2025-10-09T16:43:16.991+0000] {job.py:229} INFO - Heartbeat recovered after 138.19 seconds
+[2025-10-09T16:44:52.793+0000] {job.py:229} INFO - Heartbeat recovered after 97.40 seconds
+[2025-10-09T16:46:38.734+0000] {job.py:229} INFO - Heartbeat recovered after 106.39 seconds
+[2025-10-09T16:46:59.001+0000] {job.py:229} INFO - Heartbeat recovered after 22.36 seconds
+[2025-10-09T16:47:19.088+0000] {job.py:229} INFO - Heartbeat recovered after 20.29 seconds
+[2025-10-09T16:47:52.043+0000] {job.py:229} INFO - Heartbeat recovered after 33.20 seconds
+[2025-10-09T16:48:17.483+0000] {job.py:229} INFO - Heartbeat recovered after 26.25 seconds
+[2025-10-09T16:48:48.138+0000] {job.py:229} INFO - Heartbeat recovered after 31.00 seconds
+[2025-10-09T16:49:57.643+0000] {job.py:229} INFO - Heartbeat recovered after 70.15 seconds
+[2025-10-09T16:50:53.486+0000] {job.py:229} INFO - Heartbeat recovered after 59.99 seconds
+[2025-10-09T16:51:14.638+0000] {job.py:229} INFO - Heartbeat recovered after 21.29 seconds
+[2025-10-09T16:52:08.134+0000] {job.py:229} INFO - Heartbeat recovered after 54.14 seconds
+[2025-10-09T16:53:12.143+0000] {job.py:229} INFO - Heartbeat recovered after 64.70 seconds
+[2025-10-09T16:54:22.844+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 233, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/local_task_job_runner.py", line 284, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2358, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 872, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2344, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT task_instance.task_display_name AS task_instance_task_display_name, task_instance.task_id AS task_instance_task_id, task_instance.dag_id AS task_instance_dag_id, task_instance.run_id AS task_instance_run_id, task_instance.map_index AS task_instance_map_index, task_instance.start_date AS task_instance_start_date, task_instance.end_date AS task_instance_end_date, task_instance.duration AS task_instance_duration, task_instance.state AS task_instance_state, task_instance.try_number AS task_instance_try_number, task_instance.max_tries AS task_instance_max_tries, task_instance.hostname AS task_instance_hostname, task_instance.unixname AS task_instance_unixname, task_instance.job_id AS task_instance_job_id, task_instance.pool AS task_instance_pool, task_instance.pool_slots AS task_instance_pool_slots, task_instance.queue AS task_instance_queue, task_instance.priority_weight AS task_instance_priority_weight, task_instance.operator AS task_instance_operator, task_instance.custom_operator_name AS task_instance_custom_operator_name, task_instance.queued_dttm AS task_instance_queued_dttm, task_instance.queued_by_job_id AS task_instance_queued_by_job_id, task_instance.pid AS task_instance_pid, task_instance.executor AS task_instance_executor, task_instance.executor_config AS task_instance_executor_config, task_instance.updated_at AS task_instance_updated_at, task_instance.rendered_map_index AS task_instance_rendered_map_index, task_instance.external_executor_id AS task_instance_external_executor_id, task_instance.trigger_id AS task_instance_trigger_id, task_instance.trigger_timeout AS task_instance_trigger_timeout, task_instance.next_method AS task_instance_next_method, task_instance.next_kwargs AS task_instance_next_kwargs 
+FROM task_instance 
+WHERE task_instance.dag_id = %(dag_id_1)s AND task_instance.run_id = %(run_id_1)s AND task_instance.task_id = %(task_id_1)s AND task_instance.map_index = %(map_index_1)s]
+[parameters: {'dag_id_1': 'Container_Restart', 'run_id_1': 'scheduled__2025-10-09T15:45:00+00:00', 'task_id_1': 'apply_container_restart_docker', 'map_index_1': -1}]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T16:54:26.389+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T16:54:32.506+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T16:54:38.654+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T16:54:43.836+0000] {docker.py:438} INFO - 
+[2025-10-09T16:54:43.983+0000] {docker.py:438} INFO - total 3424
+[2025-10-09T16:54:43.984+0000] {docker.py:438} INFO - drwxr-xr-x 5    1000 1000    4096 Oct  9 16:35 .
+[2025-10-09T16:54:43.984+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-10-09T16:54:43.985+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-10-09T16:54:43.985+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-10-09T16:54:43.985+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1243 Sep 30 18:21 CPU_Stress_Test_Azure.yaml
+[2025-10-09T16:54:43.986+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-10-09T16:54:43.986+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1233 Sep 30 18:18 Load_Test_Azure.yaml
+[2025-10-09T16:54:43.986+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1274 Oct  9 16:35 Memory_Stress_Test_Azure.yaml
+[2025-10-09T16:54:43.987+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-10-09T16:54:43.987+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct  9 06:43 __pycache__
+[2025-10-09T16:54:43.993+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-10-09T16:54:43.993+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root 2958550 Oct  9 16:31 chaostoolkit.log
+[2025-10-09T16:54:43.993+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-10-09T16:54:43.994+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-10-09T16:54:43.994+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-10-09T16:54:44.029+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-10-09T16:54:44.029+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1313 Oct  9 06:32 container_restart_Azure.yaml
+[2025-10-09T16:54:44.030+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    6679 Oct  9 06:37 continuos_memory_stress.py
+[2025-10-09T16:54:44.030+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-10-09T16:54:44.031+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-10-09T16:54:44.031+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-10-09T16:54:44.034+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1034 Sep 30 18:27 cordon_uncordon_node_Azure.yaml
+[2025-10-09T16:54:44.035+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-10-09T16:54:44.035+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1771 Sep 24 07:40 db_cleanup.json
+[2025-10-09T16:54:44.036+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-10-09T16:54:44.036+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1169 Sep 30 18:15 db_cleanup_docker_Azure.yaml
+[2025-10-09T16:54:44.043+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1076 Oct  9 06:38 gradual_memory_stress.json
+[2025-10-09T16:54:44.043+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3294 Oct  9 16:31 journal.json
+[2025-10-09T16:54:44.044+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root  281342 Oct  9 13:48 k6_continuous_load.log
+[2025-10-09T16:54:44.044+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3917 Oct  9 13:48 k6_continuous_summary.json
+[2025-10-09T16:54:44.044+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-10-09T16:54:44.045+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-10-09T16:54:44.045+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-10-09T16:54:44.047+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-10-09T16:54:44.047+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-10-09T16:54:44.048+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-10-09T16:54:44.048+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-10-09T16:54:44.048+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-10-09T16:54:44.049+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-10-09T16:54:44.049+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-10-09T16:54:44.050+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-10-09T16:54:44.050+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-10-09T16:54:44.050+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-10-09T16:54:44.051+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-10-09T16:54:44.053+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-10-09T16:54:44.054+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1306 Oct  9 16:34 redis_memory_stress_Azure.yaml
+[2025-10-09T16:54:44.054+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-10-09T16:54:44.054+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct  8 01:13 scripts
+[2025-10-09T16:54:44.054+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-10-09T16:54:44.055+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-10-09T16:54:44.055+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-10-09T16:54:44.057+0000] {docker.py:438} INFO - Starting continuous container restart experiment...
+[2025-10-09T16:54:44.256+0000] {job.py:229} INFO - Heartbeat recovered after 93.68 seconds
+[2025-10-09T16:54:47.836+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:47 INFO] Validating the experiment's syntax
+[2025-10-09T16:54:51.078+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Experiment looks valid
+[2025-10-09T16:54:51.083+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Running experiment: Continuous Container Restart Experiment
+[2025-10-09T16:54:51.098+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Steady-state strategy: default
+[2025-10-09T16:54:51.099+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Rollbacks strategy: default
+[2025-10-09T16:54:51.099+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-09T16:54:51.102+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Playing your experiment's method now...
+[2025-10-09T16:54:51.103+0000] {docker.py:438} INFO - [32m[2025-10-09 16:54:51 INFO] Action: continuous-container-restart
+[2025-10-09T16:55:15.441+0000] {docker.py:438} INFO - 🚀 [DEBUG] Entered restart_containers_continuous()
+[2025-10-09T16:55:15.507+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, interval=5, duration=400, ns=default, container_name=compose-post-service
+[2025-10-09T16:55:15.514+0000] {docker.py:438} INFO - 
+[2025-10-09T16:55:15.516+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T16:55:15.516+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #1 at 2025-10-09 16:54:51
+[2025-10-09T16:55:15.517+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T16:55:15.517+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T16:55:15.518+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T16:55:15.519+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T16:55:15.519+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T16:55:15.519+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T16:55:15.520+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T16:55:15.520+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T16:55:15.522+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T16:55:15.523+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T16:55:15.523+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T16:55:15.524+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T16:55:15.525+0000] {docker.py:438} INFO - 
+[2025-10-09T16:55:15.525+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T16:55:15.525+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T16:55:15.526+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.526+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.527+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 80
+[2025-10-09T16:55:15.529+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=80
+[2025-10-09T16:55:15.530+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 80
+[2025-10-09T16:55:15.530+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T16:55:15.531+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T16:55:15.531+0000] {docker.py:438} INFO -    [DEBUG] Exec stream opened successfully, running command...
+[2025-10-09T16:55:15.533+0000] {docker.py:438} INFO -    [DEBUG] run_forever returned/finished
+[2025-10-09T16:55:15.534+0000] {docker.py:438} INFO -    📤 [DEBUG] STDOUT (truncated): 
+[2025-10-09T16:55:15.534+0000] {docker.py:438} INFO -    📤 [DEBUG] STDERR (truncated): 
+[2025-10-09T16:55:15.534+0000] {docker.py:438} INFO -    📤 [DEBUG] CTRL_ERR: {"metadata":{},"status":"Success"}
+[2025-10-09T16:55:15.536+0000] {docker.py:438} INFO -    ⏳ [DEBUG] Waiting up to 60s for restart count to increment...
+[2025-10-09T16:55:15.545+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.546+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.550+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 80
+[2025-10-09T16:55:15.551+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=80
+[2025-10-09T16:55:15.552+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 80 (before was 80)
+[2025-10-09T16:55:15.553+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.553+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.554+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.554+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.555+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 80)
+[2025-10-09T16:55:15.556+0000] {docker.py:438} INFO -    ✅ [DEBUG] Restart observed: 80 -> 81
+[2025-10-09T16:55:15.557+0000] {docker.py:438} INFO -    🎉 [DEBUG] Restart verified, breaking out of strategies loop
+[2025-10-09T16:55:15.557+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.557+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.558+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.559+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.560+0000] {docker.py:438} INFO - ✅ [DEBUG] Restart recorded for compose-post-service-67bcfcd5ff-bqrz2: 80 -> 81
+[2025-10-09T16:55:15.560+0000] {docker.py:438} INFO - 
+[2025-10-09T16:55:15.560+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T16:55:15.561+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T16:55:15.561+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 1
+[2025-10-09T16:55:15.562+0000] {docker.py:438} INFO -    📦 [DEBUG] compose-post-service-67bcfcd5ff-bqrz2: restart_verified
+[2025-10-09T16:55:15.563+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 396s
+[2025-10-09T16:55:15.563+0000] {docker.py:438} INFO - 
+[2025-10-09T16:55:15.564+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T16:55:15.565+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #2 at 2025-10-09 16:55:00
+[2025-10-09T16:55:15.565+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T16:55:15.566+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T16:55:15.566+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T16:55:15.567+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T16:55:15.569+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T16:55:15.570+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T16:55:15.570+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T16:55:15.570+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T16:55:15.571+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T16:55:15.571+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T16:55:15.571+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T16:55:15.572+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T16:55:15.572+0000] {docker.py:438} INFO - 
+[2025-10-09T16:55:15.572+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T16:55:15.573+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T16:55:15.573+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.574+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.575+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.576+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.577+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 81
+[2025-10-09T16:55:15.577+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T16:55:15.577+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T16:55:15.578+0000] {docker.py:438} INFO -    [DEBUG] Exec stream opened successfully, running command...
+[2025-10-09T16:55:15.579+0000] {docker.py:438} INFO -    [DEBUG] run_forever returned/finished
+[2025-10-09T16:55:15.579+0000] {docker.py:438} INFO -    📤 [DEBUG] STDOUT (truncated): 
+[2025-10-09T16:55:15.580+0000] {docker.py:438} INFO -    📤 [DEBUG] STDERR (truncated): 
+[2025-10-09T16:55:15.580+0000] {docker.py:438} INFO -    📤 [DEBUG] CTRL_ERR: {"metadata":{},"status":"Success"}
+[2025-10-09T16:55:15.581+0000] {docker.py:438} INFO -    ⏳ [DEBUG] Waiting up to 60s for restart count to increment...
+[2025-10-09T16:55:15.582+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.582+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.583+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.584+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.584+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.587+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.589+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.590+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.593+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.596+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.596+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.596+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.597+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.597+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.599+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.601+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.601+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.601+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.602+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.602+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.602+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.603+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.603+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.606+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.606+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.607+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.610+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.611+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 81
+[2025-10-09T16:55:15.612+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=81
+[2025-10-09T16:55:15.612+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 81 (before was 81)
+[2025-10-09T16:55:15.614+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T16:55:15.614+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T16:55:15.614+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T16:55:15.615+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T16:55:15.615+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 81)
+[2025-10-09T16:55:15.616+0000] {docker.py:438} INFO -    ✅ [DEBUG] Restart observed: 81 -> 82
+[2025-10-09T16:55:15.617+0000] {docker.py:438} INFO -    🎉 [DEBUG] Restart verified, breaking out of strategies loop
+[2025-10-09T16:57:16.885+0000] {job.py:229} INFO - Heartbeat recovered after 121.12 seconds
+[2025-10-09T17:00:24.137+0000] {job.py:229} INFO - Heartbeat recovered after 207.99 seconds
+[2025-10-09T17:02:51.492+0000] {job.py:229} INFO - Heartbeat recovered after 174.91 seconds
+[2025-10-09T17:03:08.233+0000] {job.py:229} INFO - Heartbeat recovered after 16.98 seconds
+[2025-10-09T17:03:36.976+0000] {job.py:229} INFO - Heartbeat recovered after 28.82 seconds
+[2025-10-09T17:03:44.191+0000] {docker.py:438} INFO - [32m[2025-10-09 17:03:37 INFO] Let's rollback...
+[2025-10-09T17:03:44.284+0000] {docker.py:438} INFO - [32m[2025-10-09 17:03:37 INFO] Rollback: verify-pods-running
+[2025-10-09T17:03:44.285+0000] {docker.py:438} INFO - [32m[2025-10-09 17:03:37 INFO] Probe: verify-pods-running
+[2025-10-09T17:03:46.981+0000] {docker.py:438} INFO - [32m[2025-10-09 17:03:46 INFO] Experiment ended with status: completed
+[2025-10-09T17:03:46.982+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:46.983+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:46.983+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:46.983+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:46.983+0000] {docker.py:438} INFO - ✅ [DEBUG] Restart recorded for compose-post-service-67bcfcd5ff-bqrz2: 81 -> 82
+[2025-10-09T17:03:46.983+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:46.984+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T17:03:46.984+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T17:03:46.984+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 1
+[2025-10-09T17:03:46.984+0000] {docker.py:438} INFO -    📦 [DEBUG] compose-post-service-67bcfcd5ff-bqrz2: restart_verified
+[2025-10-09T17:03:46.984+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 376s
+[2025-10-09T17:03:46.985+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:46.985+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T17:03:46.985+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #3 at 2025-10-09 16:55:20
+[2025-10-09T17:03:46.985+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T17:03:46.985+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T17:03:46.986+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T17:03:47.086+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T17:03:47.087+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T17:03:47.087+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T17:03:47.088+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T17:03:47.089+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T17:03:47.089+0000] {docker.py:438} INFO - ❌ [DEBUG] Error listing pods in namespace default: HTTPSConnectionPool(host='social-networking-aks-dev-1-dns-jw0tgvoq.hcp.westus2.azmk8s.io', port=443): Max retries exceeded with url: /api/v1/namespaces/default/pods?labelSelector=app%3Dcompose-post-service (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x710104882850>: Failed to resolve 'social-networking-aks-dev-1-dns-jw0tgvoq.hcp.westus2.azmk8s.io' ([Errno -3] Temporary failure in name resolution)"))
+[2025-10-09T17:03:47.089+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 0
+[2025-10-09T17:03:47.090+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:47.090+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 0 pods
+[2025-10-09T17:03:47.090+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 0 entries
+[2025-10-09T17:03:47.090+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T17:03:47.090+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 182s
+[2025-10-09T17:03:47.091+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:47.091+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T17:03:47.091+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #4 at 2025-10-09 16:58:34
+[2025-10-09T17:03:47.091+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T17:03:47.091+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T17:03:47.092+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T17:03:47.092+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T17:03:47.092+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T17:03:47.092+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T17:03:47.092+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T17:03:47.093+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:47.094+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T17:03:47.094+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T17:03:47.094+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.094+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.094+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.095+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.095+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 82
+[2025-10-09T17:03:47.095+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T17:03:47.095+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T17:03:47.095+0000] {docker.py:438} INFO -    [DEBUG] Exec stream opened successfully, running command...
+[2025-10-09T17:03:47.096+0000] {docker.py:438} INFO -    [DEBUG] run_forever returned/finished
+[2025-10-09T17:03:47.096+0000] {docker.py:438} INFO -    📤 [DEBUG] STDOUT (truncated): 
+[2025-10-09T17:03:47.096+0000] {docker.py:438} INFO -    📤 [DEBUG] STDERR (truncated): 
+[2025-10-09T17:03:47.096+0000] {docker.py:438} INFO -    📤 [DEBUG] CTRL_ERR: {"metadata":{},"status":"Success"}
+[2025-10-09T17:03:47.096+0000] {docker.py:438} INFO -    ⏳ [DEBUG] Waiting up to 60s for restart count to increment...
+[2025-10-09T17:03:47.097+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.097+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.097+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.097+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.098+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.098+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.098+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.098+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.098+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.099+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.099+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.099+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.099+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.099+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.100+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.100+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.100+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.100+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.101+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.101+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.101+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.101+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.101+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.102+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.102+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.102+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.102+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.102+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 82
+[2025-10-09T17:03:47.103+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=82
+[2025-10-09T17:03:47.104+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 82 (before was 82)
+[2025-10-09T17:03:47.104+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.104+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.104+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 83
+[2025-10-09T17:03:47.104+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=83
+[2025-10-09T17:03:47.105+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 83 (before was 82)
+[2025-10-09T17:03:47.105+0000] {docker.py:438} INFO -    ✅ [DEBUG] Restart observed: 82 -> 83
+[2025-10-09T17:03:47.105+0000] {docker.py:438} INFO -    🎉 [DEBUG] Restart verified, breaking out of strategies loop
+[2025-10-09T17:03:47.105+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T17:03:47.105+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 83
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=83
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO - ✅ [DEBUG] Restart recorded for compose-post-service-67bcfcd5ff-bqrz2: 82 -> 83
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T17:03:47.106+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T17:03:47.107+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 1
+[2025-10-09T17:03:47.107+0000] {docker.py:438} INFO -    📦 [DEBUG] compose-post-service-67bcfcd5ff-bqrz2: restart_verified
+[2025-10-09T17:03:47.107+0000] {docker.py:438} INFO - ⏰ [DEBUG] Less than 5 seconds remaining (-126s). Stopping continuous run.
+[2025-10-09T17:03:47.107+0000] {docker.py:438} INFO - 
+[2025-10-09T17:03:47.107+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T17:03:47.108+0000] {docker.py:438} INFO - 🏁 [DEBUG] Continuous restart experiment completed
+[2025-10-09T17:03:47.108+0000] {docker.py:438} INFO - 📈 Total cycles: 4
+[2025-10-09T17:03:47.108+0000] {docker.py:438} INFO - 📦 Total containers restarted: 3
+[2025-10-09T17:03:47.108+0000] {docker.py:438} INFO - ⏱️ Total duration: 526 seconds
+[2025-10-09T17:03:47.108+0000] {docker.py:438} INFO - 📊 Average cycle time: 131.5 seconds
+[2025-10-09T17:03:46.230+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 233, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/local_task_job_runner.py", line 284, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2358, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 872, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2344, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T17:03:47.232+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T17:03:50.683+0000] {docker.py:438} INFO - Container restart experiment completed successfully
+[2025-10-09T17:03:53.046+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T17:03:58.251+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3638, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/xcom.py", line 224, in set
+    dag_run_id = session.query(DagRun.id).filter_by(dag_id=dag_id, run_id=run_id).scalar()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T17:03:58.484+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=Container_Restart, task_id=apply_container_restart_docker, run_id=scheduled__2025-10-09T15:45:00+00:00, execution_date=20251009T154500, start_date=20251009T163155, end_date=20251009T170358
+[2025-10-09T17:03:58.594+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-09T17:03:58.596+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 7053 for task apply_container_restart_docker ((psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 2071)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3638, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/xcom.py", line 224, in set
+    dag_run_id = session.query(DagRun.id).filter_by(dag_id=dag_id, run_id=run_id).scalar()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T17:03:58.741+0000] {job.py:229} INFO - Heartbeat recovered after 22.40 seconds
+[2025-10-09T17:03:58.809+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-10-09T17:03:58.947+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-09T17:03:58.981+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

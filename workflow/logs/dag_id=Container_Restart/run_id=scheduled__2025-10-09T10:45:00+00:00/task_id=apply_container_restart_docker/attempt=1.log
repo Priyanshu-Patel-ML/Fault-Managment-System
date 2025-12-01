@@ -1,0 +1,1303 @@
+[2025-10-09T11:00:01.619+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-09T11:00:01.640+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T10:45:00+00:00 [queued]>
+[2025-10-09T11:00:01.649+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T10:45:00+00:00 [queued]>
+[2025-10-09T11:00:01.650+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-10-09T11:00:01.671+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-10-09 10:45:00+00:00
+[2025-10-09T11:00:01.690+0000] {standard_task_runner.py:72} INFO - Started process 2012 to run task
+[2025-10-09T11:00:01.699+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Container_Restart', 'apply_container_restart_docker', 'scheduled__2025-10-09T10:45:00+00:00', '--job-id', '672', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp17p9osbw']
+[2025-10-09T11:00:01.700+0000] {standard_task_runner.py:105} INFO - Job 672: Subtask apply_container_restart_docker
+[2025-10-09T11:00:01.778+0000] {task_command.py:467} INFO - Running <TaskInstance: Container_Restart.apply_container_restart_docker scheduled__2025-10-09T10:45:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-09T11:00:01.941+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Container_Restart' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-10-09T10:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-09T10:45:00+00:00'
+[2025-10-09T11:00:01.944+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-09T11:00:01.996+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-10-09T11:00:02.415+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-09T11:00:11.295+0000] {docker.py:438} INFO - 
+[2025-10-09T11:00:11.300+0000] {docker.py:438} INFO - total 3128
+[2025-10-09T11:00:11.301+0000] {docker.py:438} INFO - drwxr-xr-x 5    1000 1000    4096 Oct  9 06:39 .
+[2025-10-09T11:00:11.301+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-10-09T11:00:11.302+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-10-09T11:00:11.303+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-10-09T11:00:11.303+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1243 Sep 30 18:21 CPU_Stress_Test_Azure.yaml
+[2025-10-09T11:00:11.304+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-10-09T11:00:11.304+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1233 Sep 30 18:18 Load_Test_Azure.yaml
+[2025-10-09T11:00:11.304+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1267 Oct  9 06:39 Memory_Stress_Test_Azure.yaml
+[2025-10-09T11:00:11.305+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-10-09T11:00:11.305+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct  9 06:43 __pycache__
+[2025-10-09T11:00:11.305+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-10-09T11:00:11.306+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root 2899947 Oct  9 10:55 chaostoolkit.log
+[2025-10-09T11:00:11.306+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-10-09T11:00:11.306+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-10-09T11:00:11.307+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-10-09T11:00:11.307+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-10-09T11:00:11.307+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1313 Oct  9 06:32 container_restart_Azure.yaml
+[2025-10-09T11:00:11.308+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    6679 Oct  9 06:37 continuos_memory_stress.py
+[2025-10-09T11:00:11.308+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-10-09T11:00:11.308+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-10-09T11:00:11.309+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-10-09T11:00:11.309+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1034 Sep 30 18:27 cordon_uncordon_node_Azure.yaml
+[2025-10-09T11:00:11.309+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-10-09T11:00:11.310+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1771 Sep 24 07:40 db_cleanup.json
+[2025-10-09T11:00:11.310+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-10-09T11:00:11.310+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1169 Sep 30 18:15 db_cleanup_docker_Azure.yaml
+[2025-10-09T11:00:11.311+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1076 Oct  9 06:38 gradual_memory_stress.json
+[2025-10-09T11:00:11.311+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3295 Oct  9 10:52 journal.json
+[2025-10-09T11:00:11.311+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root   37152 Oct  9 11:00 k6_continuous_load.log
+[2025-10-09T11:00:11.312+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3953 Oct  9 10:50 k6_continuous_summary.json
+[2025-10-09T11:00:11.312+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-10-09T11:00:11.312+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-10-09T11:00:11.313+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-10-09T11:00:11.313+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-10-09T11:00:11.313+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-10-09T11:00:11.314+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-10-09T11:00:11.314+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-10-09T11:00:11.314+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-10-09T11:00:11.315+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-10-09T11:00:11.315+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-10-09T11:00:11.316+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-10-09T11:00:11.316+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-10-09T11:00:11.318+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-10-09T11:00:11.318+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-10-09T11:00:11.319+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-10-09T11:00:11.319+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1299 Sep 30 18:14 redis_memory_stress_Azure.yaml
+[2025-10-09T11:00:11.321+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-10-09T11:00:11.321+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct  8 01:13 scripts
+[2025-10-09T11:00:11.322+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-10-09T11:00:11.322+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-10-09T11:00:11.323+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-10-09T11:00:11.323+0000] {docker.py:438} INFO - Starting continuous container restart experiment...
+[2025-10-09T11:00:11.919+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:11 INFO] Validating the experiment's syntax
+[2025-10-09T11:00:12.209+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Experiment looks valid
+[2025-10-09T11:00:12.210+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Running experiment: Continuous Container Restart Experiment
+[2025-10-09T11:00:12.212+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Steady-state strategy: default
+[2025-10-09T11:00:12.213+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Rollbacks strategy: default
+[2025-10-09T11:00:12.214+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-09T11:00:12.214+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Playing your experiment's method now...
+[2025-10-09T11:00:12.215+0000] {docker.py:438} INFO - [32m[2025-10-09 11:00:12 INFO] Action: continuous-container-restart
+[2025-10-09T11:00:47.287+0000] {docker.py:438} INFO - 🚀 [DEBUG] Entered restart_containers_continuous()
+[2025-10-09T11:00:47.288+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, interval=5, duration=400, ns=default, container_name=compose-post-service
+[2025-10-09T11:00:47.288+0000] {docker.py:438} INFO - 
+[2025-10-09T11:00:47.288+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:00:47.288+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #1 at 2025-10-09 11:00:12
+[2025-10-09T11:00:47.289+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:00:47.289+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:00:47.289+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:00:47.289+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:00:47.289+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:00:47.290+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:00:47.290+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:00:47.290+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:00:47.290+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:00:47.290+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:00:47.291+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:00:47.291+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:00:47.291+0000] {docker.py:438} INFO - 
+[2025-10-09T11:00:47.291+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:00:47.291+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:00:47.292+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.292+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.292+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.292+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.292+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:00:47.293+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:00:47.293+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:00:47.293+0000] {docker.py:438} INFO -    [DEBUG] Exec stream opened successfully, running command...
+[2025-10-09T11:00:47.293+0000] {docker.py:438} INFO -    [DEBUG] run_forever returned/finished
+[2025-10-09T11:00:47.293+0000] {docker.py:438} INFO -    📤 [DEBUG] STDOUT (truncated): 
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO -    📤 [DEBUG] STDERR (truncated): 
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO -    📤 [DEBUG] CTRL_ERR: {"metadata":{},"status":"Success"}
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO -    ⏳ [DEBUG] Waiting up to 60s for restart count to increment...
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.294+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.295+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.295+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.295+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.295+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.296+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.296+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.296+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.296+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.296+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.297+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.297+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.297+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.297+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.297+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.298+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.299+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.299+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.299+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.299+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.299+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.300+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.300+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.300+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.300+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.300+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.301+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.301+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.301+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.301+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.301+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.302+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.302+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.302+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.302+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.302+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.303+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.303+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.303+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.303+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.303+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.304+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.304+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.304+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.304+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.304+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.305+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.305+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.305+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.305+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.305+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.306+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.306+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.306+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.306+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.306+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.307+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.307+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.307+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.307+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.308+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.308+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.308+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.308+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.308+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.309+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.310+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:00:47.310+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:00:47.310+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:00:47.310+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:00:47.310+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:00:47.311+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.423+0000] {docker.py:438} INFO - [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.423+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.424+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.425+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.426+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.426+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.426+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.427+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.428+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.429+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.429+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.429+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.430+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.430+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.430+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.432+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.432+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.432+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.432+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.433+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.433+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.435+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.435+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.435+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.435+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.436+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.436+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.437+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.438+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.438+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.438+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.438+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.439+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.439+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.440+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.441+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.441+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.441+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.441+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.442+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.442+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.442+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.443+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.443+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.443+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.443+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.444+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.444+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.447+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.448+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.448+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.448+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.448+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.449+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.449+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.449+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.449+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.450+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.450+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.450+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.451+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 45 (before was 45)
+[2025-10-09T11:01:21.451+0000] {docker.py:438} INFO -    ⚠️ [DEBUG] This strategy did not result in a restart, going to next strategy if any
+[2025-10-09T11:01:21.453+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:01:21.453+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:01:21.454+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:14 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:01:21.454+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.454+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:01:21.455+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:01:21.455+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:14 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:01:21.456+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.456+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:01:21.456+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:01:21.456+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:15 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:01:21.457+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.457+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:01:21.458+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.459+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:01:21.459+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:01:21.459+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:01:21.460+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:01:21.460+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': '', 'stderr': '', 'ctrl_err': '{"metadata":{},"status":"Success"}'}
+[2025-10-09T11:01:21.460+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 337s
+[2025-10-09T11:01:21.461+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.461+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:01:21.461+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #2 at 2025-10-09 11:01:20
+[2025-10-09T11:01:21.462+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:01:21.463+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:01:21.463+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:01:21.463+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:01:21.465+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:01:21.465+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:01:21.465+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:01:21.466+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:01:21.466+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:01:21.466+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:01:21.467+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:01:21.467+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:01:21.467+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.468+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:01:21.468+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:01:21.469+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:01:21.469+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:01:21.470+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:01:21.471+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:01:21.471+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:01:21.471+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:01:21.471+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:01:21.472+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:01:21.472+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:21 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:01:21.473+0000] {docker.py:438} INFO - 
+[2025-10-09T11:01:21.474+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:01:21.474+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:01:21.476+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:21 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:37.875+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 207, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 335, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T11:03:37.945+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T11:03:38.081+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:03:38.082+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.082+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:21 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.085+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.086+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:03:38.086+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.086+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:22 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.087+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.087+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:03:38.088+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.089+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:03:38.090+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:03:38.090+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:03:38.091+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:03:38.092+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:03:38.093+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 330s
+[2025-10-09T11:03:38.093+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.094+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:38.095+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #3 at 2025-10-09 11:01:27
+[2025-10-09T11:03:38.095+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:38.095+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:03:38.096+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:03:38.097+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:03:38.098+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:03:38.100+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:03:38.102+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:03:38.102+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:03:38.103+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:03:38.103+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:03:38.104+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:03:38.104+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:03:38.105+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.106+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:03:38.106+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:03:38.106+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:03:38.107+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:03:38.107+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:03:38.107+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:03:38.107+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:03:38.108+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:03:38.108+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:03:38.108+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.108+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:27 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.108+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.109+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:03:38.109+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.109+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:28 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.109+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.110+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:03:38.110+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.110+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:28 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.110+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.110+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:03:38.111+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.111+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:29 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.111+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.111+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:03:38.112+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.112+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:03:38.112+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:03:38.112+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:03:38.113+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:03:38.113+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:03:38.113+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 323s
+[2025-10-09T11:03:38.113+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.114+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:38.114+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #4 at 2025-10-09 11:01:34
+[2025-10-09T11:03:38.114+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:38.114+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:03:38.114+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:03:38.115+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:03:38.115+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:03:38.115+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:03:38.115+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:03:38.116+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:03:38.116+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:03:38.116+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:03:38.116+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:03:38.116+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:03:38.117+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.117+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:03:38.117+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:03:38.117+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:03:38.117+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:03:38.118+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:03:38.118+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:03:38.118+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:03:38.118+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:03:38.119+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:03:38.119+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.119+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:01:35 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.119+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.119+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:03:38.120+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.120+0000] {docker.py:438} INFO - Reason: [Errno 32] Broken pipe
+[2025-10-09T11:03:38.120+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.120+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:03:38.120+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.121+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:37 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.121+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.121+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:03:38.121+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:38.122+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:37 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:38.122+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.122+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:03:38.122+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:38.122+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:03:38.123+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:03:38.123+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:03:38.123+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:03:38.123+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:03:43.018+0000] {job.py:229} INFO - Heartbeat recovered after 130.37 seconds
+[2025-10-09T11:03:57.879+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 194s
+[2025-10-09T11:03:57.879+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.880+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.880+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #5 at 2025-10-09 11:03:43
+[2025-10-09T11:03:57.880+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.881+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:03:57.881+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:03:57.882+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:03:57.883+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:03:57.883+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:03:57.884+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:03:57.885+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:03:57.886+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:03:57.887+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:03:57.887+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:03:57.888+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:03:57.889+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.889+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:03:57.891+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:03:57.892+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:03:57.892+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:03:57.893+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:03:57.893+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:03:57.894+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:03:57.894+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:03:57.895+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:03:57.896+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.896+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:43 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.897+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.897+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:03:57.898+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.898+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:44 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.899+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.900+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:03:57.900+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.901+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:44 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.902+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.903+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:03:57.903+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.903+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:45 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.904+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.904+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:03:57.904+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.906+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:03:57.907+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:03:57.908+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:03:57.909+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:03:57.909+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:03:57.911+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 187s
+[2025-10-09T11:03:57.912+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.912+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.912+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #6 at 2025-10-09 11:03:50
+[2025-10-09T11:03:57.912+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.913+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:03:57.913+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:03:57.914+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:03:57.915+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:03:57.915+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:03:57.915+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:03:57.916+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:03:57.916+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:03:57.916+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:03:57.919+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:03:57.919+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:03:57.919+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.919+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:03:57.920+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:03:57.920+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:03:57.921+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:03:57.922+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:03:57.922+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:03:57.922+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:03:57.923+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:03:57.923+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:03:57.924+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.924+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:51 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.925+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.925+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:03:57.926+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.927+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:51 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.927+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.927+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:03:57.928+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.928+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:52 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.928+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.930+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:03:57.931+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:03:57.931+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:52 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:03:57.931+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.932+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:03:57.932+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.932+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:03:57.933+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:03:57.933+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:03:57.933+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:03:57.933+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:03:57.934+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 180s
+[2025-10-09T11:03:57.934+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.935+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.935+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #7 at 2025-10-09 11:03:57
+[2025-10-09T11:03:57.936+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:03:57.936+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:03:57.937+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:03:57.937+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:03:57.937+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:03:57.938+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:03:57.939+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:03:57.939+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:03:57.939+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:03:57.940+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:03:57.940+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:03:57.940+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:03:57.941+0000] {docker.py:438} INFO - 
+[2025-10-09T11:03:57.941+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:04:12.482+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:04:12.487+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:04:12.487+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:04:12.487+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:04:12.488+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:04:12.488+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:04:12.489+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:04:12.490+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:04:12.490+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.490+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:58 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.490+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.491+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:04:12.491+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.493+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:58 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.494+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.494+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:04:12.495+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.495+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:59 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.495+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.495+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:04:12.496+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.496+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:03:59 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.496+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.497+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:04:12.497+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.497+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:04:12.497+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:04:12.498+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:04:12.498+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:04:12.499+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:04:12.500+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 173s
+[2025-10-09T11:04:12.500+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.500+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:04:12.500+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #8 at 2025-10-09 11:04:04
+[2025-10-09T11:04:12.501+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:04:12.501+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:04:12.502+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:04:12.503+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:04:12.503+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:04:12.503+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:04:12.503+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:04:12.504+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:04:12.504+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:04:12.505+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:04:12.506+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:04:12.507+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:04:12.507+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.507+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:04:12.507+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:04:12.508+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:04:12.508+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:04:12.508+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:04:12.509+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:04:12.510+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:04:12.510+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:04:12.510+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:04:12.511+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.511+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:05 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.512+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.512+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:04:12.513+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.513+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:05 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.514+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.515+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:04:12.515+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.515+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:05 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.516+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.516+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:04:12.516+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.517+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:06 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.518+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.518+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:04:12.518+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.519+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:04:12.519+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:04:12.519+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:04:12.520+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:04:12.521+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:04:12.521+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 166s
+[2025-10-09T11:04:12.521+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.522+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:04:12.523+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #9 at 2025-10-09 11:04:11
+[2025-10-09T11:04:12.523+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:04:12.523+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:04:12.524+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:04:12.524+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:04:12.525+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:04:12.526+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:04:12.526+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:04:12.526+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:04:12.527+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:04:12.527+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:04:12.527+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:04:12.528+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:04:12.528+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.529+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:04:12.530+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:04:12.530+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:04:12.530+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:04:12.531+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 45
+[2025-10-09T11:04:12.532+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=45
+[2025-10-09T11:04:12.532+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 45
+[2025-10-09T11:04:12.533+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:04:12.533+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:04:12.533+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.534+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:12 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:04:12.535+0000] {docker.py:438} INFO - 
+[2025-10-09T11:04:12.535+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:04:12.536+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:04:12.536+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:12 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:05:34.945+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 207, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 335, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T11:05:35.131+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T11:05:40.183+0000] {job.py:229} INFO - Heartbeat recovered after 86.60 seconds
+[2025-10-09T11:06:03.880+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:06:03.881+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:06:03.881+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:12 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:06:03.882+0000] {docker.py:438} INFO - 
+[2025-10-09T11:06:03.883+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:06:03.883+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:06:03.885+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:04:13 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:06:03.886+0000] {docker.py:438} INFO - 
+[2025-10-09T11:06:03.886+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:06:03.886+0000] {docker.py:438} INFO - 
+[2025-10-09T11:06:03.886+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:06:03.887+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:06:03.887+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:06:03.887+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:06:03.888+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 45, 'stdout': None, 'stderr': None, 'ctrl_err': None}
+[2025-10-09T11:06:03.888+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 159s
+[2025-10-09T11:06:03.889+0000] {docker.py:438} INFO - 
+[2025-10-09T11:06:03.889+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:06:03.891+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #10 at 2025-10-09 11:04:20
+[2025-10-09T11:06:03.892+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:06:03.892+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-10-09T11:06:03.892+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-10-09T11:06:03.892+0000] {docker.py:438} INFO - 🔑 [DEBUG] Kubernetes API client created
+[2025-10-09T11:06:03.893+0000] {docker.py:438} INFO - 🔍 [DEBUG] Selecting pods now...
+[2025-10-09T11:06:03.893+0000] {docker.py:438} INFO - 🔍 [DEBUG] Entered _select_pods()
+[2025-10-09T11:06:03.893+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, all=False, rand=True, mode=fixed, qty=2, ns=default, order=alphabetic
+[2025-10-09T11:06:03.894+0000] {docker.py:438} INFO -    [DEBUG] Listing pods with label_selector=app=compose-post-service
+[2025-10-09T11:06:03.894+0000] {docker.py:438} INFO - 📋 [DEBUG] Found 1 pods initially
+[2025-10-09T11:06:03.894+0000] {docker.py:438} INFO - 🎲 [DEBUG] Random selection chosen: 1 pods
+[2025-10-09T11:06:03.894+0000] {docker.py:438} INFO - ✅ [DEBUG] Selected pods: ['compose-post-service-67bcfcd5ff-bqrz2']
+[2025-10-09T11:06:03.895+0000] {docker.py:438} INFO - 📋 [DEBUG] Pods selected: 1
+[2025-10-09T11:06:03.895+0000] {docker.py:438} INFO - 
+[2025-10-09T11:06:03.895+0000] {docker.py:438} INFO - 🎯 [DEBUG] Processing pod: compose-post-service-67bcfcd5ff-bqrz2
+[2025-10-09T11:06:03.896+0000] {docker.py:438} INFO - 📦 [DEBUG] Using provided container: compose-post-service
+[2025-10-09T11:06:03.896+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.897+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.898+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.898+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.898+0000] {docker.py:438} INFO - 📊 [DEBUG] Restart count before action: 46
+[2025-10-09T11:06:03.899+0000] {docker.py:438} INFO - 🔧 [DEBUG] Restart strategies to try: [['sh', '-c', 'kill -INT 1'], ['sh', '-c', 'kill -2 1'], ['sh', '-c', 'kill -TERM 1'], ['sh', '-c', 'kill -9 1']]
+[2025-10-09T11:06:03.900+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #1: sh -c kill -INT 1
+[2025-10-09T11:06:03.900+0000] {docker.py:438} INFO -    [DEBUG] Exec stream opened successfully, running command...
+[2025-10-09T11:06:03.900+0000] {docker.py:438} INFO -    [DEBUG] run_forever returned/finished
+[2025-10-09T11:06:03.900+0000] {docker.py:438} INFO -    📤 [DEBUG] STDOUT (truncated): 
+[2025-10-09T11:06:03.901+0000] {docker.py:438} INFO -    📤 [DEBUG] STDERR (truncated): 
+[2025-10-09T11:06:03.901+0000] {docker.py:438} INFO -    📤 [DEBUG] CTRL_ERR: {"metadata":{},"status":"Failure","message":"command terminated with non-zero exit code: error executing command [sh -c kill -INT 1], exit code 137","reason":"NonZeroExitCode","details":{"causes":[{"reason":"ExitCode","message":"137"}]}}
+[2025-10-09T11:06:03.901+0000] {docker.py:438} INFO -    ⏳ [DEBUG] Waiting up to 60s for restart count to increment...
+[2025-10-09T11:06:03.902+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.902+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.904+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.904+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.905+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.905+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.905+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.906+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.906+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.906+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.907+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.907+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.907+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.909+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.909+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.910+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.910+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.910+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.911+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.911+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.911+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.912+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.912+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.912+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.912+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.913+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.913+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.914+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.915+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.915+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.916+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.917+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.917+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.918+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.918+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.918+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.919+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.919+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.919+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.921+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.921+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.922+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.923+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.923+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.923+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.923+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.924+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.924+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.925+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.926+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.927+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.927+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.927+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.927+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.928+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.928+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.929+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.930+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.930+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.930+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.930+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:06:03.931+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:06:03.932+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:06:03.932+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:06:03.933+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:06:03.933+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:07:35.368+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 207, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 335, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-10-09T11:07:35.390+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-10-09T11:07:37.241+0000] {docker.py:438} INFO - [32m[2025-10-09 11:07:37 INFO] Let's rollback...
+[2025-10-09T11:07:37.242+0000] {docker.py:438} INFO - [32m[2025-10-09 11:07:37 INFO] Rollback: verify-pods-running
+[2025-10-09T11:07:37.244+0000] {docker.py:438} INFO - [32m[2025-10-09 11:07:37 INFO] Probe: verify-pods-running
+[2025-10-09T11:07:37.724+0000] {docker.py:438} INFO - [32m[2025-10-09 11:07:37 INFO] Experiment ended with status: completed
+[2025-10-09T11:07:37.737+0000] {docker.py:438} INFO - [DEBUG] Found 1 container_status entries
+[2025-10-09T11:07:37.737+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:07:37.738+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:07:37.738+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:07:37.739+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:07:37.740+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:07:37.743+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:07:37.744+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:07:37.744+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:07:37.747+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:07:37.748+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:07:37.748+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:07:37.748+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:07:37.749+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:07:37.749+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:07:37.755+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:07:37.756+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:07:37.758+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:07:37.759+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:07:37.759+0000] {docker.py:438} INFO - 🔍 [DEBUG] _get_restart_count() called for pod=compose-post-service-67bcfcd5ff-bqrz2, ns=default, container=compose-post-service
+[2025-10-09T11:07:37.761+0000] {docker.py:438} INFO -    [DEBUG] Found 1 container_status entries
+[2025-10-09T11:07:37.762+0000] {docker.py:438} INFO -    [DEBUG] container: compose-post-service, restart_count: 46
+[2025-10-09T11:07:37.762+0000] {docker.py:438} INFO -    ✅ [DEBUG] Matched container compose-post-service, restart_count=46
+[2025-10-09T11:07:37.764+0000] {docker.py:438} INFO -    [DEBUG] Polled restart count: 46 (before was 46)
+[2025-10-09T11:07:37.765+0000] {docker.py:438} INFO -    ⚠️ [DEBUG] This strategy did not result in a restart, going to next strategy if any
+[2025-10-09T11:07:37.765+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #2: sh -c kill -2 1
+[2025-10-09T11:07:37.768+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:07:37.771+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:07:36 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:07:37.771+0000] {docker.py:438} INFO - 
+[2025-10-09T11:07:37.772+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #3: sh -c kill -TERM 1
+[2025-10-09T11:07:37.772+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:07:37.774+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:07:36 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:07:37.776+0000] {docker.py:438} INFO - 
+[2025-10-09T11:07:37.777+0000] {docker.py:438} INFO - ➡️ [DEBUG] Trying restart strategy #4: sh -c kill -9 1
+[2025-10-09T11:07:37.777+0000] {docker.py:438} INFO -    ❌ [DEBUG] Failed to open exec stream for pod compose-post-service-67bcfcd5ff-bqrz2, container compose-post-service: (0)
+[2025-10-09T11:07:37.779+0000] {docker.py:438} INFO - Reason: Handshake status 500 Internal Server Error -+-+- {'date': 'Thu, 09 Oct 2025 11:07:37 GMT', 'connection': 'close', 'content-length': '0'} -+-+- b''
+[2025-10-09T11:07:37.780+0000] {docker.py:438} INFO - 
+[2025-10-09T11:07:37.780+0000] {docker.py:438} INFO - ❌ [DEBUG] All strategies exhausted for pod compose-post-service-67bcfcd5ff-bqrz2 and no restart observed
+[2025-10-09T11:07:37.784+0000] {docker.py:438} INFO - 
+[2025-10-09T11:07:37.785+0000] {docker.py:438} INFO - 🏁 [DEBUG] restart_containers() finished. Processed 1 pods
+[2025-10-09T11:07:37.785+0000] {docker.py:438} INFO -    [DEBUG] restart_containers returned 1 entries
+[2025-10-09T11:07:37.785+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-10-09T11:07:37.786+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed restarts this cycle: 1
+[2025-10-09T11:07:37.786+0000] {docker.py:438} INFO -    - compose-post-service-67bcfcd5ff-bqrz2 status=restart_failed details={'pod_name': 'compose-post-service-67bcfcd5ff-bqrz2', 'container_name': 'compose-post-service', 'status': 'restart_failed', 'before_count': 46, 'stdout': '', 'stderr': '', 'ctrl_err': '{"metadata":{},"status":"Failure","message":"command terminated with non-zero exit code: error executing command [sh -c kill -INT 1], exit code 137","reason":"NonZeroExitCode","details":{"causes":[{"reason":"ExitCode","message":"137"}]}}'}
+[2025-10-09T11:07:37.790+0000] {docker.py:438} INFO - ⏰ [DEBUG] Less than 5 seconds remaining (-45s). Stopping continuous run.
+[2025-10-09T11:07:37.790+0000] {docker.py:438} INFO - 
+[2025-10-09T11:07:37.791+0000] {docker.py:438} INFO - ============================================================
+[2025-10-09T11:07:37.791+0000] {docker.py:438} INFO - 🏁 [DEBUG] Continuous restart experiment completed
+[2025-10-09T11:07:37.791+0000] {docker.py:438} INFO - 📈 Total cycles: 10
+[2025-10-09T11:07:37.792+0000] {docker.py:438} INFO - 📦 Total containers restarted: 0
+[2025-10-09T11:07:37.792+0000] {docker.py:438} INFO - ⏱️ Total duration: 445 seconds
+[2025-10-09T11:07:37.796+0000] {docker.py:438} INFO - 📊 Average cycle time: 44.5 seconds
+[2025-10-09T11:07:38.625+0000] {docker.py:438} INFO - Container restart experiment completed successfully
+[2025-10-09T11:07:39.580+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-09T11:07:39.580+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Container_Restart, task_id=apply_container_restart_docker, run_id=scheduled__2025-10-09T10:45:00+00:00, execution_date=20251009T104500, start_date=20251009T110001, end_date=20251009T110739
+[2025-10-09T11:07:39.714+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-09T11:07:39.813+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-09T11:07:39.824+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

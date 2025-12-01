@@ -1,0 +1,35 @@
+[2025-10-10T02:55:02.180+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-10T02:55:02.234+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-10T02:00:00+00:00 [queued]>
+[2025-10-10T02:55:02.250+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-10T02:00:00+00:00 [queued]>
+[2025-10-10T02:55:02.250+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-10-10T02:55:02.278+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_continuous_multi_endpoint_load_test> on 2025-10-10 02:00:00+00:00
+[2025-10-10T02:55:02.293+0000] {standard_task_runner.py:72} INFO - Started process 282 to run task
+[2025-10-10T02:55:02.299+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Continuous_Load', 'run_continuous_multi_endpoint_load_test', 'scheduled__2025-10-10T02:00:00+00:00', '--job-id', '7178', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp2hp8ozqn']
+[2025-10-10T02:55:02.302+0000] {standard_task_runner.py:105} INFO - Job 7178: Subtask run_continuous_multi_endpoint_load_test
+[2025-10-10T02:55:02.422+0000] {task_command.py:467} INFO - Running <TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-10-10T02:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-10T02:55:02.605+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Continuous_Load' AIRFLOW_CTX_TASK_ID='run_continuous_multi_endpoint_load_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-10T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-10T02:00:00+00:00'
+[2025-10-10T02:55:02.606+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-10T02:55:02.676+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-10T02:55:03.504+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-10T02:55:35.891+0000] {docker.py:438} INFO - 
+[2025-10-10T02:55:35.898+0000] {docker.py:438} INFO - Starting Continuous Multi-Endpoint Load Test...
+[2025-10-10T02:55:37.893+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:37 INFO] Validating the experiment's syntax
+[2025-10-10T02:55:38.297+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Experiment looks valid
+[2025-10-10T02:55:38.298+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Running experiment: Continuous Load Test - POST Compose & GET Timeline APIs
+[2025-10-10T02:55:38.332+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Steady-state strategy: default
+[2025-10-10T02:55:38.333+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Rollbacks strategy: default
+[2025-10-10T02:55:38.333+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-10T02:55:38.334+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Playing your experiment's method now...
+[2025-10-10T02:55:38.334+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] Action: Continuous multi-endpoint load test
+[2025-10-10T02:55:38.492+0000] {docker.py:438} INFO - [32m[2025-10-10 02:55:38 INFO] ✅ Obtained login_token (JWT): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lc3RhbXAiOiIxNzYwMDY0OTM4IiwidHRsIjoiMzYwMCIsInVzZXJfaWQiOiI0MDA0Njk5MjM2MjAwOTUxODA4IiwidXNlcm5hbWUiOiJqYWdhbiJ9.nQASNp6TbmnbJEgSz4wLLrFX4ZTrxKr38h3d1uqpSyQ
+[2025-10-10T03:45:43.943+0000] {docker.py:438} INFO - [31m[2025-10-10 03:45:43 ERROR] ❌ Continuous load test failed to start
+[2025-10-10T03:45:43.944+0000] {docker.py:438} INFO - [32m[2025-10-10 03:45:43 INFO] k6 continuous output logged to k6_continuous_load.log
+[2025-10-10T03:45:43.945+0000] {docker.py:438} INFO - [32m[2025-10-10 03:45:43 INFO] Let's rollback...
+[2025-10-10T03:45:43.945+0000] {docker.py:438} INFO - [32m[2025-10-10 03:45:43 INFO] No declared rollbacks, let's move on.
+[2025-10-10T03:45:43.946+0000] {docker.py:438} INFO - [32m[2025-10-10 03:45:43 INFO] Experiment ended with status: completed
+[2025-10-10T03:45:44.378+0000] {docker.py:438} INFO - Continuous load test completed successfully
+[2025-10-10T03:45:45.196+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-10T03:45:45.199+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Continuous_Load, task_id=run_continuous_multi_endpoint_load_test, run_id=scheduled__2025-10-10T02:00:00+00:00, execution_date=20251010T020000, start_date=20251010T025502, end_date=20251010T034545
+[2025-10-10T03:45:45.326+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-10T03:45:45.372+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-10T03:45:45.377+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

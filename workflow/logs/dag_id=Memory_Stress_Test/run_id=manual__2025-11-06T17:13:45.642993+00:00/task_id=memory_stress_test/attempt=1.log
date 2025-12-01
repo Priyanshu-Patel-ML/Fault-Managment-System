@@ -1,0 +1,177 @@
+[2025-11-06T17:23:29.078+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-06T17:23:29.109+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-06T17:13:45.642993+00:00 [queued]>
+[2025-11-06T17:23:29.121+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-06T17:13:45.642993+00:00 [queued]>
+[2025-11-06T17:23:29.122+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-06T17:23:29.155+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-11-06 17:13:45.642993+00:00
+[2025-11-06T17:23:29.170+0000] {standard_task_runner.py:72} INFO - Started process 6379 to run task
+[2025-11-06T17:23:29.181+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'manual__2025-11-06T17:13:45.642993+00:00', '--job-id', '14105', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpiex583ty']
+[2025-11-06T17:23:29.183+0000] {standard_task_runner.py:105} INFO - Job 14105: Subtask memory_stress_test
+[2025-11-06T17:23:29.260+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-06T17:13:45.642993+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-06T17:23:29.429+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-06T17:13:45.642993+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-06T17:13:45.642993+00:00'
+[2025-11-06T17:23:29.430+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-06T17:23:29.503+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-06T17:23:30.046+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-06T17:23:48.422+0000] {docker.py:438} INFO - 
+[2025-11-06T17:23:49.371+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Validating the experiment's syntax
+[2025-11-06T17:23:49.919+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Experiment looks valid
+[2025-11-06T17:23:49.921+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Running experiment: Repeated Gradual Memory Stress Experiment
+[2025-11-06T17:23:49.926+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Steady-state strategy: default
+[2025-11-06T17:23:49.937+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Rollbacks strategy: default
+[2025-11-06T17:23:49.939+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-06T17:23:49.943+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Playing your experiment's method now...
+[2025-11-06T17:23:49.945+0000] {docker.py:438} INFO - [32m[2025-11-06 17:23:49 INFO] Action: repeated-gradual-memory-stress
+[2025-11-06T17:30:52.994+0000] {docker.py:438} INFO - 🚀 Starting REPEATED gradual memory stress cycles
+[2025-11-06T17:30:52.995+0000] {docker.py:438} INFO - 🔄 Cycle duration: 50s (gradual ramp to OOM)
+[2025-11-06T17:30:52.997+0000] {docker.py:438} INFO - ⏱️  Total experiment: 600s
+[2025-11-06T17:30:52.997+0000] {docker.py:438} INFO - 📈 Memory ramp: 50MB → 300MB (+80MB/10s)
+[2025-11-06T17:30:52.997+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-11-06T17:30:52.998+0000] {docker.py:438} INFO - ⏳ Recovery wait: 15s between cycles
+[2025-11-06T17:30:52.998+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:52.999+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #1 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:52.999+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 600s
+[2025-11-06T17:30:52.999+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.002+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.003+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-11-06T17:30:53.003+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.005+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-11-06T17:30:53.005+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.005+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-11-06T17:30:53.007+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.007+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-11-06T17:30:53.007+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:30:53.009+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:30:53.009+0000] {docker.py:438} INFO - 💥 OOM Event #1 triggered!
+[2025-11-06T17:30:53.009+0000] {docker.py:438} INFO - ✅ Cycle #1 completed in 64s
+[2025-11-06T17:30:53.011+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:30:53.012+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:53.012+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #2 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:53.014+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 521s
+[2025-11-06T17:30:53.014+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.014+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.015+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-11-06T17:30:53.015+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.015+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-11-06T17:30:53.018+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.018+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-11-06T17:30:53.020+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.020+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-11-06T17:30:53.021+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:30:53.023+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:30:53.023+0000] {docker.py:438} INFO - 💥 OOM Event #2 triggered!
+[2025-11-06T17:30:53.024+0000] {docker.py:438} INFO - ✅ Cycle #2 completed in 64s
+[2025-11-06T17:30:53.024+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:30:53.025+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:53.025+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #3 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:53.025+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 443s
+[2025-11-06T17:30:53.028+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.028+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.029+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-11-06T17:30:53.029+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.029+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-11-06T17:30:53.032+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.032+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-11-06T17:30:53.032+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.033+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-11-06T17:30:53.033+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:30:53.034+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:30:53.034+0000] {docker.py:438} INFO - 💥 OOM Event #3 triggered!
+[2025-11-06T17:30:53.034+0000] {docker.py:438} INFO - ✅ Cycle #3 completed in 64s
+[2025-11-06T17:30:53.037+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:30:53.037+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:53.037+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #4 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:53.038+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 364s
+[2025-11-06T17:30:53.038+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.039+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.039+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:30:53.039+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.041+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-4-step-1\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-4-step-1","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:30:53.041+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-11-06T17:30:53.041+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.042+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-11-06T17:30:53.042+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.043+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-11-06T17:30:53.044+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:30:53.044+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:30:53.045+0000] {docker.py:438} INFO - 💥 OOM Event #4 triggered!
+[2025-11-06T17:30:53.046+0000] {docker.py:438} INFO - ✅ Cycle #4 completed in 62s
+[2025-11-06T17:30:53.047+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:30:53.048+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:53.048+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #5 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:53.048+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 287s
+[2025-11-06T17:30:53.050+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.050+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.052+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-11-06T17:30:53.052+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.052+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-11-06T17:30:53.053+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.053+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-11-06T17:30:53.053+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.054+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-11-06T17:30:53.054+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:30:53.057+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:30:53.057+0000] {docker.py:438} INFO - 💥 OOM Event #5 triggered!
+[2025-11-06T17:30:53.057+0000] {docker.py:438} INFO - ✅ Cycle #5 completed in 63s
+[2025-11-06T17:30:53.058+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:30:53.058+0000] {docker.py:438} INFO - 
+[2025-11-06T17:30:53.059+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #6 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:30:53.059+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 209s
+[2025-11-06T17:30:53.059+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:30:53.060+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:30:53.060+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:30:53.060+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:30:53.063+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-6-step-1\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-6-step-1","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:30:53.063+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:30:53.063+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:30:53.064+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-6-step-2\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-6-step-2","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:30:53.064+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": proxy error from localhost:9443 while dialing 10.244.3.42:10250, code 502: 502 Bad Gateway","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": proxy error from localhost:9443 while dialing 10.244.3.42:10250, code 502: 502 Bad Gateway"}]},"code":500}\n'
+[2025-11-06T17:30:53.067+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:30:53.067+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-6-step-3\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-6-step-3","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.076+0000] {docker.py:438} INFO - [32m[2025-11-06 17:32:46 INFO] Let's rollback...
+[2025-11-06T17:32:46.077+0000] {docker.py:438} INFO - [32m[2025-11-06 17:32:46 INFO] No declared rollbacks, let's move on.
+[2025-11-06T17:32:46.078+0000] {docker.py:438} INFO - [32m[2025-11-06 17:32:46 INFO] Experiment ended with status: completed
+[2025-11-06T17:32:46.081+0000] {docker.py:438} INFO - ❌ Error at 290MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:32:46.081+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:32:46.082+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:32:46.082+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-6-step-4\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-6-step-4","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.082+0000] {docker.py:438} INFO - 💥 OOM Event #6 triggered!
+[2025-11-06T17:32:46.084+0000] {docker.py:438} INFO - ✅ Cycle #6 completed in 57s
+[2025-11-06T17:32:46.084+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:32:46.085+0000] {docker.py:438} INFO - 
+[2025-11-06T17:32:46.085+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #7 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:32:46.088+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 136s
+[2025-11-06T17:32:46.088+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-06T17:32:46.088+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-06T17:32:46.089+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:32:46.089+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-06T17:32:46.090+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-7-step-1\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-7-step-1","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.090+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:32:46.091+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-06T17:32:46.091+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-7-step-2\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-7-step-2","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.092+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:32:46.092+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-06T17:32:46.093+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-7-step-3\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-7-step-3","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.095+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Internal Server Error' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Internal error occurred: failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\"","reason":"InternalError","details":{"causes":[{"message":"failed calling webhook \\"mstresschaos.kb.io\\": failed to call webhook: Post \\"https://chaos-mesh-controller-manager.chaos-mesh.svc:443/mutate-chaos-mesh-org-v1alpha1-stresschaos?timeout=5s\\": no endpoints available for service \\"chaos-mesh-controller-manager\\""}]},"code":500}\n'
+[2025-11-06T17:32:46.095+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-06T17:32:46.096+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-06T17:32:46.096+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'{"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"stresschaos.chaos-mesh.org \\"gradual-oom-stress-cycle-7-step-4\\" not found","reason":"NotFound","details":{"name":"gradual-oom-stress-cycle-7-step-4","group":"chaos-mesh.org","kind":"stresschaos"},"code":404}\n'
+[2025-11-06T17:32:46.097+0000] {docker.py:438} INFO - 💥 OOM Event #7 triggered!
+[2025-11-06T17:32:46.097+0000] {docker.py:438} INFO - ✅ Cycle #7 completed in 57s
+[2025-11-06T17:32:46.098+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-06T17:32:46.098+0000] {docker.py:438} INFO - 
+[2025-11-06T17:32:46.098+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #8 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-06T17:32:46.099+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 64s
+[2025-11-06T17:32:46.099+0000] {docker.py:438} INFO - ⚠️ Not enough time for full cycle, stopping experiment
+[2025-11-06T17:32:46.101+0000] {docker.py:438} INFO - 
+[2025-11-06T17:32:46.101+0000] {docker.py:438} INFO - ============================================================
+[2025-11-06T17:32:46.103+0000] {docker.py:438} INFO - 🏁 REPEATED GRADUAL MEMORY STRESS COMPLETED!
+[2025-11-06T17:32:46.103+0000] {docker.py:438} INFO - ============================================================
+[2025-11-06T17:32:46.105+0000] {docker.py:438} INFO - 🔄 Total cycles performed: 8
+[2025-11-06T17:32:46.106+0000] {docker.py:438} INFO - 💥 Total OOM events: 7
+[2025-11-06T17:32:46.106+0000] {docker.py:438} INFO - ⏱️  Total experiment time: 536s
+[2025-11-06T17:32:46.109+0000] {docker.py:438} INFO - 📊 Average cycle time: 67s
+[2025-11-06T17:32:46.295+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-11-06T17:32:56.741+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-06T17:32:56.743+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=manual__2025-11-06T17:13:45.642993+00:00, execution_date=20251106T171345, start_date=20251106T172329, end_date=20251106T173256
+[2025-11-06T17:32:56.841+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-06T17:32:56.865+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-06T17:32:56.869+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

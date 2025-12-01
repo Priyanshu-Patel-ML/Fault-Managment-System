@@ -1,0 +1,252 @@
+[2025-11-19T21:58:34.006+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-19T21:58:34.034+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-19T21:58:31.155357+00:00 [queued]>
+[2025-11-19T21:58:34.047+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-19T21:58:31.155357+00:00 [queued]>
+[2025-11-19T21:58:34.048+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-19T21:58:34.074+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-11-19 21:58:31.155357+00:00
+[2025-11-19T21:58:34.088+0000] {standard_task_runner.py:72} INFO - Started process 383 to run task
+[2025-11-19T21:58:34.101+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Reinitialize_Application', 'apply_container_restart_docker', 'manual__2025-11-19T21:58:31.155357+00:00', '--job-id', '15810', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpcdwqkkqx']
+[2025-11-19T21:58:34.103+0000] {standard_task_runner.py:105} INFO - Job 15810: Subtask apply_container_restart_docker
+[2025-11-19T21:58:34.201+0000] {task_command.py:467} INFO - Running <TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-19T21:58:31.155357+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-19T21:58:34.398+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reinitialize_Application' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-11-19T21:58:31.155357+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-19T21:58:31.155357+00:00'
+[2025-11-19T21:58:34.406+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-19T21:58:34.688+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-11-19T21:58:35.703+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-19T21:59:08.581+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 233, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/local_task_job_runner.py", line 284, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2358, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 872, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2344, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-11-19T21:59:08.755+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-11-19T21:59:13.872+0000] {job.py:229} INFO - Heartbeat recovered after 18.01 seconds
+[2025-11-19T21:59:19.532+0000] {docker.py:438} INFO - 
+[2025-11-19T21:59:19.566+0000] {docker.py:438} INFO - total 10672
+[2025-11-19T21:59:19.566+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000     4096 Nov 11 11:35 .
+[2025-11-19T21:59:19.567+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root     4096 Sep 26 10:44 ..
+[2025-11-19T21:59:19.571+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1193 Sep  8 07:02 API_Latency.json
+[2025-11-19T21:59:19.571+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      729 Sep  9 10:30 API_Timeout.json
+[2025-11-19T21:59:19.572+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-11-19T21:59:19.572+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1665 Nov 11 09:21 Memory_Stress_Test_Azure.yaml
+[2025-11-19T21:59:19.573+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-11-19T21:59:19.575+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root     4096 Oct 29 06:31 __pycache__
+[2025-11-19T21:59:19.575+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000     4096 Oct 21 08:05 chaos_env
+[2025-11-19T21:59:19.576+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     8875 Sep 25 16:54 chaosk6_actions.py
+[2025-11-19T21:59:19.576+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 10369826 Nov 19 21:41 chaostoolkit.log
+[2025-11-19T21:59:19.579+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1421 Oct 23 09:34 check.py
+[2025-11-19T21:59:19.579+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3213 Sep  9 09:11 combined-sequential.json
+[2025-11-19T21:59:19.580+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000     1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-11-19T21:59:19.580+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      502 Sep 16 05:31 connection_test_experiment.json
+[2025-11-19T21:59:19.582+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      692 Oct 24 01:43 container_probe.json
+[2025-11-19T21:59:19.585+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     2533 Oct 23 09:28 container_probe.yaml
+[2025-11-19T21:59:19.585+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1420 Sep 24 06:53 container_restart.json
+[2025-11-19T21:59:19.588+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    16452 Sep 26 09:59 container_restart.py
+[2025-11-19T21:59:19.588+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1744 Nov 11 09:15 container_restart_Azure.yaml
+[2025-11-19T21:59:19.589+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1409 Sep 18 12:30 continuous_load_test.json
+[2025-11-19T21:59:19.589+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-11-19T21:59:19.590+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1637 Sep 25 04:39 cordon_test.json
+[2025-11-19T21:59:19.590+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1430 Nov 11 09:16 cordon_uncordon_node_Azure.yaml
+[2025-11-19T21:59:19.591+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-11-19T21:59:19.593+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1760 Oct 21 08:00 db_cleanup.json
+[2025-11-19T21:59:19.594+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     6399 Sep 24 07:40 db_cleanup.py
+[2025-11-19T21:59:19.594+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     5855 Oct 28 12:27 direct_memory_stress.py
+[2025-11-19T21:59:19.595+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3217 Nov 19 21:41 journal.json
+[2025-11-19T21:59:19.595+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000        0 Nov 11 11:31 json
+[2025-11-19T21:59:19.598+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root   256826 Nov 19 21:41 k6_continuous_load.log
+[2025-11-19T21:59:19.598+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3904 Nov 19 21:41 k6_continuous_summary.json
+[2025-11-19T21:59:19.599+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3433 Sep 25 09:28 k6_summary.json
+[2025-11-19T21:59:19.599+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      989 Sep 30 09:24 kubernetes_actions.json
+[2025-11-19T21:59:19.602+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    10961 Sep 30 09:23 kubernetes_actions.py
+[2025-11-19T21:59:19.603+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      945 Sep 21 16:40 load_test.json
+[2025-11-19T21:59:19.604+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      528 Sep 17 12:13 max_connection_experiment.json
+[2025-11-19T21:59:19.604+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-11-19T21:59:19.608+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1066 Oct 30 12:27 memory_stress.json
+[2025-11-19T21:59:19.608+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     6653 Oct 29 06:18 memory_stress.py
+[2025-11-19T21:59:19.609+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-11-19T21:59:19.609+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     7586 Sep 18 05:54 mongodb_actions.py
+[2025-11-19T21:59:19.613+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     2136 Sep 18 11:23 mongodb_connection.json
+[2025-11-19T21:59:19.613+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-11-19T21:59:19.613+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     3657 Sep 18 05:42 mongodb_probes.py
+[2025-11-19T21:59:19.614+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     6161 Sep 12 08:04 pod_restart.py
+[2025-11-19T21:59:19.614+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1497 Sep 30 05:50 redis_config_faults.py
+[2025-11-19T21:59:19.617+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      862 Sep 30 05:50 redis_experiment.json
+[2025-11-19T21:59:19.617+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      945 Sep 18 06:53 redis_load.json
+[2025-11-19T21:59:19.618+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1634 Nov 11 09:16 redis_memory_stress_Azure.yaml
+[2025-11-19T21:59:19.618+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-11-19T21:59:19.623+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-11-19T21:59:19.623+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     1307 Oct 27 10:33 sample_probe.yaml
+[2025-11-19T21:59:19.623+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000     4096 Oct 22 06:46 scripts
+[2025-11-19T21:59:19.624+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      272 Oct 27 08:51 simple-stress-test.yaml
+[2025-11-19T21:59:19.626+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000     4096 Sep 30 09:41 socialNetwork
+[2025-11-19T21:59:19.626+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      821 Sep 26 13:20 stress_test.json
+[2025-11-19T21:59:19.627+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-11-19T21:59:19.629+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000      295 Oct 27 08:49 test_after_fix.yaml
+[2025-11-19T21:59:19.630+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000      367 Sep 17 07:24 test_params.json
+[2025-11-19T21:59:19.632+0000] {docker.py:438} INFO - Starting Reinitializing the Social Networking Application...
+[2025-11-19T21:59:21.357+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:21 INFO] Validating the experiment's syntax
+[2025-11-19T21:59:22.986+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Experiment looks valid
+[2025-11-19T21:59:22.988+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Running experiment: Simple Social Network Reset
+[2025-11-19T21:59:22.997+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Steady-state strategy: default
+[2025-11-19T21:59:22.998+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Rollbacks strategy: default
+[2025-11-19T21:59:22.998+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-19T21:59:22.999+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Playing your experiment's method now...
+[2025-11-19T21:59:23.002+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:22 INFO] Action: complete-reset-and-reinit
+[2025-11-19T21:59:23.003+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting complete reset and reinitialization...
+[2025-11-19T21:59:23.003+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting full social network reset...
+[2025-11-19T21:59:23.004+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Redis data...
+[2025-11-19T21:59:23.080+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-19T21:59:23.152+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-19T21:59:23.177+0000] {docker.py:438} INFO - WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x712029678610>: Failed to resolve 'otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io' ([Errno -2] Name or service not known)")': /api/v1/namespaces/default/pods?labelSelector=app%3Dsocial-graph-redis
+[2025-11-19T21:59:23.183+0000] {docker.py:438} INFO - WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x71202967a1d0>: Failed to resolve 'otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io' ([Errno -2] Name or service not known)")': /api/v1/namespaces/default/pods?labelSelector=app%3Dsocial-graph-redis
+[2025-11-19T21:59:23.206+0000] {docker.py:438} INFO - WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x71202967acd0>: Failed to resolve 'otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io' ([Errno -2] Name or service not known)")': /api/v1/namespaces/default/pods?labelSelector=app%3Dsocial-graph-redis
+[2025-11-19T21:59:23.295+0000] {docker.py:438} INFO - [31m[2025-11-19 21:59:23 ERROR]   => failed: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io', port=443): Max retries exceeded with url: /api/v1/namespaces/default/pods?labelSelector=app%3Dsocial-graph-redis (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x71202967a550>: Failed to resolve 'otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io' ([Errno -2] Name or service not known)"))
+[2025-11-19T21:59:23.296+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:23 INFO] Let's rollback...
+[2025-11-19T21:59:23.299+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:23 INFO] No declared rollbacks, let's move on.
+[2025-11-19T21:59:23.299+0000] {docker.py:438} INFO - [32m[2025-11-19 21:59:23 INFO] Experiment ended with status: completed
+[2025-11-19T21:59:23.776+0000] {docker.py:438} INFO - Reinitialized Social Networking APplication successfully
+[2025-11-19T21:59:24.454+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-19T21:59:24.459+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Reinitialize_Application, task_id=apply_container_restart_docker, run_id=manual__2025-11-19T21:58:31.155357+00:00, execution_date=20251119T215831, start_date=20251119T215834, end_date=20251119T215924
+[2025-11-19T21:59:24.626+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-19T21:59:24.712+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-19T21:59:24.722+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

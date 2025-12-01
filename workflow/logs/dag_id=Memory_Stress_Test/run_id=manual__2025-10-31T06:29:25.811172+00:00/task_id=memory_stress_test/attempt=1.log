@@ -1,0 +1,168 @@
+[2025-10-31T06:29:28.389+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-31T06:29:28.429+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-10-31T06:29:25.811172+00:00 [queued]>
+[2025-10-31T06:29:28.441+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-10-31T06:29:25.811172+00:00 [queued]>
+[2025-10-31T06:29:28.442+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-31T06:29:28.470+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-10-31 06:29:25.811172+00:00
+[2025-10-31T06:29:28.482+0000] {standard_task_runner.py:72} INFO - Started process 4381 to run task
+[2025-10-31T06:29:28.495+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'manual__2025-10-31T06:29:25.811172+00:00', '--job-id', '12179', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp0faqcy9d']
+[2025-10-31T06:29:28.497+0000] {standard_task_runner.py:105} INFO - Job 12179: Subtask memory_stress_test
+[2025-10-31T06:29:28.611+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-10-31T06:29:25.811172+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-31T06:29:28.813+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-31T06:29:25.811172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-31T06:29:25.811172+00:00'
+[2025-10-31T06:29:28.817+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-31T06:29:28.909+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-31T06:29:29.558+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-31T06:29:51.201+0000] {docker.py:438} INFO - 
+[2025-10-31T06:29:52.233+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Validating the experiment's syntax
+[2025-10-31T06:29:52.968+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Experiment looks valid
+[2025-10-31T06:29:52.970+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Running experiment: Repeated Gradual Memory Stress Experiment
+[2025-10-31T06:29:52.976+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Steady-state strategy: default
+[2025-10-31T06:29:52.977+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Rollbacks strategy: default
+[2025-10-31T06:29:52.978+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-31T06:29:52.978+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Playing your experiment's method now...
+[2025-10-31T06:29:52.980+0000] {docker.py:438} INFO - [32m[2025-10-31 06:29:52 INFO] Action: repeated-gradual-memory-stress
+[2025-10-31T06:39:03.720+0000] {docker.py:438} INFO - [32m[2025-10-31 06:39:03 INFO] Let's rollback...
+[2025-10-31T06:39:03.721+0000] {docker.py:438} INFO - [32m[2025-10-31 06:39:03 INFO] No declared rollbacks, let's move on.
+[2025-10-31T06:39:03.722+0000] {docker.py:438} INFO - [32m[2025-10-31 06:39:03 INFO] Experiment ended with status: completed
+[2025-10-31T06:39:03.723+0000] {docker.py:438} INFO - 🚀 Starting REPEATED gradual memory stress cycles
+[2025-10-31T06:39:03.724+0000] {docker.py:438} INFO - 🔄 Cycle duration: 50s (gradual ramp to OOM)
+[2025-10-31T06:39:03.724+0000] {docker.py:438} INFO - ⏱️  Total experiment: 600s
+[2025-10-31T06:39:03.725+0000] {docker.py:438} INFO - 📈 Memory ramp: 50MB → 300MB (+80MB/10s)
+[2025-10-31T06:39:03.725+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-10-31T06:39:03.726+0000] {docker.py:438} INFO - ⏳ Recovery wait: 15s between cycles
+[2025-10-31T06:39:03.726+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.726+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #1 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.727+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 600s
+[2025-10-31T06:39:03.727+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.728+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.728+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.729+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.729+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.730+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.730+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.731+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.731+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.731+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.732+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.732+0000] {docker.py:438} INFO - 💥 OOM Event #1 triggered!
+[2025-10-31T06:39:03.733+0000] {docker.py:438} INFO - ✅ Cycle #1 completed in 64s
+[2025-10-31T06:39:03.733+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.733+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.734+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #2 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.734+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 521s
+[2025-10-31T06:39:03.734+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.735+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.735+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.735+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.736+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.736+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.737+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.737+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.737+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.738+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.738+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.739+0000] {docker.py:438} INFO - 💥 OOM Event #2 triggered!
+[2025-10-31T06:39:03.739+0000] {docker.py:438} INFO - ✅ Cycle #2 completed in 64s
+[2025-10-31T06:39:03.739+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.740+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.740+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #3 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.740+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 442s
+[2025-10-31T06:39:03.741+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.741+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.742+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.742+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.742+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.743+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.743+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.744+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.744+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.744+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.745+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.745+0000] {docker.py:438} INFO - 💥 OOM Event #3 triggered!
+[2025-10-31T06:39:03.745+0000] {docker.py:438} INFO - ✅ Cycle #3 completed in 64s
+[2025-10-31T06:39:03.746+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.746+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.746+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #4 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.747+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 364s
+[2025-10-31T06:39:03.747+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.748+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.748+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.748+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.749+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.749+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.749+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.750+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.750+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.750+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.751+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.751+0000] {docker.py:438} INFO - 💥 OOM Event #4 triggered!
+[2025-10-31T06:39:03.752+0000] {docker.py:438} INFO - ✅ Cycle #4 completed in 64s
+[2025-10-31T06:39:03.752+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.753+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.753+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #5 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.753+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 285s
+[2025-10-31T06:39:03.754+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.754+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.755+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.755+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.755+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.756+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.756+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.757+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.757+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.757+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.758+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.758+0000] {docker.py:438} INFO - 💥 OOM Event #5 triggered!
+[2025-10-31T06:39:03.759+0000] {docker.py:438} INFO - ✅ Cycle #5 completed in 64s
+[2025-10-31T06:39:03.759+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.759+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.760+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #6 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.760+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 206s
+[2025-10-31T06:39:03.760+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.761+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.761+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.762+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.762+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.762+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.763+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.763+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.764+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.764+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.764+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.765+0000] {docker.py:438} INFO - 💥 OOM Event #6 triggered!
+[2025-10-31T06:39:03.765+0000] {docker.py:438} INFO - ✅ Cycle #6 completed in 64s
+[2025-10-31T06:39:03.766+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.766+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.767+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #7 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.767+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 128s
+[2025-10-31T06:39:03.767+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-10-31T06:39:03.768+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-10-31T06:39:03.768+0000] {docker.py:438} INFO -     ✅ Applied 50MB stress
+[2025-10-31T06:39:03.768+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-10-31T06:39:03.769+0000] {docker.py:438} INFO -     ✅ Applied 130MB stress
+[2025-10-31T06:39:03.769+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-10-31T06:39:03.769+0000] {docker.py:438} INFO -     ✅ Applied 210MB stress
+[2025-10-31T06:39:03.770+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-10-31T06:39:03.770+0000] {docker.py:438} INFO -     ✅ Applied 290MB stress
+[2025-10-31T06:39:03.771+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-10-31T06:39:03.771+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-10-31T06:39:03.771+0000] {docker.py:438} INFO - 💥 OOM Event #7 triggered!
+[2025-10-31T06:39:03.772+0000] {docker.py:438} INFO - ✅ Cycle #7 completed in 63s
+[2025-10-31T06:39:03.772+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-10-31T06:39:03.773+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.773+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #8 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-10-31T06:39:03.773+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 49s
+[2025-10-31T06:39:03.774+0000] {docker.py:438} INFO - ⚠️ Not enough time for full cycle, stopping experiment
+[2025-10-31T06:39:03.774+0000] {docker.py:438} INFO - 
+[2025-10-31T06:39:03.775+0000] {docker.py:438} INFO - ============================================================
+[2025-10-31T06:39:03.775+0000] {docker.py:438} INFO - 🏁 REPEATED GRADUAL MEMORY STRESS COMPLETED!
+[2025-10-31T06:39:03.775+0000] {docker.py:438} INFO - ============================================================
+[2025-10-31T06:39:03.776+0000] {docker.py:438} INFO - 🔄 Total cycles performed: 8
+[2025-10-31T06:39:03.776+0000] {docker.py:438} INFO - 💥 Total OOM events: 7
+[2025-10-31T06:39:03.776+0000] {docker.py:438} INFO - ⏱️  Total experiment time: 551s
+[2025-10-31T06:39:03.777+0000] {docker.py:438} INFO - 📊 Average cycle time: 69s
+[2025-10-31T06:39:03.851+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-10-31T06:39:14.120+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-31T06:39:14.121+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=manual__2025-10-31T06:29:25.811172+00:00, execution_date=20251031T062925, start_date=20251031T062928, end_date=20251031T063914
+[2025-10-31T06:39:14.157+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-31T06:39:14.175+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-31T06:39:14.178+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

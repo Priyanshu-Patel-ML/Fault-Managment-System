@@ -1,0 +1,49 @@
+[2025-10-11T04:45:03.467+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-11T04:45:03.514+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test scheduled__2025-10-11T04:00:00+00:00 [queued]>
+[2025-10-11T04:45:03.590+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test scheduled__2025-10-11T04:00:00+00:00 [queued]>
+[2025-10-11T04:45:03.590+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-11T04:45:03.651+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): redis_memory_stress_test> on 2025-10-11 04:00:00+00:00
+[2025-10-11T04:45:03.716+0000] {standard_task_runner.py:72} INFO - Started process 685 to run task
+[2025-10-11T04:45:03.732+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Redis_Memory_Stress_Test', 'redis_memory_stress_test', 'scheduled__2025-10-11T04:00:00+00:00', '--job-id', '7674', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpwc4tdlbz']
+[2025-10-11T04:45:03.739+0000] {standard_task_runner.py:105} INFO - Job 7674: Subtask redis_memory_stress_test
+[2025-10-11T04:45:03.904+0000] {task_command.py:467} INFO - Running <TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test scheduled__2025-10-11T04:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-11T04:45:04.175+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Redis_Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='redis_memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-11T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-11T04:00:00+00:00'
+[2025-10-11T04:45:04.176+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-11T04:45:04.270+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-11T04:45:05.281+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-11T04:45:43.648+0000] {docker.py:438} INFO - 
+[2025-10-11T04:45:45.814+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Validating the experiment's syntax
+[2025-10-11T04:45:45.817+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Experiment looks valid
+[2025-10-11T04:45:45.819+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Running experiment: Redis Pod Memory Stress Test
+[2025-10-11T04:45:45.832+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Steady-state strategy: default
+[2025-10-11T04:45:45.833+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Rollbacks strategy: default
+[2025-10-11T04:45:45.834+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-11T04:45:45.835+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Playing your experiment's method now...
+[2025-10-11T04:45:45.836+0000] {docker.py:438} INFO - [32m[2025-10-11 04:45:45 INFO] Action: redis-memory-stress-k8s
+[2025-10-11T04:45:47.556+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:45:49.825+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:49:51.276+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:49:52.997+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:49:53.429+0000] {docker.py:438} INFO - [32m[2025-10-11 04:49:53 INFO] Let's rollback...
+[2025-10-11T04:49:53.431+0000] {docker.py:438} INFO - [32m[2025-10-11 04:49:53 INFO] Rollback: reset-redis-memory-k8s
+[2025-10-11T04:49:53.431+0000] {docker.py:438} INFO - [32m[2025-10-11 04:49:53 INFO] Action: reset-redis-memory-k8s
+[2025-10-11T04:49:54.864+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:49:56.596+0000] {docker.py:438} INFO - Defaulted container "user-timeline-redis" out of: user-timeline-redis, redis-exporter
+[2025-10-11T04:49:56.972+0000] {docker.py:438} INFO - [32m[2025-10-11 04:49:56 INFO] Experiment ended with status: completed
+[2025-10-11T04:49:56.975+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory 100kb → OK
+[2025-10-11T04:49:56.975+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory-policy noeviction → OK
+[2025-10-11T04:49:56.975+0000] {docker.py:438} INFO - [INFO] Set maxmemory=100KB, policy=noeviction
+[2025-10-11T04:49:56.976+0000] {docker.py:438} INFO - [INFO] Sleeping for 240 seconds for stress effect...
+[2025-10-11T04:49:56.976+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory 0 → OK
+[2025-10-11T04:49:56.978+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory-policy noeviction → OK
+[2025-10-11T04:49:56.978+0000] {docker.py:438} INFO - [INFO] Redis settings reset to default.
+[2025-10-11T04:49:56.978+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory 0 → OK
+[2025-10-11T04:49:56.979+0000] {docker.py:438} INFO - [CMD] CONFIG SET maxmemory-policy noeviction → OK
+[2025-10-11T04:49:56.979+0000] {docker.py:438} INFO - [INFO] Redis settings reset to default.
+[2025-10-11T04:49:57.118+0000] {docker.py:438} INFO - [INFO] Sleeping for cooldown...
+[2025-10-11T04:50:27.126+0000] {docker.py:438} INFO - [INFO] DAG complete
+[2025-10-11T04:50:27.451+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-11T04:50:27.451+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Redis_Memory_Stress_Test, task_id=redis_memory_stress_test, run_id=scheduled__2025-10-11T04:00:00+00:00, execution_date=20251011T040000, start_date=20251011T044503, end_date=20251011T045027
+[2025-10-11T04:50:27.507+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-11T04:50:27.547+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-11T04:50:27.549+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

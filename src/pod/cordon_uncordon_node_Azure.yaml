@@ -1,0 +1,38 @@
+Cordon_Uncordon_Node:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: "All the nodes are cordoned by fault generation tool for 5 minutes. During this time, fault generation tool deletes pDost-storage-seDrvice pod. Since the nodes are cordoned, deleted pod will not be able to join any node, So allD the http requDests will failD with HTTP 5xxD errors due toD service unavaDilability causDed by cordoninDg the nodes."
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  tags:
+    - "target_system: Application_Nodes"
+    - "Severity: High"
+    - "configured_duration: 300"
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 0
+  tasks:
+    - task_id: apply_cordon_uncordon_node
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/azureuser/fault-injector/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/home/azureuser/.kube/config"
+          target: "/root/.kube/config"
+          type: "bind"
+          read_only: true
+      environment:
+        KUBECONFIG: "/root/.kube/config"
+      command: >
+        bash -c "cd /opt/airflow/src/pod && chaos run cordon_test.json"
+

@@ -1,0 +1,203 @@
+[2025-11-19T22:31:43.117+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-19T22:31:43.144+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-19T22:31:40.265490+00:00 [queued]>
+[2025-11-19T22:31:43.156+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-19T22:31:40.265490+00:00 [queued]>
+[2025-11-19T22:31:43.157+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-19T22:31:43.181+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): redis_memory_stress_test> on 2025-11-19 22:31:40.265490+00:00
+[2025-11-19T22:31:43.197+0000] {standard_task_runner.py:72} INFO - Started process 397 to run task
+[2025-11-19T22:31:43.214+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Redis_Memory_Stress_Test', 'redis_memory_stress_test', 'manual__2025-11-19T22:31:40.265490+00:00', '--job-id', '15912', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmptq5zrxpo']
+[2025-11-19T22:31:43.216+0000] {standard_task_runner.py:105} INFO - Job 15912: Subtask redis_memory_stress_test
+[2025-11-19T22:31:43.323+0000] {task_command.py:467} INFO - Running <TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-19T22:31:40.265490+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-19T22:31:43.551+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Redis_Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='redis_memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-19T22:31:40.265490+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-19T22:31:40.265490+00:00'
+[2025-11-19T22:31:43.558+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-19T22:31:43.982+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-19T22:31:58.597+0000] {job.py:229} INFO - Heartbeat recovered after 15.59 seconds
+[2025-11-19T22:32:19.178+0000] {job.py:229} INFO - Heartbeat recovered after 21.93 seconds
+[2025-11-19T22:32:34.928+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-19T22:32:41.524+0000] {job.py:229} INFO - Heartbeat recovered after 27.17 seconds
+[2025-11-19T22:34:53.147+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 224, in heartbeat
+    job = Job._update_heartbeat(job=self, session=session)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/job.py", line 374, in _update_heartbeat
+    orm_job: Job | None = session.scalar(select(Job).where(Job.id == job.id).limit(1))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-11-19T22:34:53.233+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-11-19T22:34:58.305+0000] {job.py:229} INFO - Heartbeat recovered after 113.80 seconds
+[2025-11-19T22:35:14.906+0000] {docker.py:438} INFO - 
+[2025-11-19T22:35:16.083+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Validating the experiment's syntax
+[2025-11-19T22:35:16.087+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Experiment looks valid
+[2025-11-19T22:35:16.088+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Running experiment: Redis Pod Memory Stress Test
+[2025-11-19T22:35:16.098+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Steady-state strategy: default
+[2025-11-19T22:35:16.099+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Rollbacks strategy: default
+[2025-11-19T22:35:16.100+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-19T22:35:16.100+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Playing your experiment's method now...
+[2025-11-19T22:35:16.101+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Action: redis-memory-stress-k8s
+[2025-11-19T22:35:16.466+0000] {docker.py:438} INFO - E1119 22:35:16.466085      17 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.480+0000] {docker.py:438} INFO - E1119 22:35:16.479595      17 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.502+0000] {docker.py:438} INFO - E1119 22:35:16.501194      17 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.534+0000] {docker.py:438} INFO - E1119 22:35:16.534158      17 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.544+0000] {docker.py:438} INFO - E1119 22:35:16.544174      17 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.548+0000] {docker.py:438} INFO - Unable to connect to the server: dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host
+[2025-11-19T22:35:16.555+0000] {docker.py:438} INFO - [31m[2025-11-19 22:35:16 ERROR]   => failed: subprocess.CalledProcessError: Command 'kubectl get pod -l app=user-timeline-redis -o jsonpath='{.items[0].metadata.name}'' returned non-zero exit status 1.
+[2025-11-19T22:35:16.556+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Let's rollback...
+[2025-11-19T22:35:16.557+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Rollback: reset-redis-memory-k8s
+[2025-11-19T22:35:16.557+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Action: reset-redis-memory-k8s
+[2025-11-19T22:35:16.780+0000] {docker.py:438} INFO - E1119 22:35:16.779722      24 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.790+0000] {docker.py:438} INFO - E1119 22:35:16.789354      24 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.800+0000] {docker.py:438} INFO - E1119 22:35:16.799359      24 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.809+0000] {docker.py:438} INFO - E1119 22:35:16.809151      24 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.815+0000] {docker.py:438} INFO - E1119 22:35:16.815154      24 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io:443/api?timeout=32s\": dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host"
+[2025-11-19T22:35:16.818+0000] {docker.py:438} INFO - Unable to connect to the server: dial tcp: lookup otel-demo-dns-ivbxhllh.hcp.eastus.azmk8s.io on 127.0.0.53:53: no such host
+[2025-11-19T22:35:16.825+0000] {docker.py:438} INFO - [31m[2025-11-19 22:35:16 ERROR]   => failed: subprocess.CalledProcessError: Command 'kubectl get pod -l app=user-timeline-redis -o jsonpath='{.items[0].metadata.name}'' returned non-zero exit status 1.
+[2025-11-19T22:35:16.827+0000] {docker.py:438} INFO - [32m[2025-11-19 22:35:16 INFO] Experiment ended with status: completed
+[2025-11-19T22:35:17.005+0000] {docker.py:438} INFO - [INFO] Sleeping for cooldown...
+[2025-11-19T22:35:47.028+0000] {docker.py:438} INFO - [INFO] DAG complete
+[2025-11-19T22:35:48.055+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-19T22:35:48.061+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Redis_Memory_Stress_Test, task_id=redis_memory_stress_test, run_id=manual__2025-11-19T22:31:40.265490+00:00, execution_date=20251119T223140, start_date=20251119T223143, end_date=20251119T223548
+[2025-11-19T22:35:48.136+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-19T22:35:48.195+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-19T22:35:48.198+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

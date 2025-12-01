@@ -1,0 +1,44 @@
+Container_Restart:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: 'As part of container restart workflow, compose-post-service container running inside the pod with label "app=compose-post-service"  is restarted continuously for 7 minutes. Due to this, some of the http requests to the endpoint /post/compose in the social networking application fails with 500 error as the container is not up and running to cater to the http requests.'
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  tags:
+    - "target_system: compose-post-service"
+    - "Severity: High"
+    - "configured_duration: 300"
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 0
+  tasks:
+    - task_id: apply_container_restart_docker
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "priyanshu01ce/airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/azureuser/fault-injector/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/home/azureuser/.kube/config"
+          target: "/root/.kube/config"
+          type: "bind"
+          read_only: true
+      environment:
+        KUBECONFIG: "/root/.kube/config"
+        PYTHONPATH: "/opt/airflow/src/pod"
+      command: >
+        bash -c '
+        cd /opt/airflow/src/pod &&
+        ls -la &&
+        echo "Starting continuous container restart experiment..." &&
+        chaos run container_restart.json &&
+        echo "Container restart experiment completed successfully"'
+      container_name: "container_restart_chaos"

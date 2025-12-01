@@ -1,0 +1,217 @@
+[2025-11-11T06:58:12.251+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-11T06:58:12.277+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-10T23:01:46.735837+00:00 [queued]>
+[2025-11-11T06:58:12.288+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-10T23:01:46.735837+00:00 [queued]>
+[2025-11-11T06:58:12.289+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-11T06:58:12.318+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-11-10 23:01:46.735837+00:00
+[2025-11-11T06:58:12.333+0000] {standard_task_runner.py:72} INFO - Started process 152 to run task
+[2025-11-11T06:58:12.349+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'manual__2025-11-10T23:01:46.735837+00:00', '--job-id', '14462', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp6xlqy_h_']
+[2025-11-11T06:58:12.353+0000] {standard_task_runner.py:105} INFO - Job 14462: Subtask memory_stress_test
+[2025-11-11T06:58:12.433+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test manual__2025-11-10T23:01:46.735837+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-11T06:58:12.598+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-10T23:01:46.735837+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-10T23:01:46.735837+00:00'
+[2025-11-11T06:58:12.601+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-11T06:58:12.674+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-11T06:58:13.279+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-11T06:58:31.860+0000] {docker.py:438} INFO - 
+[2025-11-11T06:58:32.809+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:32 INFO] Validating the experiment's syntax
+[2025-11-11T06:58:33.543+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Experiment looks valid
+[2025-11-11T06:58:33.545+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Running experiment: Repeated Gradual Memory Stress Experiment
+[2025-11-11T06:58:33.550+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Steady-state strategy: default
+[2025-11-11T06:58:33.552+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Rollbacks strategy: default
+[2025-11-11T06:58:33.552+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-11T06:58:33.554+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Playing your experiment's method now...
+[2025-11-11T06:58:33.555+0000] {docker.py:438} INFO - [32m[2025-11-11 06:58:33 INFO] Action: repeated-gradual-memory-stress
+[2025-11-11T07:05:33.136+0000] {docker.py:438} INFO - 🚀 Starting REPEATED gradual memory stress cycles
+[2025-11-11T07:05:33.137+0000] {docker.py:438} INFO - 🔄 Cycle duration: 50s (gradual ramp to OOM)
+[2025-11-11T07:05:33.139+0000] {docker.py:438} INFO - ⏱️  Total experiment: 600s
+[2025-11-11T07:05:33.139+0000] {docker.py:438} INFO - 📈 Memory ramp: 50MB → 300MB (+80MB/10s)
+[2025-11-11T07:05:33.140+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-11-11T07:05:33.140+0000] {docker.py:438} INFO - ⏳ Recovery wait: 15s between cycles
+[2025-11-11T07:05:33.141+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.141+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #1 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.142+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 600s
+[2025-11-11T07:05:33.142+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.143+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.143+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.143+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.144+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.144+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.145+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.145+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.146+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.146+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.147+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.147+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.147+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.148+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.148+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.149+0000] {docker.py:438} INFO - 💥 OOM Event #1 triggered!
+[2025-11-11T07:05:33.149+0000] {docker.py:438} INFO - ✅ Cycle #1 completed in 57s
+[2025-11-11T07:05:33.150+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:05:33.150+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.151+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #2 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.151+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 528s
+[2025-11-11T07:05:33.152+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.152+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.152+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.153+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.153+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.154+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.154+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.155+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.155+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.156+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.156+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.156+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.157+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.157+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.158+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.159+0000] {docker.py:438} INFO - 💥 OOM Event #2 triggered!
+[2025-11-11T07:05:33.159+0000] {docker.py:438} INFO - ✅ Cycle #2 completed in 57s
+[2025-11-11T07:05:33.160+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:05:33.160+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.160+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #3 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.161+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 455s
+[2025-11-11T07:05:33.161+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.162+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.162+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.163+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.163+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.164+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.164+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.165+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.165+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.166+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.166+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.167+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.167+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.167+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.168+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.169+0000] {docker.py:438} INFO - 💥 OOM Event #3 triggered!
+[2025-11-11T07:05:33.169+0000] {docker.py:438} INFO - ✅ Cycle #3 completed in 57s
+[2025-11-11T07:05:33.170+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:05:33.170+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.171+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #4 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.171+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 383s
+[2025-11-11T07:05:33.171+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.172+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.172+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.173+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.173+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.174+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.174+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.174+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.175+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.175+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.176+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.176+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.176+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.177+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.177+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.178+0000] {docker.py:438} INFO - 💥 OOM Event #4 triggered!
+[2025-11-11T07:05:33.178+0000] {docker.py:438} INFO - ✅ Cycle #4 completed in 57s
+[2025-11-11T07:05:33.179+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:05:33.179+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.179+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #5 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.180+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 310s
+[2025-11-11T07:05:33.180+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.181+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.181+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.182+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.182+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.183+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.183+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.184+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.184+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.185+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.185+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.185+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.186+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.186+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.187+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.187+0000] {docker.py:438} INFO - 💥 OOM Event #5 triggered!
+[2025-11-11T07:05:33.188+0000] {docker.py:438} INFO - ✅ Cycle #5 completed in 57s
+[2025-11-11T07:05:33.188+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:05:33.188+0000] {docker.py:438} INFO - 
+[2025-11-11T07:05:33.189+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #6 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:05:33.189+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 238s
+[2025-11-11T07:05:33.190+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:05:33.190+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:05:33.191+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.191+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:05:33.191+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.192+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.192+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:05:33.193+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.193+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.194+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:05:33.194+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.194+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.195+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:05:33.195+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:05:33.196+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:05:33.196+0000] {docker.py:438} INFO - 💥 OOM Event #6 triggered!
+[2025-11-11T07:08:13.080+0000] {docker.py:438} INFO - [32m[2025-11-11 07:08:13 INFO] Let's rollback...
+[2025-11-11T07:08:13.082+0000] {docker.py:438} INFO - [32m[2025-11-11 07:08:13 INFO] No declared rollbacks, let's move on.
+[2025-11-11T07:08:13.084+0000] {docker.py:438} INFO - [32m[2025-11-11 07:08:13 INFO] Experiment ended with status: completed
+[2025-11-11T07:08:13.085+0000] {docker.py:438} INFO - ✅ Cycle #6 completed in 57s
+[2025-11-11T07:08:13.086+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:08:13.086+0000] {docker.py:438} INFO - 
+[2025-11-11T07:08:13.088+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #7 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:08:13.088+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 165s
+[2025-11-11T07:08:13.090+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:08:13.090+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:08:13.093+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.093+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:08:13.094+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.094+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.096+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:08:13.096+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.097+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.097+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:08:13.100+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.100+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.100+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:08:13.102+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:08:13.102+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.105+0000] {docker.py:438} INFO - 💥 OOM Event #7 triggered!
+[2025-11-11T07:08:13.105+0000] {docker.py:438} INFO - ✅ Cycle #7 completed in 57s
+[2025-11-11T07:08:13.106+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:08:13.106+0000] {docker.py:438} INFO - 
+[2025-11-11T07:08:13.110+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #8 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:08:13.110+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 93s
+[2025-11-11T07:08:13.112+0000] {docker.py:438} INFO - 📈 Starting gradual ramp: 50MB → 300MB
+[2025-11-11T07:08:13.112+0000] {docker.py:438} INFO -   📊 Step 1: 50MB
+[2025-11-11T07:08:13.114+0000] {docker.py:438} INFO -     ❌ Error at 50MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.114+0000] {docker.py:438} INFO -   📊 Step 2: 130MB
+[2025-11-11T07:08:13.114+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.117+0000] {docker.py:438} INFO -     ❌ Error at 130MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.117+0000] {docker.py:438} INFO -   📊 Step 3: 210MB
+[2025-11-11T07:08:13.118+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.118+0000] {docker.py:438} INFO -     ❌ Error at 210MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.119+0000] {docker.py:438} INFO -   📊 Step 4: 290MB
+[2025-11-11T07:08:13.121+0000] {docker.py:438} INFO -     ⚠️ Cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.121+0000] {docker.py:438} INFO -     ❌ Error at 290MB: Failed to create custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.124+0000] {docker.py:438} INFO -     🔥 High memory pressure - OOM likely!
+[2025-11-11T07:08:13.124+0000] {docker.py:438} INFO -   💥 Maintaining 370MB for OOM trigger...
+[2025-11-11T07:08:13.125+0000] {docker.py:438} INFO -     ⚠️ Final cleanup error: Failed to delete custom resource object: 'Not Found' b'404 page not found\n'
+[2025-11-11T07:08:13.125+0000] {docker.py:438} INFO - 💥 OOM Event #8 triggered!
+[2025-11-11T07:08:13.125+0000] {docker.py:438} INFO - ✅ Cycle #8 completed in 57s
+[2025-11-11T07:08:13.127+0000] {docker.py:438} INFO - ⏳ Waiting 15s for pod recovery...
+[2025-11-11T07:08:13.127+0000] {docker.py:438} INFO - 
+[2025-11-11T07:08:13.128+0000] {docker.py:438} INFO - 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 CYCLE #9 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+[2025-11-11T07:08:13.128+0000] {docker.py:438} INFO - ⏰ Remaining experiment time: 20s
+[2025-11-11T07:08:13.128+0000] {docker.py:438} INFO - ⚠️ Not enough time for full cycle, stopping experiment
+[2025-11-11T07:08:13.131+0000] {docker.py:438} INFO - 
+[2025-11-11T07:08:13.133+0000] {docker.py:438} INFO - ============================================================
+[2025-11-11T07:08:13.133+0000] {docker.py:438} INFO - 🏁 REPEATED GRADUAL MEMORY STRESS COMPLETED!
+[2025-11-11T07:08:13.134+0000] {docker.py:438} INFO - ============================================================
+[2025-11-11T07:08:13.136+0000] {docker.py:438} INFO - 🔄 Total cycles performed: 9
+[2025-11-11T07:08:13.136+0000] {docker.py:438} INFO - 💥 Total OOM events: 8
+[2025-11-11T07:08:13.138+0000] {docker.py:438} INFO - ⏱️  Total experiment time: 580s
+[2025-11-11T07:08:13.139+0000] {docker.py:438} INFO - 📊 Average cycle time: 64s
+[2025-11-11T07:08:13.339+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-11-11T07:08:23.761+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-11T07:08:23.761+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=manual__2025-11-10T23:01:46.735837+00:00, execution_date=20251110T230146, start_date=20251111T065812, end_date=20251111T070823
+[2025-11-11T07:08:23.820+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-11T07:08:23.847+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-11T07:08:23.851+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

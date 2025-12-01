@@ -1,0 +1,98 @@
+[2025-11-11T08:52:27.355+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-11T08:52:27.397+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-11T08:52:23.981743+00:00 [queued]>
+[2025-11-11T08:52:27.409+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-11T08:52:23.981743+00:00 [queued]>
+[2025-11-11T08:52:27.409+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-11T08:52:27.439+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-11-11 08:52:23.981743+00:00
+[2025-11-11T08:52:27.456+0000] {standard_task_runner.py:72} INFO - Started process 188 to run task
+[2025-11-11T08:52:27.470+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Reinitialize_Application', 'apply_container_restart_docker', 'manual__2025-11-11T08:52:23.981743+00:00', '--job-id', '14508', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp3p006v_3']
+[2025-11-11T08:52:27.477+0000] {standard_task_runner.py:105} INFO - Job 14508: Subtask apply_container_restart_docker
+[2025-11-11T08:52:27.586+0000] {task_command.py:467} INFO - Running <TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-11T08:52:23.981743+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-11T08:52:27.880+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reinitialize_Application' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-11-11T08:52:23.981743+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-11T08:52:23.981743+00:00'
+[2025-11-11T08:52:27.884+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-11T08:52:28.024+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-11-11T08:52:28.949+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-11T08:52:57.406+0000] {docker.py:438} INFO - 
+[2025-11-11T08:52:57.432+0000] {docker.py:438} INFO - total 9780
+[2025-11-11T08:52:57.433+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000    4096 Nov  3 08:06 .
+[2025-11-11T08:52:57.433+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-11-11T08:52:57.434+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-11-11T08:52:57.436+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-11-11T08:52:57.436+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-11-11T08:52:57.437+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1672 Oct 30 07:48 Memory_Stress_Test_Azure.yaml
+[2025-11-11T08:52:57.437+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-11-11T08:52:57.440+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct 29 06:31 __pycache__
+[2025-11-11T08:52:57.440+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000    4096 Oct 21 08:05 chaos_env
+[2025-11-11T08:52:57.440+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-11-11T08:52:57.441+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 9349027 Nov 11 08:46 chaostoolkit.log
+[2025-11-11T08:52:57.445+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1421 Oct 23 09:34 check.py
+[2025-11-11T08:52:57.445+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-11-11T08:52:57.446+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000    1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-11-11T08:52:57.446+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-11-11T08:52:57.447+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     692 Oct 24 01:43 container_probe.json
+[2025-11-11T08:52:57.448+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    2533 Oct 23 09:28 container_probe.yaml
+[2025-11-11T08:52:57.449+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-11-11T08:52:57.449+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-11-11T08:52:57.449+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1751 Nov  3 05:42 container_restart_Azure.yaml
+[2025-11-11T08:52:57.452+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-11-11T08:52:57.454+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-11-11T08:52:57.454+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-11-11T08:52:57.456+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1436 Oct 30 12:28 cordon_uncordon_node_Azure.yaml
+[2025-11-11T08:52:57.457+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-11-11T08:52:57.458+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1760 Oct 21 08:00 db_cleanup.json
+[2025-11-11T08:52:57.458+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-11-11T08:52:57.458+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    5855 Oct 28 12:27 direct_memory_stress.py
+[2025-11-11T08:52:57.459+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3216 Nov 11 08:46 journal.json
+[2025-11-11T08:52:57.459+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root  362796 Nov 11 08:46 k6_continuous_load.log
+[2025-11-11T08:52:57.460+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3613 Nov 11 08:46 k6_continuous_summary.json
+[2025-11-11T08:52:57.460+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-11-11T08:52:57.463+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-11-11T08:52:57.465+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-11-11T08:52:57.465+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-11-11T08:52:57.466+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-11-11T08:52:57.466+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-11-11T08:52:57.466+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1066 Oct 30 12:27 memory_stress.json
+[2025-11-11T08:52:57.469+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    6653 Oct 29 06:18 memory_stress.py
+[2025-11-11T08:52:57.469+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-11-11T08:52:57.470+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-11-11T08:52:57.470+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-11-11T08:52:57.473+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-11-11T08:52:57.473+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-11-11T08:52:57.474+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-11-11T08:52:57.474+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-11-11T08:52:57.474+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-11-11T08:52:57.476+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-11-11T08:52:57.476+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1641 Oct 30 12:29 redis_memory_stress_Azure.yaml
+[2025-11-11T08:52:57.477+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-11-11T08:52:57.477+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-11-11T08:52:57.478+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1307 Oct 27 10:33 sample_probe.yaml
+[2025-11-11T08:52:57.478+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct 22 06:46 scripts
+[2025-11-11T08:52:57.479+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     272 Oct 27 08:51 simple-stress-test.yaml
+[2025-11-11T08:52:57.479+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-11-11T08:52:57.480+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-11-11T08:52:57.480+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-11-11T08:52:57.481+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     295 Oct 27 08:49 test_after_fix.yaml
+[2025-11-11T08:52:57.481+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-11-11T08:52:57.482+0000] {docker.py:438} INFO - Starting Reinitializing the Social Networking Application...
+[2025-11-11T08:52:59.121+0000] {docker.py:438} INFO - [32m[2025-11-11 08:52:59 INFO] Validating the experiment's syntax
+[2025-11-11T08:53:01.426+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Experiment looks valid
+[2025-11-11T08:53:01.428+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Running experiment: Simple Social Network Reset
+[2025-11-11T08:53:01.433+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Steady-state strategy: default
+[2025-11-11T08:53:01.442+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Rollbacks strategy: default
+[2025-11-11T08:53:01.443+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-11T08:53:01.444+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Playing your experiment's method now...
+[2025-11-11T08:53:01.444+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Action: complete-reset-and-reinit
+[2025-11-11T08:53:01.446+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting complete reset and reinitialization...
+[2025-11-11T08:53:01.446+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting full social network reset...
+[2025-11-11T08:53:01.446+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Redis data...
+[2025-11-11T08:53:01.500+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-11T08:53:01.537+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-11T08:53:01.815+0000] {docker.py:438} INFO - [31m[2025-11-11 08:53:01 ERROR]   => failed: Exception: No running pods found for deployment: social-graph-redis
+[2025-11-11T08:53:01.816+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Let's rollback...
+[2025-11-11T08:53:01.817+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] No declared rollbacks, let's move on.
+[2025-11-11T08:53:01.825+0000] {docker.py:438} INFO - [32m[2025-11-11 08:53:01 INFO] Experiment ended with status: completed
+[2025-11-11T08:53:02.095+0000] {docker.py:438} INFO - Reinitialized Social Networking APplication successfully
+[2025-11-11T08:53:02.865+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-11T08:53:02.866+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Reinitialize_Application, task_id=apply_container_restart_docker, run_id=manual__2025-11-11T08:52:23.981743+00:00, execution_date=20251111T085223, start_date=20251111T085227, end_date=20251111T085302
+[2025-11-11T08:53:02.982+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-11T08:53:03.029+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-11T08:53:03.036+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

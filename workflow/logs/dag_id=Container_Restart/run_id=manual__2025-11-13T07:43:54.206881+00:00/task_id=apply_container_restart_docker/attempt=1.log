@@ -1,0 +1,904 @@
+[2025-11-13T07:43:56.940+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-13T07:43:56.975+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-11-13T07:43:54.206881+00:00 [queued]>
+[2025-11-13T07:43:56.983+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-11-13T07:43:54.206881+00:00 [queued]>
+[2025-11-13T07:43:56.983+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-13T07:43:57.005+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-11-13 07:43:54.206881+00:00
+[2025-11-13T07:43:57.020+0000] {standard_task_runner.py:72} INFO - Started process 44 to run task
+[2025-11-13T07:43:57.033+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Container_Restart', 'apply_container_restart_docker', 'manual__2025-11-13T07:43:54.206881+00:00', '--job-id', '14807', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp2jgefljq']
+[2025-11-13T07:43:57.035+0000] {standard_task_runner.py:105} INFO - Job 14807: Subtask apply_container_restart_docker
+[2025-11-13T07:43:57.114+0000] {task_command.py:467} INFO - Running <TaskInstance: Container_Restart.apply_container_restart_docker manual__2025-11-13T07:43:54.206881+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-13T07:43:57.231+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Container_Restart' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-11-13T07:43:54.206881+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-13T07:43:54.206881+00:00'
+[2025-11-13T07:43:57.233+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-13T07:43:57.347+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-11-13T07:43:57.899+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-13T07:44:07.937+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:07.945+0000] {docker.py:438} INFO - total 10244
+[2025-11-13T07:44:07.946+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000    4096 Nov 11 11:35 .
+[2025-11-13T07:44:07.946+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-11-13T07:44:07.947+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-11-13T07:44:07.947+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-11-13T07:44:07.948+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-11-13T07:44:07.948+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1665 Nov 11 09:21 Memory_Stress_Test_Azure.yaml
+[2025-11-13T07:44:07.949+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-11-13T07:44:07.949+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct 29 06:31 __pycache__
+[2025-11-13T07:44:07.950+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000    4096 Oct 21 08:05 chaos_env
+[2025-11-13T07:44:07.950+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-11-13T07:44:07.951+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 9987233 Nov 13 07:14 chaostoolkit.log
+[2025-11-13T07:44:07.952+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1421 Oct 23 09:34 check.py
+[2025-11-13T07:44:07.952+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-11-13T07:44:07.952+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000    1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-11-13T07:44:07.953+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-11-13T07:44:07.954+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     692 Oct 24 01:43 container_probe.json
+[2025-11-13T07:44:07.954+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    2533 Oct 23 09:28 container_probe.yaml
+[2025-11-13T07:44:07.955+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-11-13T07:44:07.956+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-11-13T07:44:07.956+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1744 Nov 11 09:15 container_restart_Azure.yaml
+[2025-11-13T07:44:07.956+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-11-13T07:44:07.957+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-11-13T07:44:07.957+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-11-13T07:44:07.958+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1430 Nov 11 09:16 cordon_uncordon_node_Azure.yaml
+[2025-11-13T07:44:07.959+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-11-13T07:44:07.959+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1760 Oct 21 08:00 db_cleanup.json
+[2025-11-13T07:44:07.959+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-11-13T07:44:07.960+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    5855 Oct 28 12:27 direct_memory_stress.py
+[2025-11-13T07:44:07.960+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3294 Nov 13 07:14 journal.json
+[2025-11-13T07:44:07.961+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000       0 Nov 11 11:31 json
+[2025-11-13T07:44:07.961+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root  198840 Nov 13 07:26 k6_continuous_load.log
+[2025-11-13T07:44:07.962+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3896 Nov 13 06:45 k6_continuous_summary.json
+[2025-11-13T07:44:07.962+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-11-13T07:44:07.962+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-11-13T07:44:07.963+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-11-13T07:44:07.964+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-11-13T07:44:07.965+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-11-13T07:44:07.965+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-11-13T07:44:07.965+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1066 Oct 30 12:27 memory_stress.json
+[2025-11-13T07:44:07.966+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    6653 Oct 29 06:18 memory_stress.py
+[2025-11-13T07:44:07.966+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-11-13T07:44:07.967+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-11-13T07:44:07.967+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-11-13T07:44:07.967+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-11-13T07:44:07.968+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-11-13T07:44:07.968+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-11-13T07:44:07.969+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-11-13T07:44:07.969+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-11-13T07:44:07.970+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-11-13T07:44:07.970+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1634 Nov 11 09:16 redis_memory_stress_Azure.yaml
+[2025-11-13T07:44:07.970+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-11-13T07:44:07.971+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-11-13T07:44:07.971+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1307 Oct 27 10:33 sample_probe.yaml
+[2025-11-13T07:44:07.972+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct 22 06:46 scripts
+[2025-11-13T07:44:07.972+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     272 Oct 27 08:51 simple-stress-test.yaml
+[2025-11-13T07:44:07.972+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-11-13T07:44:07.973+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-11-13T07:44:07.973+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-11-13T07:44:07.974+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     295 Oct 27 08:49 test_after_fix.yaml
+[2025-11-13T07:44:07.974+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-11-13T07:44:07.975+0000] {docker.py:438} INFO - Starting continuous container restart experiment...
+[2025-11-13T07:44:08.489+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Validating the experiment's syntax
+[2025-11-13T07:44:08.822+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Experiment looks valid
+[2025-11-13T07:44:08.824+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Running experiment: Continuous Container Restart Experiment
+[2025-11-13T07:44:08.826+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Steady-state strategy: default
+[2025-11-13T07:44:08.827+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Rollbacks strategy: default
+[2025-11-13T07:44:08.827+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-13T07:44:08.828+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Playing your experiment's method now...
+[2025-11-13T07:44:08.828+0000] {docker.py:438} INFO - [32m[2025-11-13 07:44:08 INFO] Action: continuous-container-restart
+[2025-11-13T07:44:59.009+0000] {docker.py:438} INFO - 🚀 [DEBUG] Entered restart_containers_continuous()
+[2025-11-13T07:44:59.010+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, interval=5, duration=400, ns=default, container_name=compose-post-service
+[2025-11-13T07:44:59.010+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.010+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.011+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #1 at 2025-11-13 07:44:08
+[2025-11-13T07:44:59.011+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.011+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.011+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.012+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.012+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #1: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.012+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.012+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 400s
+[2025-11-13T07:44:59.013+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.013+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.013+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #2 at 2025-11-13 07:44:13
+[2025-11-13T07:44:59.013+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.014+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.014+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.014+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.014+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #2: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.015+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.015+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 395s
+[2025-11-13T07:44:59.015+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.015+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.016+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #3 at 2025-11-13 07:44:18
+[2025-11-13T07:44:59.016+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.016+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.016+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.017+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.017+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #3: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.017+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.017+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 390s
+[2025-11-13T07:44:59.018+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.018+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.018+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #4 at 2025-11-13 07:44:23
+[2025-11-13T07:44:59.018+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.019+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.019+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.019+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.019+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #4: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.019+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.020+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 385s
+[2025-11-13T07:44:59.020+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.020+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.020+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #5 at 2025-11-13 07:44:28
+[2025-11-13T07:44:59.021+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.021+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.021+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.021+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.021+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #5: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.022+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.022+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 380s
+[2025-11-13T07:44:59.022+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.022+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.023+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #6 at 2025-11-13 07:44:33
+[2025-11-13T07:44:59.023+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.023+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.024+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.024+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.024+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #6: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.024+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.024+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 375s
+[2025-11-13T07:44:59.025+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.025+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.025+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #7 at 2025-11-13 07:44:38
+[2025-11-13T07:44:59.025+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.026+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.026+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.026+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.026+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #7: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.027+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.027+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 370s
+[2025-11-13T07:44:59.027+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.027+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.028+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #8 at 2025-11-13 07:44:43
+[2025-11-13T07:44:59.028+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.028+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.028+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.029+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.029+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #8: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.029+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.029+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 365s
+[2025-11-13T07:44:59.029+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.030+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.030+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #9 at 2025-11-13 07:44:48
+[2025-11-13T07:44:59.030+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.030+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.031+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.031+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.031+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #9: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.031+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.031+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 360s
+[2025-11-13T07:44:59.032+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.032+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.032+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #10 at 2025-11-13 07:44:53
+[2025-11-13T07:44:59.032+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.033+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.033+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.033+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.033+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #10: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:44:59.033+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:44:59.034+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 355s
+[2025-11-13T07:44:59.034+0000] {docker.py:438} INFO - 
+[2025-11-13T07:44:59.034+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.034+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #11 at 2025-11-13 07:44:58
+[2025-11-13T07:44:59.035+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:44:59.035+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:44:59.035+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:44:59.036+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.163+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #11: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.163+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.164+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 350s
+[2025-11-13T07:45:54.164+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.165+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.165+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #12 at 2025-11-13 07:45:04
+[2025-11-13T07:45:54.166+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.166+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.167+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.167+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.167+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #12: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.168+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.168+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 345s
+[2025-11-13T07:45:54.168+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.169+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.169+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #13 at 2025-11-13 07:45:09
+[2025-11-13T07:45:54.170+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.170+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.170+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.171+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.171+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #13: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.172+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.172+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 340s
+[2025-11-13T07:45:54.173+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.173+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.173+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #14 at 2025-11-13 07:45:14
+[2025-11-13T07:45:54.174+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.174+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.175+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.175+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.176+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #14: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.177+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.177+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 335s
+[2025-11-13T07:45:54.179+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.179+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.179+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #15 at 2025-11-13 07:45:19
+[2025-11-13T07:45:54.180+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.180+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.181+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.181+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.181+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #15: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.182+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.182+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 330s
+[2025-11-13T07:45:54.183+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.183+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.184+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #16 at 2025-11-13 07:45:24
+[2025-11-13T07:45:54.184+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.185+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.185+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.186+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.186+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #16: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.187+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.187+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 325s
+[2025-11-13T07:45:54.188+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.188+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.188+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #17 at 2025-11-13 07:45:29
+[2025-11-13T07:45:54.189+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.189+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.189+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.190+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.190+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #17: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.190+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.191+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 320s
+[2025-11-13T07:45:54.191+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.191+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.192+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #18 at 2025-11-13 07:45:34
+[2025-11-13T07:45:54.192+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.193+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.193+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.193+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.194+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #18: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.194+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.194+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 315s
+[2025-11-13T07:45:54.194+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.195+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.195+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #19 at 2025-11-13 07:45:39
+[2025-11-13T07:45:54.195+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.196+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.196+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.196+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.196+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #19: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.197+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.197+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 310s
+[2025-11-13T07:45:54.197+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.197+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.198+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #20 at 2025-11-13 07:45:44
+[2025-11-13T07:45:54.198+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.198+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.198+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.199+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.199+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #20: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.199+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.199+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 305s
+[2025-11-13T07:45:54.200+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.200+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.200+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #21 at 2025-11-13 07:45:49
+[2025-11-13T07:45:54.201+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.201+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.201+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:45:54.201+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.202+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #21: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:45:54.202+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:45:54.202+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 300s
+[2025-11-13T07:45:54.203+0000] {docker.py:438} INFO - 
+[2025-11-13T07:45:54.203+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.203+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #22 at 2025-11-13 07:45:54
+[2025-11-13T07:45:54.203+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:45:54.204+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:45:54.204+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.353+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.354+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #22: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.357+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.357+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 295s
+[2025-11-13T07:46:49.357+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.358+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.359+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #23 at 2025-11-13 07:45:59
+[2025-11-13T07:46:49.359+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.360+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.360+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.361+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.362+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #23: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.362+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.362+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 290s
+[2025-11-13T07:46:49.363+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.363+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.363+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #24 at 2025-11-13 07:46:04
+[2025-11-13T07:46:49.364+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.365+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.366+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.366+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.367+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #24: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.367+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.368+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 285s
+[2025-11-13T07:46:49.368+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.369+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.369+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #25 at 2025-11-13 07:46:09
+[2025-11-13T07:46:49.369+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.370+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.370+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.371+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.371+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #25: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.372+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.372+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 280s
+[2025-11-13T07:46:49.372+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.373+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.373+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #26 at 2025-11-13 07:46:14
+[2025-11-13T07:46:49.374+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.374+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.374+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.375+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.375+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #26: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.376+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.376+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 275s
+[2025-11-13T07:46:49.376+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.377+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.377+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #27 at 2025-11-13 07:46:19
+[2025-11-13T07:46:49.378+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.378+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.379+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.379+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.380+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #27: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.380+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.381+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 270s
+[2025-11-13T07:46:49.381+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.381+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.382+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #28 at 2025-11-13 07:46:24
+[2025-11-13T07:46:49.382+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.383+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.383+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.383+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.384+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #28: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.384+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.384+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 265s
+[2025-11-13T07:46:49.385+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.385+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.386+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #29 at 2025-11-13 07:46:29
+[2025-11-13T07:46:49.386+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.387+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.387+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.387+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.388+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #29: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.388+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.388+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 260s
+[2025-11-13T07:46:49.389+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.389+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.389+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #30 at 2025-11-13 07:46:34
+[2025-11-13T07:46:49.390+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.390+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.391+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.391+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.392+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #30: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.392+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.392+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 255s
+[2025-11-13T07:46:49.393+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.393+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.394+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #31 at 2025-11-13 07:46:39
+[2025-11-13T07:46:49.394+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.395+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.395+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.396+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.396+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #31: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.397+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.397+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 249s
+[2025-11-13T07:46:49.397+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.398+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.398+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #32 at 2025-11-13 07:46:44
+[2025-11-13T07:46:49.399+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.399+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.399+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:46:49.399+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.400+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #32: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:46:49.400+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:46:49.401+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 244s
+[2025-11-13T07:46:49.401+0000] {docker.py:438} INFO - 
+[2025-11-13T07:46:49.401+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.402+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #33 at 2025-11-13 07:46:49
+[2025-11-13T07:46:49.402+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:46:49.402+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:46:49.403+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.578+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.579+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #33: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.580+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.580+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 239s
+[2025-11-13T07:47:44.580+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.581+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.581+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #34 at 2025-11-13 07:46:54
+[2025-11-13T07:47:44.581+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.582+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.582+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.583+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.583+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #34: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.584+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.584+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 234s
+[2025-11-13T07:47:44.584+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.585+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.585+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #35 at 2025-11-13 07:46:59
+[2025-11-13T07:47:44.586+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.586+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.587+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.587+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.587+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #35: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.588+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.589+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 229s
+[2025-11-13T07:47:44.589+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.589+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.590+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #36 at 2025-11-13 07:47:04
+[2025-11-13T07:47:44.590+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.591+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.591+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.592+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.592+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #36: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.592+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.593+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 224s
+[2025-11-13T07:47:44.593+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.593+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.594+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #37 at 2025-11-13 07:47:09
+[2025-11-13T07:47:44.594+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.594+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.595+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.595+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.596+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #37: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.596+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.596+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 219s
+[2025-11-13T07:47:44.597+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.597+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.597+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #38 at 2025-11-13 07:47:14
+[2025-11-13T07:47:44.598+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.598+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.599+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.599+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.599+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #38: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.600+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.600+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 214s
+[2025-11-13T07:47:44.600+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.601+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.601+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #39 at 2025-11-13 07:47:19
+[2025-11-13T07:47:44.601+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.602+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.602+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.603+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.603+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #39: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.604+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.604+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 209s
+[2025-11-13T07:47:44.604+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.605+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.605+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #40 at 2025-11-13 07:47:24
+[2025-11-13T07:47:44.605+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.605+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.606+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.606+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.606+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #40: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.607+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.607+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 204s
+[2025-11-13T07:47:44.607+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.607+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.608+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #41 at 2025-11-13 07:47:29
+[2025-11-13T07:47:44.608+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.608+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.608+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.609+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.609+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #41: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.609+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.610+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 199s
+[2025-11-13T07:47:44.610+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.610+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.610+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #42 at 2025-11-13 07:47:34
+[2025-11-13T07:47:44.611+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.611+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.611+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.611+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.612+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #42: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.612+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.613+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 194s
+[2025-11-13T07:47:44.613+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.613+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.614+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #43 at 2025-11-13 07:47:39
+[2025-11-13T07:47:44.614+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.614+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.615+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:47:44.615+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.615+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #43: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:47:44.615+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:47:44.616+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 189s
+[2025-11-13T07:47:44.616+0000] {docker.py:438} INFO - 
+[2025-11-13T07:47:44.616+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.616+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #44 at 2025-11-13 07:47:44
+[2025-11-13T07:47:44.617+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:47:44.617+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:47:44.617+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.779+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.780+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #44: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.780+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.781+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 184s
+[2025-11-13T07:48:39.781+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.782+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.782+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #45 at 2025-11-13 07:47:49
+[2025-11-13T07:48:39.783+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.783+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.783+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.784+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.784+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #45: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.784+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.785+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 179s
+[2025-11-13T07:48:39.785+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.786+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.786+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #46 at 2025-11-13 07:47:54
+[2025-11-13T07:48:39.786+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.787+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.787+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.788+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.788+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #46: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.789+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.789+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 174s
+[2025-11-13T07:48:39.790+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.790+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.790+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #47 at 2025-11-13 07:47:59
+[2025-11-13T07:48:39.791+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.791+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.792+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.792+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.793+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #47: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.793+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.793+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 169s
+[2025-11-13T07:48:39.794+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.794+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.794+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #48 at 2025-11-13 07:48:04
+[2025-11-13T07:48:39.795+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.795+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.796+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.796+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.796+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #48: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.797+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.797+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 164s
+[2025-11-13T07:48:39.797+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.798+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.798+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #49 at 2025-11-13 07:48:09
+[2025-11-13T07:48:39.799+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.799+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.800+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.800+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.800+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #49: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.801+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.801+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 159s
+[2025-11-13T07:48:39.801+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.802+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.802+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #50 at 2025-11-13 07:48:14
+[2025-11-13T07:48:39.803+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.803+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.803+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.804+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.804+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #50: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.804+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.805+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 154s
+[2025-11-13T07:48:39.805+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.805+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.806+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #51 at 2025-11-13 07:48:19
+[2025-11-13T07:48:39.806+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.806+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.806+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.807+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.807+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #51: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.807+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.807+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 149s
+[2025-11-13T07:48:39.808+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.808+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.808+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #52 at 2025-11-13 07:48:24
+[2025-11-13T07:48:39.808+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.809+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.809+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.809+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.810+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #52: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.810+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.810+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 144s
+[2025-11-13T07:48:39.810+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.811+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.811+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #53 at 2025-11-13 07:48:29
+[2025-11-13T07:48:39.811+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.811+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.812+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.812+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.812+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #53: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.813+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.813+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 139s
+[2025-11-13T07:48:39.813+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.813+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.814+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #54 at 2025-11-13 07:48:34
+[2025-11-13T07:48:39.814+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.814+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.814+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:48:39.815+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.815+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #54: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:48:39.815+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:48:39.815+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 134s
+[2025-11-13T07:48:39.816+0000] {docker.py:438} INFO - 
+[2025-11-13T07:48:39.816+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.816+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #55 at 2025-11-13 07:48:39
+[2025-11-13T07:48:39.817+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:48:39.817+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:48:39.817+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:34.988+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.989+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #55: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.989+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:34.989+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 129s
+[2025-11-13T07:49:34.990+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:34.990+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:34.990+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #56 at 2025-11-13 07:48:44
+[2025-11-13T07:49:34.991+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:34.991+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:34.991+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:34.992+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.992+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #56: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.992+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:34.993+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 124s
+[2025-11-13T07:49:34.993+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:34.994+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:34.994+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #57 at 2025-11-13 07:48:49
+[2025-11-13T07:49:34.994+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:34.995+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:34.995+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:34.996+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.996+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #57: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:34.996+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:34.999+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 119s
+[2025-11-13T07:49:34.999+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.000+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.000+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #58 at 2025-11-13 07:48:54
+[2025-11-13T07:49:35.001+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.001+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.001+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.002+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.002+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #58: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.002+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.003+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 114s
+[2025-11-13T07:49:35.003+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.004+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.004+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #59 at 2025-11-13 07:48:59
+[2025-11-13T07:49:35.004+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.005+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.005+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.005+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.006+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #59: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.006+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.006+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 109s
+[2025-11-13T07:49:35.007+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.007+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.008+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #60 at 2025-11-13 07:49:04
+[2025-11-13T07:49:35.008+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.008+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.009+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.009+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.009+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #60: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.010+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.010+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 104s
+[2025-11-13T07:49:35.010+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.011+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.011+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #61 at 2025-11-13 07:49:09
+[2025-11-13T07:49:35.011+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.012+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.012+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.012+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.013+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #61: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.013+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.014+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 99s
+[2025-11-13T07:49:35.014+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.014+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.015+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #62 at 2025-11-13 07:49:14
+[2025-11-13T07:49:35.015+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.015+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.016+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.016+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.016+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #62: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.016+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.017+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 94s
+[2025-11-13T07:49:35.017+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.017+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.017+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #63 at 2025-11-13 07:49:19
+[2025-11-13T07:49:35.018+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.018+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.018+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.018+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.018+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #63: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.019+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.019+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 89s
+[2025-11-13T07:49:35.019+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.019+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.020+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #64 at 2025-11-13 07:49:24
+[2025-11-13T07:49:35.020+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.020+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.020+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.020+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.021+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #64: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.021+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.021+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 84s
+[2025-11-13T07:49:35.021+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.022+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.022+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #65 at 2025-11-13 07:49:29
+[2025-11-13T07:49:35.022+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.022+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.023+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:49:35.023+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.023+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #65: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:49:35.023+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:49:35.024+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 79s
+[2025-11-13T07:49:35.024+0000] {docker.py:438} INFO - 
+[2025-11-13T07:49:35.024+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.024+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #66 at 2025-11-13 07:49:34
+[2025-11-13T07:49:35.025+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:49:35.025+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:49:35.025+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.167+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.168+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #66: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.168+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.169+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 74s
+[2025-11-13T07:50:30.169+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.169+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.170+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #67 at 2025-11-13 07:49:40
+[2025-11-13T07:50:30.170+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.171+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.171+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.171+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.172+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #67: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.172+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.173+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 69s
+[2025-11-13T07:50:30.173+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.173+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.174+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #68 at 2025-11-13 07:49:45
+[2025-11-13T07:50:30.174+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.175+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.175+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.175+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.176+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #68: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.176+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.177+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 64s
+[2025-11-13T07:50:30.177+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.178+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.178+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #69 at 2025-11-13 07:49:50
+[2025-11-13T07:50:30.178+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.179+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.179+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.180+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.180+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #69: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.180+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.181+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 59s
+[2025-11-13T07:50:30.181+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.181+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.182+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #70 at 2025-11-13 07:49:55
+[2025-11-13T07:50:30.182+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.183+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.183+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.183+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.184+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #70: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.184+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.185+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 54s
+[2025-11-13T07:50:30.185+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.185+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.186+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #71 at 2025-11-13 07:50:00
+[2025-11-13T07:50:30.186+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.186+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.187+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.187+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.188+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #71: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.188+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.188+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 49s
+[2025-11-13T07:50:30.189+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.189+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.189+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #72 at 2025-11-13 07:50:05
+[2025-11-13T07:50:30.190+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.190+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.191+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.191+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.191+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #72: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.192+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.192+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 44s
+[2025-11-13T07:50:30.193+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.193+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.193+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #73 at 2025-11-13 07:50:10
+[2025-11-13T07:50:30.194+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.194+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.194+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.194+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.195+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #73: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.195+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.195+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 39s
+[2025-11-13T07:50:30.195+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.196+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.196+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #74 at 2025-11-13 07:50:15
+[2025-11-13T07:50:30.196+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.196+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.197+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.197+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.197+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #74: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.197+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.198+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 34s
+[2025-11-13T07:50:30.198+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.198+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.198+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #75 at 2025-11-13 07:50:20
+[2025-11-13T07:50:30.199+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.199+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.199+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.199+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.199+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #75: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.200+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.200+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 29s
+[2025-11-13T07:50:30.200+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.200+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.201+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #76 at 2025-11-13 07:50:25
+[2025-11-13T07:50:30.201+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.201+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.201+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:30.202+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.202+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #76: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:30.202+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:30.202+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 24s
+[2025-11-13T07:50:30.202+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:30.203+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.203+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #77 at 2025-11-13 07:50:30
+[2025-11-13T07:50:30.203+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:30.203+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:30.204+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:45.245+0000] {docker.py:438} INFO - [32m[2025-11-13 07:50:45 INFO] Let's rollback...
+[2025-11-13T07:50:45.246+0000] {docker.py:438} INFO - [32m[2025-11-13 07:50:45 INFO] Rollback: verify-pods-running
+[2025-11-13T07:50:45.246+0000] {docker.py:438} INFO - [32m[2025-11-13 07:50:45 INFO] Probe: verify-pods-running
+[2025-11-13T07:50:45.263+0000] {docker.py:438} INFO - [31m[2025-11-13 07:50:45 ERROR]   => failed: kubernetes.config.config_exception.ConfigException: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.264+0000] {docker.py:438} INFO - [32m[2025-11-13 07:50:45 INFO] Experiment ended with status: completed
+[2025-11-13T07:50:45.265+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.266+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #77: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.266+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:45.267+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 19s
+[2025-11-13T07:50:45.267+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:45.268+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.268+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #78 at 2025-11-13 07:50:35
+[2025-11-13T07:50:45.269+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.269+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:45.269+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:45.270+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.270+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #78: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.271+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:45.271+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 14s
+[2025-11-13T07:50:45.271+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:45.272+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.272+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #79 at 2025-11-13 07:50:40
+[2025-11-13T07:50:45.273+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.273+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:45.273+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:45.274+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.274+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #79: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.275+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:45.275+0000] {docker.py:438} INFO - ⏳ [DEBUG] Waiting 5 seconds until next cycle. Time remaining: 9s
+[2025-11-13T07:50:45.276+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:45.276+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.276+0000] {docker.py:438} INFO - 🔄 [DEBUG] Container Restart Cycle #80 at 2025-11-13 07:50:45
+[2025-11-13T07:50:45.277+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.277+0000] {docker.py:438} INFO - 🔄 [DEBUG] Entered restart_containers()
+[2025-11-13T07:50:45.278+0000] {docker.py:438} INFO -    Params => label_selector=app=compose-post-service, name_pattern=None, qty=2, rand=True, mode=fixed, ns=default, order=alphabetic, container_name=compose-post-service, restart_command=None
+[2025-11-13T07:50:45.278+0000] {docker.py:438} INFO - ❌ [DEBUG] Failed to create k8s api client: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.283+0000] {docker.py:438} INFO - ❌ [DEBUG] Exception calling restart_containers in cycle #80: File does not exist: /home/azureuser/.minikube/ca.crt
+[2025-11-13T07:50:45.284+0000] {docker.py:438} INFO - ✅ [DEBUG] Successfully restarted this cycle: 0
+[2025-11-13T07:50:45.284+0000] {docker.py:438} INFO - ⏰ [DEBUG] Less than 5 seconds remaining (4s). Stopping continuous run.
+[2025-11-13T07:50:45.287+0000] {docker.py:438} INFO - 
+[2025-11-13T07:50:45.287+0000] {docker.py:438} INFO - ============================================================
+[2025-11-13T07:50:45.291+0000] {docker.py:438} INFO - 🏁 [DEBUG] Continuous restart experiment completed
+[2025-11-13T07:50:45.291+0000] {docker.py:438} INFO - 📈 Total cycles: 80
+[2025-11-13T07:50:45.291+0000] {docker.py:438} INFO - 📦 Total containers restarted: 0
+[2025-11-13T07:50:45.292+0000] {docker.py:438} INFO - ⏱️ Total duration: 396 seconds
+[2025-11-13T07:50:45.292+0000] {docker.py:438} INFO - 📊 Average cycle time: 5.0 seconds
+[2025-11-13T07:50:45.400+0000] {docker.py:438} INFO - Container restart experiment completed successfully
+[2025-11-13T07:50:45.642+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-13T07:50:45.643+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Container_Restart, task_id=apply_container_restart_docker, run_id=manual__2025-11-13T07:43:54.206881+00:00, execution_date=20251113T074354, start_date=20251113T074356, end_date=20251113T075045
+[2025-11-13T07:50:45.671+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-13T07:50:45.687+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-13T07:50:45.690+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

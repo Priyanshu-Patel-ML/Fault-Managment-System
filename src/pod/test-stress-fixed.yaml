@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: test-connection-fixed
+  namespace: default
+spec:
+  mode: all
+  selector:
+    labelSelectors:
+      app: post-storage-service
+  stressors:
+    memory:
+      workers: 1
+      size: "200MB"
+      oomScoreAdj: 1000
+  duration: "10s"

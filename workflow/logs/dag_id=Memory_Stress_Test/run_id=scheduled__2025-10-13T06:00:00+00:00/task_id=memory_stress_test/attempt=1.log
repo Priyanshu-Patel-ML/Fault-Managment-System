@@ -1,0 +1,476 @@
+[2025-10-13T06:45:02.984+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-13T06:45:03.046+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-13T06:00:00+00:00 [queued]>
+[2025-10-13T06:45:03.069+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-13T06:00:00+00:00 [queued]>
+[2025-10-13T06:45:03.069+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-13T06:45:03.115+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): memory_stress_test> on 2025-10-13 06:00:00+00:00
+[2025-10-13T06:45:03.168+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Memory_Stress_Test', 'memory_stress_test', 'scheduled__2025-10-13T06:00:00+00:00', '--job-id', '7997', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpqk3_c5m0']
+[2025-10-13T06:45:03.171+0000] {standard_task_runner.py:105} INFO - Job 7997: Subtask memory_stress_test
+[2025-10-13T06:45:03.144+0000] {standard_task_runner.py:72} INFO - Started process 964 to run task
+[2025-10-13T06:45:03.276+0000] {task_command.py:467} INFO - Running <TaskInstance: Memory_Stress_Test.memory_stress_test scheduled__2025-10-13T06:00:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-10-13T06:45:03.645+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-10-13T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-13T06:00:00+00:00'
+[2025-10-13T06:45:03.648+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-13T06:45:03.740+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-10-13T06:45:04.405+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-10-13T06:45:34.074+0000] {docker.py:438} INFO - 
+[2025-10-13T06:45:35.661+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:35 INFO] Validating the experiment's syntax
+[2025-10-13T06:45:36.251+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Experiment looks valid
+[2025-10-13T06:45:36.254+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Running experiment: Continuous Memory Stress Experiment
+[2025-10-13T06:45:36.263+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Steady-state strategy: default
+[2025-10-13T06:45:36.264+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Rollbacks strategy: default
+[2025-10-13T06:45:36.265+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-10-13T06:45:36.267+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Playing your experiment's method now...
+[2025-10-13T06:45:36.268+0000] {docker.py:438} INFO - [32m[2025-10-13 06:45:36 INFO] Action: continuous-memory-stress
+[2025-10-13T06:47:44.807+0000] {docker.py:438} INFO - 🚀 Starting continuous memory stress experiment
+[2025-10-13T06:47:44.808+0000] {docker.py:438} INFO - 📅 Interval: 5 seconds
+[2025-10-13T06:47:44.808+0000] {docker.py:438} INFO - ⏱️  Duration: 300 seconds
+[2025-10-13T06:47:44.831+0000] {docker.py:438} INFO - 💾 Memory size: 512MB
+[2025-10-13T06:47:44.831+0000] {docker.py:438} INFO - 🎯 Target: app=post-storage-service
+[2025-10-13T06:47:44.832+0000] {docker.py:438} INFO - 📍 Namespace: default
+[2025-10-13T06:47:44.832+0000] {docker.py:438} INFO - ⚡ OOM Score: 1000
+[2025-10-13T06:47:44.835+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.835+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.835+0000] {docker.py:438} INFO - 🔥 Memory Stress #1 at 2025-10-13 06:45:36
+[2025-10-13T06:47:44.838+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.838+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-1
+[2025-10-13T06:47:44.841+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.841+0000] {docker.py:438} INFO - 📊 Time remaining: 300 seconds
+[2025-10-13T06:47:44.842+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.842+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.845+0000] {docker.py:438} INFO - 🔥 Memory Stress #2 at 2025-10-13 06:45:41
+[2025-10-13T06:47:44.845+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.846+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-1
+[2025-10-13T06:47:44.846+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-2
+[2025-10-13T06:47:44.846+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.848+0000] {docker.py:438} INFO - 📊 Time remaining: 294 seconds
+[2025-10-13T06:47:44.848+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.849+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.849+0000] {docker.py:438} INFO - 🔥 Memory Stress #3 at 2025-10-13 06:45:47
+[2025-10-13T06:47:44.849+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.852+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-2
+[2025-10-13T06:47:44.852+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-3
+[2025-10-13T06:47:44.853+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.853+0000] {docker.py:438} INFO - 📊 Time remaining: 288 seconds
+[2025-10-13T06:47:44.855+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.855+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.855+0000] {docker.py:438} INFO - 🔥 Memory Stress #4 at 2025-10-13 06:45:52
+[2025-10-13T06:47:44.857+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.857+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-3
+[2025-10-13T06:47:44.858+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-4
+[2025-10-13T06:47:44.858+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.859+0000] {docker.py:438} INFO - 📊 Time remaining: 283 seconds
+[2025-10-13T06:47:44.859+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.859+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.862+0000] {docker.py:438} INFO - 🔥 Memory Stress #5 at 2025-10-13 06:45:58
+[2025-10-13T06:47:44.862+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.864+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-4
+[2025-10-13T06:47:44.864+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-5
+[2025-10-13T06:47:44.864+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.867+0000] {docker.py:438} INFO - 📊 Time remaining: 277 seconds
+[2025-10-13T06:47:44.867+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.867+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.868+0000] {docker.py:438} INFO - 🔥 Memory Stress #6 at 2025-10-13 06:46:04
+[2025-10-13T06:47:44.868+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.869+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-5
+[2025-10-13T06:47:44.869+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-6
+[2025-10-13T06:47:44.871+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.871+0000] {docker.py:438} INFO - 📊 Time remaining: 272 seconds
+[2025-10-13T06:47:44.871+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.872+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.872+0000] {docker.py:438} INFO - 🔥 Memory Stress #7 at 2025-10-13 06:46:09
+[2025-10-13T06:47:44.874+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.874+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-6
+[2025-10-13T06:47:44.874+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-7
+[2025-10-13T06:47:44.876+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.876+0000] {docker.py:438} INFO - 📊 Time remaining: 266 seconds
+[2025-10-13T06:47:44.877+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.877+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.880+0000] {docker.py:438} INFO - 🔥 Memory Stress #8 at 2025-10-13 06:46:15
+[2025-10-13T06:47:44.880+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.881+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-7
+[2025-10-13T06:47:44.881+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-8
+[2025-10-13T06:47:44.883+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.883+0000] {docker.py:438} INFO - 📊 Time remaining: 260 seconds
+[2025-10-13T06:47:44.883+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.884+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.884+0000] {docker.py:438} INFO - 🔥 Memory Stress #9 at 2025-10-13 06:46:20
+[2025-10-13T06:47:44.885+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.885+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-8
+[2025-10-13T06:47:44.888+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-9
+[2025-10-13T06:47:44.888+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.889+0000] {docker.py:438} INFO - 📊 Time remaining: 255 seconds
+[2025-10-13T06:47:44.889+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.889+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.890+0000] {docker.py:438} INFO - 🔥 Memory Stress #10 at 2025-10-13 06:46:26
+[2025-10-13T06:47:44.890+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.891+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-9
+[2025-10-13T06:47:44.891+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-10
+[2025-10-13T06:47:44.891+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.892+0000] {docker.py:438} INFO - 📊 Time remaining: 249 seconds
+[2025-10-13T06:47:44.892+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.893+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.893+0000] {docker.py:438} INFO - 🔥 Memory Stress #11 at 2025-10-13 06:46:32
+[2025-10-13T06:47:44.893+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.895+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-10
+[2025-10-13T06:47:44.895+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-11
+[2025-10-13T06:47:44.896+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.896+0000] {docker.py:438} INFO - 📊 Time remaining: 243 seconds
+[2025-10-13T06:47:44.898+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.898+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.898+0000] {docker.py:438} INFO - 🔥 Memory Stress #12 at 2025-10-13 06:46:37
+[2025-10-13T06:47:44.900+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.900+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-11
+[2025-10-13T06:47:44.901+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-12
+[2025-10-13T06:47:44.901+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.903+0000] {docker.py:438} INFO - 📊 Time remaining: 238 seconds
+[2025-10-13T06:47:44.903+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.903+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.904+0000] {docker.py:438} INFO - 🔥 Memory Stress #13 at 2025-10-13 06:46:43
+[2025-10-13T06:47:44.904+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.907+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-12
+[2025-10-13T06:47:44.907+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-13
+[2025-10-13T06:47:44.907+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.908+0000] {docker.py:438} INFO - 📊 Time remaining: 232 seconds
+[2025-10-13T06:47:44.908+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.910+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.910+0000] {docker.py:438} INFO - 🔥 Memory Stress #14 at 2025-10-13 06:46:48
+[2025-10-13T06:47:44.910+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.911+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-13
+[2025-10-13T06:47:44.912+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-14
+[2025-10-13T06:47:44.912+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.913+0000] {docker.py:438} INFO - 📊 Time remaining: 227 seconds
+[2025-10-13T06:47:44.913+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.914+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.914+0000] {docker.py:438} INFO - 🔥 Memory Stress #15 at 2025-10-13 06:46:54
+[2025-10-13T06:47:44.914+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.915+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-14
+[2025-10-13T06:47:44.915+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-15
+[2025-10-13T06:47:44.916+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.916+0000] {docker.py:438} INFO - 📊 Time remaining: 221 seconds
+[2025-10-13T06:47:44.916+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.917+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.917+0000] {docker.py:438} INFO - 🔥 Memory Stress #16 at 2025-10-13 06:47:00
+[2025-10-13T06:47:44.918+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.918+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-15
+[2025-10-13T06:47:44.918+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-16
+[2025-10-13T06:47:44.919+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.919+0000] {docker.py:438} INFO - 📊 Time remaining: 215 seconds
+[2025-10-13T06:47:44.920+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.920+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.921+0000] {docker.py:438} INFO - 🔥 Memory Stress #17 at 2025-10-13 06:47:05
+[2025-10-13T06:47:44.921+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.921+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-16
+[2025-10-13T06:47:44.922+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-17
+[2025-10-13T06:47:44.922+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.922+0000] {docker.py:438} INFO - 📊 Time remaining: 210 seconds
+[2025-10-13T06:47:44.923+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.923+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.924+0000] {docker.py:438} INFO - 🔥 Memory Stress #18 at 2025-10-13 06:47:11
+[2025-10-13T06:47:44.924+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.924+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-17
+[2025-10-13T06:47:44.925+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-18
+[2025-10-13T06:47:44.925+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.926+0000] {docker.py:438} INFO - 📊 Time remaining: 204 seconds
+[2025-10-13T06:47:44.926+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.926+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.927+0000] {docker.py:438} INFO - 🔥 Memory Stress #19 at 2025-10-13 06:47:16
+[2025-10-13T06:47:44.927+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.928+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-18
+[2025-10-13T06:47:44.928+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-19
+[2025-10-13T06:47:44.928+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.929+0000] {docker.py:438} INFO - 📊 Time remaining: 199 seconds
+[2025-10-13T06:47:44.929+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.930+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.930+0000] {docker.py:438} INFO - 🔥 Memory Stress #20 at 2025-10-13 06:47:22
+[2025-10-13T06:47:44.931+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.931+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-19
+[2025-10-13T06:47:44.932+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-20
+[2025-10-13T06:47:44.932+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.932+0000] {docker.py:438} INFO - 📊 Time remaining: 193 seconds
+[2025-10-13T06:47:44.933+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.933+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.934+0000] {docker.py:438} INFO - 🔥 Memory Stress #21 at 2025-10-13 06:47:28
+[2025-10-13T06:47:44.934+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.934+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-20
+[2025-10-13T06:47:44.935+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-21
+[2025-10-13T06:47:44.935+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.936+0000] {docker.py:438} INFO - 📊 Time remaining: 188 seconds
+[2025-10-13T06:47:44.936+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.936+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.937+0000] {docker.py:438} INFO - 🔥 Memory Stress #22 at 2025-10-13 06:47:33
+[2025-10-13T06:47:44.937+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.937+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-21
+[2025-10-13T06:47:44.938+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-22
+[2025-10-13T06:47:44.938+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.939+0000] {docker.py:438} INFO - 📊 Time remaining: 182 seconds
+[2025-10-13T06:47:44.939+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.940+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.940+0000] {docker.py:438} INFO - 🔥 Memory Stress #23 at 2025-10-13 06:47:39
+[2025-10-13T06:47:44.940+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.941+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-22
+[2025-10-13T06:47:44.941+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-23
+[2025-10-13T06:47:44.942+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:47:44.942+0000] {docker.py:438} INFO - 📊 Time remaining: 176 seconds
+[2025-10-13T06:47:44.943+0000] {docker.py:438} INFO - 
+[2025-10-13T06:47:44.943+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:47:44.943+0000] {docker.py:438} INFO - 🔥 Memory Stress #24 at 2025-10-13 06:47:44
+[2025-10-13T06:47:44.944+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.893+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-23
+[2025-10-13T06:49:58.894+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-24
+[2025-10-13T06:49:58.894+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.895+0000] {docker.py:438} INFO - 📊 Time remaining: 171 seconds
+[2025-10-13T06:49:58.895+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.896+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.898+0000] {docker.py:438} INFO - 🔥 Memory Stress #25 at 2025-10-13 06:47:50
+[2025-10-13T06:49:58.898+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.900+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-24
+[2025-10-13T06:49:58.900+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-25
+[2025-10-13T06:49:58.901+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.901+0000] {docker.py:438} INFO - 📊 Time remaining: 165 seconds
+[2025-10-13T06:49:58.901+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.903+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.904+0000] {docker.py:438} INFO - 🔥 Memory Stress #26 at 2025-10-13 06:47:55
+[2025-10-13T06:49:58.904+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.904+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-25
+[2025-10-13T06:49:58.907+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-26
+[2025-10-13T06:49:58.908+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.908+0000] {docker.py:438} INFO - 📊 Time remaining: 160 seconds
+[2025-10-13T06:49:58.910+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.910+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.911+0000] {docker.py:438} INFO - 🔥 Memory Stress #27 at 2025-10-13 06:48:01
+[2025-10-13T06:49:58.911+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.911+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-26
+[2025-10-13T06:49:58.913+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-27
+[2025-10-13T06:49:58.913+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.914+0000] {docker.py:438} INFO - 📊 Time remaining: 154 seconds
+[2025-10-13T06:49:58.914+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.916+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.916+0000] {docker.py:438} INFO - 🔥 Memory Stress #28 at 2025-10-13 06:48:07
+[2025-10-13T06:49:58.916+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.917+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-27
+[2025-10-13T06:49:58.917+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-28
+[2025-10-13T06:49:58.919+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.919+0000] {docker.py:438} INFO - 📊 Time remaining: 149 seconds
+[2025-10-13T06:49:58.920+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.920+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.920+0000] {docker.py:438} INFO - 🔥 Memory Stress #29 at 2025-10-13 06:48:12
+[2025-10-13T06:49:58.921+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.921+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-28
+[2025-10-13T06:49:58.922+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-29
+[2025-10-13T06:49:58.923+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.923+0000] {docker.py:438} INFO - 📊 Time remaining: 143 seconds
+[2025-10-13T06:49:58.925+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.925+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.926+0000] {docker.py:438} INFO - 🔥 Memory Stress #30 at 2025-10-13 06:48:18
+[2025-10-13T06:49:58.926+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.927+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-29
+[2025-10-13T06:49:58.927+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-30
+[2025-10-13T06:49:58.930+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.930+0000] {docker.py:438} INFO - 📊 Time remaining: 137 seconds
+[2025-10-13T06:49:58.930+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.931+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.931+0000] {docker.py:438} INFO - 🔥 Memory Stress #31 at 2025-10-13 06:48:23
+[2025-10-13T06:49:58.932+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.932+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-30
+[2025-10-13T06:49:58.932+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-31
+[2025-10-13T06:49:58.933+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.933+0000] {docker.py:438} INFO - 📊 Time remaining: 132 seconds
+[2025-10-13T06:49:58.934+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.934+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.934+0000] {docker.py:438} INFO - 🔥 Memory Stress #32 at 2025-10-13 06:48:29
+[2025-10-13T06:49:58.936+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.936+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-31
+[2025-10-13T06:49:58.937+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-32
+[2025-10-13T06:49:58.937+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.937+0000] {docker.py:438} INFO - 📊 Time remaining: 126 seconds
+[2025-10-13T06:49:58.938+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.938+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.940+0000] {docker.py:438} INFO - 🔥 Memory Stress #33 at 2025-10-13 06:48:35
+[2025-10-13T06:49:58.940+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.941+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-32
+[2025-10-13T06:49:58.941+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-33
+[2025-10-13T06:49:58.941+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.942+0000] {docker.py:438} INFO - 📊 Time remaining: 121 seconds
+[2025-10-13T06:49:58.942+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.945+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.945+0000] {docker.py:438} INFO - 🔥 Memory Stress #34 at 2025-10-13 06:48:40
+[2025-10-13T06:49:58.945+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.946+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-33
+[2025-10-13T06:49:58.946+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-34
+[2025-10-13T06:49:58.947+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.947+0000] {docker.py:438} INFO - 📊 Time remaining: 115 seconds
+[2025-10-13T06:49:58.947+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.948+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.948+0000] {docker.py:438} INFO - 🔥 Memory Stress #35 at 2025-10-13 06:48:46
+[2025-10-13T06:49:58.949+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.949+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-34
+[2025-10-13T06:49:58.949+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-35
+[2025-10-13T06:49:58.951+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.951+0000] {docker.py:438} INFO - 📊 Time remaining: 109 seconds
+[2025-10-13T06:49:58.952+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.952+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.953+0000] {docker.py:438} INFO - 🔥 Memory Stress #36 at 2025-10-13 06:48:51
+[2025-10-13T06:49:58.954+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.954+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-35
+[2025-10-13T06:49:58.955+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-36
+[2025-10-13T06:49:58.955+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.956+0000] {docker.py:438} INFO - 📊 Time remaining: 104 seconds
+[2025-10-13T06:49:58.956+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.957+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.957+0000] {docker.py:438} INFO - 🔥 Memory Stress #37 at 2025-10-13 06:48:57
+[2025-10-13T06:49:58.958+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.958+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-36
+[2025-10-13T06:49:58.958+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-37
+[2025-10-13T06:49:58.959+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.960+0000] {docker.py:438} INFO - 📊 Time remaining: 98 seconds
+[2025-10-13T06:49:58.960+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.961+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.961+0000] {docker.py:438} INFO - 🔥 Memory Stress #38 at 2025-10-13 06:49:03
+[2025-10-13T06:49:58.961+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.962+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-37
+[2025-10-13T06:49:58.962+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-38
+[2025-10-13T06:49:58.963+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.963+0000] {docker.py:438} INFO - 📊 Time remaining: 93 seconds
+[2025-10-13T06:49:58.963+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.965+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.966+0000] {docker.py:438} INFO - 🔥 Memory Stress #39 at 2025-10-13 06:49:08
+[2025-10-13T06:49:58.967+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.967+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-38
+[2025-10-13T06:49:58.968+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-39
+[2025-10-13T06:49:58.968+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.968+0000] {docker.py:438} INFO - 📊 Time remaining: 87 seconds
+[2025-10-13T06:49:58.969+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.969+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.970+0000] {docker.py:438} INFO - 🔥 Memory Stress #40 at 2025-10-13 06:49:14
+[2025-10-13T06:49:58.970+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.970+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-39
+[2025-10-13T06:49:58.971+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-40
+[2025-10-13T06:49:58.971+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.972+0000] {docker.py:438} INFO - 📊 Time remaining: 81 seconds
+[2025-10-13T06:49:58.972+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.972+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.973+0000] {docker.py:438} INFO - 🔥 Memory Stress #41 at 2025-10-13 06:49:19
+[2025-10-13T06:49:58.973+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.974+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-40
+[2025-10-13T06:49:58.974+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-41
+[2025-10-13T06:49:58.974+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.975+0000] {docker.py:438} INFO - 📊 Time remaining: 76 seconds
+[2025-10-13T06:49:58.975+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.976+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.976+0000] {docker.py:438} INFO - 🔥 Memory Stress #42 at 2025-10-13 06:49:25
+[2025-10-13T06:49:58.976+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.977+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-41
+[2025-10-13T06:49:58.977+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-42
+[2025-10-13T06:49:58.978+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.978+0000] {docker.py:438} INFO - 📊 Time remaining: 70 seconds
+[2025-10-13T06:49:58.978+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.979+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.979+0000] {docker.py:438} INFO - 🔥 Memory Stress #43 at 2025-10-13 06:49:30
+[2025-10-13T06:49:58.980+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.980+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-42
+[2025-10-13T06:49:58.980+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-43
+[2025-10-13T06:49:58.981+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.981+0000] {docker.py:438} INFO - 📊 Time remaining: 65 seconds
+[2025-10-13T06:49:58.982+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.982+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.982+0000] {docker.py:438} INFO - 🔥 Memory Stress #44 at 2025-10-13 06:49:36
+[2025-10-13T06:49:58.983+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.983+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-43
+[2025-10-13T06:49:58.984+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-44
+[2025-10-13T06:49:58.984+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.984+0000] {docker.py:438} INFO - 📊 Time remaining: 59 seconds
+[2025-10-13T06:49:58.985+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.985+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.986+0000] {docker.py:438} INFO - 🔥 Memory Stress #45 at 2025-10-13 06:49:42
+[2025-10-13T06:49:58.986+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.986+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-44
+[2025-10-13T06:49:58.987+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-45
+[2025-10-13T06:49:58.987+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.987+0000] {docker.py:438} INFO - 📊 Time remaining: 54 seconds
+[2025-10-13T06:49:58.988+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.988+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.989+0000] {docker.py:438} INFO - 🔥 Memory Stress #46 at 2025-10-13 06:49:47
+[2025-10-13T06:49:58.989+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.989+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-45
+[2025-10-13T06:49:58.990+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-46
+[2025-10-13T06:49:58.990+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.991+0000] {docker.py:438} INFO - 📊 Time remaining: 48 seconds
+[2025-10-13T06:49:58.991+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.992+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.992+0000] {docker.py:438} INFO - 🔥 Memory Stress #47 at 2025-10-13 06:49:53
+[2025-10-13T06:49:58.992+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.993+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-46
+[2025-10-13T06:49:58.993+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-47
+[2025-10-13T06:49:58.994+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:49:58.994+0000] {docker.py:438} INFO - 📊 Time remaining: 42 seconds
+[2025-10-13T06:49:58.994+0000] {docker.py:438} INFO - 
+[2025-10-13T06:49:58.995+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:49:58.995+0000] {docker.py:438} INFO - 🔥 Memory Stress #48 at 2025-10-13 06:49:58
+[2025-10-13T06:50:33.193+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.194+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-47
+[2025-10-13T06:50:33.195+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-48
+[2025-10-13T06:50:33.195+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.197+0000] {docker.py:438} INFO - 📊 Time remaining: 37 seconds
+[2025-10-13T06:50:33.197+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.198+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.198+0000] {docker.py:438} INFO - 🔥 Memory Stress #49 at 2025-10-13 06:50:04
+[2025-10-13T06:50:33.199+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.199+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-48
+[2025-10-13T06:50:33.199+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-49
+[2025-10-13T06:50:33.201+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.201+0000] {docker.py:438} INFO - 📊 Time remaining: 31 seconds
+[2025-10-13T06:50:33.202+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.202+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.203+0000] {docker.py:438} INFO - 🔥 Memory Stress #50 at 2025-10-13 06:50:10
+[2025-10-13T06:50:33.203+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.204+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-49
+[2025-10-13T06:50:33.204+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-50
+[2025-10-13T06:50:33.204+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.207+0000] {docker.py:438} INFO - 📊 Time remaining: 26 seconds
+[2025-10-13T06:50:33.207+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.208+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.208+0000] {docker.py:438} INFO - 🔥 Memory Stress #51 at 2025-10-13 06:50:15
+[2025-10-13T06:50:33.210+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.210+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-50
+[2025-10-13T06:50:33.211+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-51
+[2025-10-13T06:50:33.211+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.211+0000] {docker.py:438} INFO - 📊 Time remaining: 20 seconds
+[2025-10-13T06:50:33.212+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.213+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.213+0000] {docker.py:438} INFO - 🔥 Memory Stress #52 at 2025-10-13 06:50:21
+[2025-10-13T06:50:33.215+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.215+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-51
+[2025-10-13T06:50:33.216+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-52
+[2025-10-13T06:50:33.216+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.216+0000] {docker.py:438} INFO - 📊 Time remaining: 14 seconds
+[2025-10-13T06:50:33.218+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.218+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.219+0000] {docker.py:438} INFO - 🔥 Memory Stress #53 at 2025-10-13 06:50:26
+[2025-10-13T06:50:33.219+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.220+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-52
+[2025-10-13T06:50:33.220+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-53
+[2025-10-13T06:50:33.220+0000] {docker.py:438} INFO - ⏳ Waiting 5 seconds until next stress cycle...
+[2025-10-13T06:50:33.221+0000] {docker.py:438} INFO - 📊 Time remaining: 9 seconds
+[2025-10-13T06:50:33.221+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.223+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.224+0000] {docker.py:438} INFO - 🔥 Memory Stress #54 at 2025-10-13 06:50:32
+[2025-10-13T06:50:33.224+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.226+0000] {docker.py:438} INFO - 🧹 Cleaned up previous stress: oom-stress-cycle-53
+[2025-10-13T06:50:33.226+0000] {docker.py:438} INFO - ✅ Successfully created memory stress: oom-stress-cycle-54
+[2025-10-13T06:50:33.227+0000] {docker.py:438} INFO - ⏰ Less than 5 seconds remaining, stopping experiment
+[2025-10-13T06:50:33.227+0000] {docker.py:438} INFO - 🧹 Final cleanup: oom-stress-cycle-54
+[2025-10-13T06:50:33.227+0000] {docker.py:438} INFO - 
+[2025-10-13T06:50:33.230+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.230+0000] {docker.py:438} INFO - 🏁 Memory Stress Experiment Completed!
+[2025-10-13T06:50:33.231+0000] {docker.py:438} INFO - ==================================================
+[2025-10-13T06:50:33.231+0000] {docker.py:438} INFO - 📈 Total stress cycles performed: 54
+[2025-10-13T06:50:33.231+0000] {docker.py:438} INFO - ⏱️  Total duration: 297 seconds
+[2025-10-13T06:50:33.232+0000] {docker.py:438} INFO - 📊 Average interval: 5.5 seconds
+[2025-10-13T06:50:33.232+0000] {docker.py:438} INFO - [32m[2025-10-13 06:50:33 INFO] Let's rollback...
+[2025-10-13T06:50:33.233+0000] {docker.py:438} INFO - [32m[2025-10-13 06:50:33 INFO] No declared rollbacks, let's move on.
+[2025-10-13T06:50:33.233+0000] {docker.py:438} INFO - [32m[2025-10-13 06:50:33 INFO] Experiment ended with status: completed
+[2025-10-13T06:50:33.394+0000] {docker.py:438} INFO - [INFO] Memory stress test completed
+[2025-10-13T06:50:43.729+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-13T06:50:43.729+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Memory_Stress_Test, task_id=memory_stress_test, run_id=scheduled__2025-10-13T06:00:00+00:00, execution_date=20251013T060000, start_date=20251013T064503, end_date=20251013T065043
+[2025-10-13T06:50:43.782+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-13T06:50:43.809+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-13T06:50:43.812+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

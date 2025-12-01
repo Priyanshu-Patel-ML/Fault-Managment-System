@@ -1,0 +1,45 @@
+probe:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: "probe_testing"
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  tags:
+    - "target_system:compose-post-service"
+    - "Severity:low"
+    - "configured_duration: 300"
+ 
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 0
+  tasks:
+    - task_id: apply_probe_testing
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "priyanshu01ce/airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/azureuser/fault-injector/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/home/azureuser/.kube/config"
+          target: "/root/.kube/config"
+          type: "bind"
+          read_only: true
+      environment:
+        KUBECONFIG: "/root/.kube/config"
+        PYTHONPATH: "/opt/airflow/src/pod"
+      command: >
+        bash -c '
+        cd /opt/airflow/src/pod &&
+        ls -la &&
+        echo "Probe testing succcessfully..." &&
+        chaos run container_probe.json &&
+        echo "probe_tested_successfully"'
+      container_name: "container_probe"

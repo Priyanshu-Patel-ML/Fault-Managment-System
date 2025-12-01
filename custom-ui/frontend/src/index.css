@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid #1b5e20;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background: white;
+  color: #1b5e20;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #1b5e20;
+  color: white;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: white;
+  color: rgba(27, 94, 32, 0.3);
+  border-color: rgba(27, 94, 32, 0.3);
+}
+
+input, select, textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #1b5e20;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #1b5e20;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+p, span, div, td, th {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+a {
+  color: #1b5e20;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+table {
+  font-family: 'Inter', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 12px;
+}
+
+td {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 14px 12px;
+}
+

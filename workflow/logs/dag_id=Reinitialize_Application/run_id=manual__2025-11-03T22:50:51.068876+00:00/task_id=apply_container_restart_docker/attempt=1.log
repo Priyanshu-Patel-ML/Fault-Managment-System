@@ -1,0 +1,761 @@
+[2025-11-03T22:50:52.938+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-03T22:50:52.962+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-03T22:50:51.068876+00:00 [queued]>
+[2025-11-03T22:50:52.973+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-03T22:50:51.068876+00:00 [queued]>
+[2025-11-03T22:50:52.974+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-03T22:50:52.999+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): apply_container_restart_docker> on 2025-11-03 22:50:51.068876+00:00
+[2025-11-03T22:50:53.011+0000] {standard_task_runner.py:72} INFO - Started process 5506 to run task
+[2025-11-03T22:50:53.020+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Reinitialize_Application', 'apply_container_restart_docker', 'manual__2025-11-03T22:50:51.068876+00:00', '--job-id', '13137', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp_7np5i76']
+[2025-11-03T22:50:53.022+0000] {standard_task_runner.py:105} INFO - Job 13137: Subtask apply_container_restart_docker
+[2025-11-03T22:50:53.127+0000] {task_command.py:467} INFO - Running <TaskInstance: Reinitialize_Application.apply_container_restart_docker manual__2025-11-03T22:50:51.068876+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-03T22:50:53.281+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reinitialize_Application' AIRFLOW_CTX_TASK_ID='apply_container_restart_docker' AIRFLOW_CTX_EXECUTION_DATE='2025-11-03T22:50:51.068876+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-03T22:50:51.068876+00:00'
+[2025-11-03T22:50:53.283+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-03T22:50:53.352+0000] {docker.py:367} INFO - Starting docker container from image priyanshu01ce/***_chaos:latest
+[2025-11-03T22:50:54.041+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-03T22:51:11.174+0000] {docker.py:438} INFO - 
+[2025-11-03T22:51:11.184+0000] {docker.py:438} INFO - total 7068
+[2025-11-03T22:51:11.184+0000] {docker.py:438} INFO - drwxr-xr-x 6    1000 1000    4096 Nov  3 08:06 .
+[2025-11-03T22:51:11.185+0000] {docker.py:438} INFO - drwxr-xr-x 1 *** root    4096 Sep 26 10:44 ..
+[2025-11-03T22:51:11.185+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1193 Sep  8 07:02 API_Latency.json
+[2025-11-03T22:51:11.186+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     729 Sep  9 10:30 API_Timeout.json
+[2025-11-03T22:51:11.186+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1331 Oct  7 18:22 Continuous_Load_Test_Azure.yaml
+[2025-11-03T22:51:11.187+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1672 Oct 30 07:48 Memory_Stress_Test_Azure.yaml
+[2025-11-03T22:51:11.188+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1178 Sep 30 18:19 Stress_Test_Azure.yaml
+[2025-11-03T22:51:11.188+0000] {docker.py:438} INFO - drwxrwxr-x 2 root    root    4096 Oct 29 06:31 __pycache__
+[2025-11-03T22:51:11.189+0000] {docker.py:438} INFO - drwxrwxr-x 5    1000 1000    4096 Oct 21 08:05 chaos_env
+[2025-11-03T22:51:11.190+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    8875 Sep 25 16:54 chaosk6_actions.py
+[2025-11-03T22:51:11.190+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000 6582434 Nov  3 22:50 chaostoolkit.log
+[2025-11-03T22:51:11.191+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1421 Oct 23 09:34 check.py
+[2025-11-03T22:51:11.191+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3213 Sep  9 09:11 combined-sequential.json
+[2025-11-03T22:51:11.192+0000] {docker.py:438} INFO - -rwxrwxr-x 1    1000 1000    1489 Oct 27 06:29 complete_chaos_mesh-cleanup.sh
+[2025-11-03T22:51:11.192+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     502 Sep 16 05:31 connection_test_experiment.json
+[2025-11-03T22:51:11.195+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     692 Oct 24 01:43 container_probe.json
+[2025-11-03T22:51:11.195+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    2533 Oct 23 09:28 container_probe.yaml
+[2025-11-03T22:51:11.195+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1420 Sep 24 06:53 container_restart.json
+[2025-11-03T22:51:11.196+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   16452 Sep 26 09:59 container_restart.py
+[2025-11-03T22:51:11.196+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1751 Nov  3 05:42 container_restart_Azure.yaml
+[2025-11-03T22:51:11.197+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1409 Sep 18 12:30 continuous_load_test.json
+[2025-11-03T22:51:11.197+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 10:13 cordon-uncordon-node.json
+[2025-11-03T22:51:11.198+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1637 Sep 25 04:39 cordon_test.json
+[2025-11-03T22:51:11.198+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1436 Oct 30 12:28 cordon_uncordon_node_Azure.yaml
+[2025-11-03T22:51:11.198+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1203 Sep 30 06:51 cpu_stress_ng.json
+[2025-11-03T22:51:11.199+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1760 Oct 21 08:00 db_cleanup.json
+[2025-11-03T22:51:11.199+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6399 Sep 24 07:40 db_cleanup.py
+[2025-11-03T22:51:11.200+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    5855 Oct 28 12:27 direct_memory_stress.py
+[2025-11-03T22:51:11.200+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000  300558 Nov  3 22:50 journal.json
+[2025-11-03T22:51:11.200+0000] {docker.py:438} INFO - -rw-rw-r-- 1 root    root   50127 Nov  3 16:02 k6_continuous_load.log
+[2025-11-03T22:51:11.203+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3965 Nov  3 15:48 k6_continuous_summary.json
+[2025-11-03T22:51:11.203+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3433 Sep 25 09:28 k6_summary.json
+[2025-11-03T22:51:11.204+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     989 Sep 30 09:24 kubernetes_actions.json
+[2025-11-03T22:51:11.204+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000   10961 Sep 30 09:23 kubernetes_actions.py
+[2025-11-03T22:51:11.205+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 21 16:40 load_test.json
+[2025-11-03T22:51:11.205+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     528 Sep 17 12:13 max_connection_experiment.json
+[2025-11-03T22:51:11.205+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1227 Sep 13 15:20 memory-stress-rollback.json
+[2025-11-03T22:51:11.206+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1066 Oct 30 12:27 memory_stress.json
+[2025-11-03T22:51:11.206+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    6653 Oct 29 06:18 memory_stress.py
+[2025-11-03T22:51:11.207+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1421 Sep 29 05:20 mongo_db_container_restart.json
+[2025-11-03T22:51:11.208+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    7586 Sep 18 05:54 mongodb_actions.py
+[2025-11-03T22:51:11.208+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    2136 Sep 18 11:23 mongodb_connection.json
+[2025-11-03T22:51:11.209+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     597 Sep 16 09:17 mongodb_network_latency_experiment.json
+[2025-11-03T22:51:11.209+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    3657 Sep 18 05:42 mongodb_probes.py
+[2025-11-03T22:51:11.211+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    6161 Sep 12 08:04 pod_restart.py
+[2025-11-03T22:51:11.211+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1497 Sep 30 05:50 redis_config_faults.py
+[2025-11-03T22:51:11.212+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     862 Sep 30 05:50 redis_experiment.json
+[2025-11-03T22:51:11.212+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     945 Sep 18 06:53 redis_load.json
+[2025-11-03T22:51:11.212+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1641 Oct 30 12:29 redis_memory_stress_Azure.yaml
+[2025-11-03T22:51:11.213+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1333 Oct 21 09:39 reinitialize_application.yaml
+[2025-11-03T22:51:11.213+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000    1284 Sep 25 10:53 run_load_test_with_cleanup.py
+[2025-11-03T22:51:11.214+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000    1307 Oct 27 10:33 sample_probe.yaml
+[2025-11-03T22:51:11.214+0000] {docker.py:438} INFO - drwxr-xr-x 2    1000 1000    4096 Oct 22 06:46 scripts
+[2025-11-03T22:51:11.214+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     272 Oct 27 08:51 simple-stress-test.yaml
+[2025-11-03T22:51:11.217+0000] {docker.py:438} INFO - drwxr-xr-x 4    1000 1000    4096 Sep 30 09:41 socialNetwork
+[2025-11-03T22:51:11.217+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     821 Sep 26 13:20 stress_test.json
+[2025-11-03T22:51:11.218+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     301 Oct 27 08:46 test-stress-fixed.yaml
+[2025-11-03T22:51:11.218+0000] {docker.py:438} INFO - -rw-rw-r-- 1    1000 1000     295 Oct 27 08:49 test_after_fix.yaml
+[2025-11-03T22:51:11.218+0000] {docker.py:438} INFO - -rw-r--r-- 1    1000 1000     367 Sep 17 07:24 test_params.json
+[2025-11-03T22:51:11.219+0000] {docker.py:438} INFO - Starting Reinitializing the Social Networking Application...
+[2025-11-03T22:51:12.066+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Validating the experiment's syntax
+[2025-11-03T22:51:12.561+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Experiment looks valid
+[2025-11-03T22:51:12.563+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Running experiment: Simple Social Network Reset
+[2025-11-03T22:51:12.568+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Steady-state strategy: default
+[2025-11-03T22:51:12.569+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Rollbacks strategy: default
+[2025-11-03T22:51:12.570+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-03T22:51:12.571+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Playing your experiment's method now...
+[2025-11-03T22:51:12.572+0000] {docker.py:438} INFO - [32m[2025-11-03 22:51:12 INFO] Action: complete-reset-and-reinit
+[2025-11-03T22:51:12.573+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting complete reset and reinitialization...
+[2025-11-03T22:51:12.574+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Starting full social network reset...
+[2025-11-03T22:51:12.574+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Redis data...
+[2025-11-03T22:51:12.602+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:12.620+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:12.911+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-redis-64bd79b48b-gpwdg for deployment: social-graph-redis
+[2025-11-03T22:51:12.913+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-redis-64bd79b48b-gpwdg, container social-graph-redis: redis-cli FLUSHALL
+[2025-11-03T22:51:14.397+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-03T22:51:14.417+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:14.434+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:14.776+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: home-timeline-redis-744dd9998f-xqjsk for deployment: home-timeline-redis
+[2025-11-03T22:51:14.777+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod home-timeline-redis-744dd9998f-xqjsk, container home-timeline-redis: redis-cli FLUSHALL
+[2025-11-03T22:51:16.127+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-03T22:51:16.145+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:16.162+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:16.414+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-redis-7b8f6ff4fb-5s87m for deployment: user-timeline-redis
+[2025-11-03T22:51:16.415+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-redis-7b8f6ff4fb-5s87m, container user-timeline-redis: redis-cli FLUSHALL
+[2025-11-03T22:51:17.822+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: OK
+[2025-11-03T22:51:17.823+0000] {docker.py:438} INFO - 
+[2025-11-03T22:51:17.823+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Clearing Memcached data...
+[2025-11-03T22:51:17.841+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:17.858+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:18.152+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-memcached-67c6cc65cc-j4jdz for deployment: post-storage-memcached
+[2025-11-03T22:51:18.153+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-memcached-67c6cc65cc-j4jdz, container post-storage-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-11-03T22:51:19.569+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-11-03T22:51:19.585+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:19.607+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:19.894+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-memcached-56f89988c-nxdzl for deployment: user-memcached
+[2025-11-03T22:51:19.896+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-memcached-56f89988c-nxdzl, container user-memcached: sh -c echo 'flush_all' | nc localhost 11211
+[2025-11-03T22:51:21.453+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: sh: 1: nc: not found
+[2025-11-03T22:51:21.454+0000] {docker.py:438} INFO - 
+[2025-11-03T22:51:21.454+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Dropping MongoDB databases...
+[2025-11-03T22:51:21.471+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:21.494+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:21.878+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-11-03T22:51:21.879+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('post').dropDatabase()
+[2025-11-03T22:51:23.412+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:23.413+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:23.413+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("64441c87-c7bc-4be6-a47c-0552ea01c68b") }
+[2025-11-03T22:51:23.414+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:23.414+0000] {docker.py:438} INFO - { "dropped" : "post", "ok" : 1 }
+[2025-11-03T22:51:23.431+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:23.449+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:23.736+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: post-storage-mongodb-7f7657964c-b2fld for deployment: post-storage-mongodb
+[2025-11-03T22:51:23.737+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod post-storage-mongodb-7f7657964c-b2fld, container post-storage-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-03T22:51:25.303+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:25.304+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:25.304+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("d1c98d84-b606-47ac-9577-6d1e0472aea6") }
+[2025-11-03T22:51:25.305+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:25.305+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-03T22:51:25.333+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:25.350+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:25.640+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-11-03T22:51:25.642+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('user').dropDatabase()
+[2025-11-03T22:51:27.351+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:27.352+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:27.352+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("3e09dd90-3fdc-4bcd-a8ff-20f38d8fcd5d") }
+[2025-11-03T22:51:27.354+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:27.354+0000] {docker.py:438} INFO - { "dropped" : "user", "ok" : 1 }
+[2025-11-03T22:51:27.371+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:27.390+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:27.656+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-mongodb-f95b7d968-tqlld for deployment: user-mongodb
+[2025-11-03T22:51:27.659+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-mongodb-f95b7d968-tqlld, container user-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-03T22:51:29.268+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:29.269+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:29.269+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("229f1c67-d9d9-4182-a366-dff2fe4e5982") }
+[2025-11-03T22:51:29.270+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:29.270+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-03T22:51:29.287+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:29.304+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:29.592+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-11-03T22:51:29.593+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('social-graph').dropDatabase()
+[2025-11-03T22:51:31.334+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:31.335+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:31.335+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("62a7478b-0b41-4126-bd56-7ce68a6b9cf3") }
+[2025-11-03T22:51:31.337+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:31.337+0000] {docker.py:438} INFO - { "dropped" : "social-graph", "ok" : 1 }
+[2025-11-03T22:51:31.354+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:31.379+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:31.654+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: social-graph-mongodb-77fd77d9f4-jj4vn for deployment: social-graph-mongodb
+[2025-11-03T22:51:31.655+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod social-graph-mongodb-77fd77d9f4-jj4vn, container social-graph-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-03T22:51:33.236+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:33.237+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:33.239+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("fe746f17-bf1c-49ed-bea5-3ad589ddf336") }
+[2025-11-03T22:51:33.239+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:33.240+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-03T22:51:33.256+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:33.274+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:33.579+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-lz2wj for deployment: user-timeline-mongodb
+[2025-11-03T22:51:33.580+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-lz2wj, container user-timeline-mongodb: mongo --eval db.getSiblingDB('user-timeline').dropDatabase()
+[2025-11-03T22:51:35.773+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:35.774+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:35.774+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("11665fb6-13c8-411e-ab76-018c13f346cf") }
+[2025-11-03T22:51:35.775+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:35.775+0000] {docker.py:438} INFO - { "dropped" : "user-timeline", "ok" : 1 }
+[2025-11-03T22:51:35.792+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:35.810+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:36.161+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Found running pod: user-timeline-mongodb-6ff9797bfc-lz2wj for deployment: user-timeline-mongodb
+[2025-11-03T22:51:36.162+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Executing command in pod user-timeline-mongodb-6ff9797bfc-lz2wj, container user-timeline-mongodb: mongo --eval db.getSiblingDB('READ__ME_TO_RECOVER_YOUR_DATA').dropDatabase()
+[2025-11-03T22:51:38.297+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Command executed successfully. Output: MongoDB shell version v4.4.6
+[2025-11-03T22:51:38.297+0000] {docker.py:438} INFO - connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+[2025-11-03T22:51:38.298+0000] {docker.py:438} INFO - Implicit session: session { "id" : UUID("1f55d14a-de0f-4550-a834-86a64cb22175") }
+[2025-11-03T22:51:38.298+0000] {docker.py:438} INFO - MongoDB server version: 4.4.6
+[2025-11-03T22:51:38.299+0000] {docker.py:438} INFO - { "ok" : 1 }
+[2025-11-03T22:51:38.299+0000] {docker.py:438} INFO - 
+[2025-11-03T22:51:38.300+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Full social network reset completed
+[2025-11-03T22:51:43.314+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Loaded local Kubernetes config
+[2025-11-03T22:51:43.315+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: social-graph-service
+[2025-11-03T22:51:43.709+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted social-graph-service
+[2025-11-03T22:51:43.710+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-service
+[2025-11-03T22:51:43.924+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-service
+[2025-11-03T22:51:43.927+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: post-storage-service
+[2025-11-03T22:51:44.196+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted post-storage-service
+[2025-11-03T22:51:44.196+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: compose-post-service
+[2025-11-03T22:51:44.427+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted compose-post-service
+[2025-11-03T22:51:44.428+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: home-timeline-service
+[2025-11-03T22:51:44.650+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted home-timeline-service
+[2025-11-03T22:51:44.651+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-timeline-service
+[2025-11-03T22:51:44.855+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-timeline-service
+[2025-11-03T22:51:44.857+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: nginx-thrift
+[2025-11-03T22:51:45.111+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted nginx-thrift
+[2025-11-03T22:51:45.112+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: text-service
+[2025-11-03T22:51:45.380+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted text-service
+[2025-11-03T22:51:45.381+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: unique-id-service
+[2025-11-03T22:51:45.578+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted unique-id-service
+[2025-11-03T22:51:45.580+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Restarting deployment: user-mention-service
+[2025-11-03T22:51:45.785+0000] {docker.py:438} INFO - INFO:kubernetes_actions:✅ Successfully restarted user-mention-service
+[2025-11-03T22:51:45.786+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Waiting 90 seconds for services to restart...
+[2025-11-03T22:53:15.787+0000] {docker.py:438} INFO - INFO:kubernetes_actions:Reinitializing social network data...
+[2025-11-03T22:54:37.735+0000] {docker.py:438} INFO - ERROR:kubernetes_actions:Reinitialization failed: Traceback (most recent call last):
+[2025-11-03T22:54:37.736+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 1073, in _wrap_create_connection
+[2025-11-03T22:54:37.736+0000] {docker.py:438} INFO -     sock = await aiohappyeyeballs.start_connection(
+[2025-11-03T22:54:37.737+0000] {docker.py:438} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.737+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohappyeyeballs/impl.py", line 104, in start_connection
+[2025-11-03T22:54:37.738+0000] {docker.py:438} INFO -     raise first_exception
+[2025-11-03T22:54:37.738+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohappyeyeballs/impl.py", line 81, in start_connection
+[2025-11-03T22:54:37.739+0000] {docker.py:438} INFO -     sock = await _connect_sock(
+[2025-11-03T22:54:37.739+0000] {docker.py:438} INFO -            ^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.741+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohappyeyeballs/impl.py", line 166, in _connect_sock
+[2025-11-03T22:54:37.741+0000] {docker.py:438} INFO -     await loop.sock_connect(sock, address)
+[2025-11-03T22:54:37.741+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.11/asyncio/selector_events.py", line 638, in sock_connect
+[2025-11-03T22:54:37.744+0000] {docker.py:438} INFO -     return await fut
+[2025-11-03T22:54:37.744+0000] {docker.py:438} INFO -            ^^^^^^^^^
+[2025-11-03T22:54:37.745+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.11/asyncio/selector_events.py", line 678, in _sock_connect_cb
+[2025-11-03T22:54:37.745+0000] {docker.py:438} INFO -     raise OSError(err, f'Connect call failed {address}')
+[2025-11-03T22:54:37.745+0000] {docker.py:438} INFO - ConnectionRefusedError: [Errno 111] Connect call failed ('4.154.253.199', 8080)
+[2025-11-03T22:54:37.747+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.747+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-11-03T22:54:37.748+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.748+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.749+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 157, in <module>
+[2025-11-03T22:54:37.749+0000] {docker.py:438} INFO -     loop.run_until_complete(future)
+[2025-11-03T22:54:37.750+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+[2025-11-03T22:54:37.751+0000] {docker.py:438} INFO -     return future.result()
+[2025-11-03T22:54:37.753+0000] {docker.py:438} INFO -            ^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.753+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 106, in follow
+[2025-11-03T22:54:37.754+0000] {docker.py:438} INFO -     _ = await asyncio.gather(*tasks)
+[2025-11-03T22:54:37.754+0000] {docker.py:438} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.754+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 12, in upload_follow
+[2025-11-03T22:54:37.755+0000] {docker.py:438} INFO -     async with session.post(addr + '/wrk2-api/user/follow', data=payload) as resp:
+[2025-11-03T22:54:37.755+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 1353, in __aenter__
+[2025-11-03T22:54:37.756+0000] {docker.py:438} INFO -     self._resp = await self._coro
+[2025-11-03T22:54:37.756+0000] {docker.py:438} INFO -                  ^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.758+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 657, in _request
+[2025-11-03T22:54:37.759+0000] {docker.py:438} INFO -     conn = await self._connector.connect(
+[2025-11-03T22:54:37.759+0000] {docker.py:438} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.760+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 564, in connect
+[2025-11-03T22:54:37.760+0000] {docker.py:438} INFO -     proto = await self._create_connection(req, traces, timeout)
+[2025-11-03T22:54:37.760+0000] {docker.py:438} INFO -             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.762+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 975, in _create_connection
+[2025-11-03T22:54:37.762+0000] {docker.py:438} INFO -     _, proto = await self._create_direct_connection(req, traces, timeout)
+[2025-11-03T22:54:37.763+0000] {docker.py:438} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.763+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 1350, in _create_direct_connection
+[2025-11-03T22:54:37.764+0000] {docker.py:438} INFO -     raise last_exc
+[2025-11-03T22:54:37.764+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 1319, in _create_direct_connection
+[2025-11-03T22:54:37.764+0000] {docker.py:438} INFO -     transp, proto = await self._wrap_create_connection(
+[2025-11-03T22:54:37.766+0000] {docker.py:438} INFO -                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.766+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/connector.py", line 1088, in _wrap_create_connection
+[2025-11-03T22:54:37.767+0000] {docker.py:438} INFO -     raise client_error(req.connection_key, exc) from exc
+[2025-11-03T22:54:37.767+0000] {docker.py:438} INFO - aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 4.154.253.199:8080 ssl:default [Connect call failed ('4.154.253.199', 8080)]
+[2025-11-03T22:54:37.768+0000] {docker.py:438} INFO - Task exception was never retrieved
+[2025-11-03T22:54:37.768+0000] {docker.py:438} INFO - future: <Task finished name='Task-21928' coro=<upload_follow() done, defined at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:9> exception=ClientOSError(None, 'Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow')>
+[2025-11-03T22:54:37.769+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.771+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 637, in write_bytes
+[2025-11-03T22:54:37.771+0000] {docker.py:438} INFO -     await self.body.write(writer)
+[2025-11-03T22:54:37.772+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/payload.py", line 246, in write
+[2025-11-03T22:54:37.772+0000] {docker.py:438} INFO -     await writer.write(self._value)
+[2025-11-03T22:54:37.773+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 115, in write
+[2025-11-03T22:54:37.773+0000] {docker.py:438} INFO -     self._write(chunk)
+[2025-11-03T22:54:37.774+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 75, in _write
+[2025-11-03T22:54:37.774+0000] {docker.py:438} INFO -     raise ConnectionResetError("Cannot write to closing transport")
+[2025-11-03T22:54:37.774+0000] {docker.py:438} INFO - ConnectionResetError: Cannot write to closing transport
+[2025-11-03T22:54:37.775+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.775+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-11-03T22:54:37.778+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.778+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.778+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 12, in upload_follow
+[2025-11-03T22:54:37.779+0000] {docker.py:438} INFO -     async with session.post(addr + '/wrk2-api/user/follow', data=payload) as resp:
+[2025-11-03T22:54:37.779+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 1353, in __aenter__
+[2025-11-03T22:54:37.780+0000] {docker.py:438} INFO -     self._resp = await self._coro
+[2025-11-03T22:54:37.780+0000] {docker.py:438} INFO -                  ^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.781+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 684, in _request
+[2025-11-03T22:54:37.781+0000] {docker.py:438} INFO -     await resp.start(conn)
+[2025-11-03T22:54:37.781+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 999, in start
+[2025-11-03T22:54:37.782+0000] {docker.py:438} INFO -     message, payload = await protocol.read()  # type: ignore[union-attr]
+[2025-11-03T22:54:37.782+0000] {docker.py:438} INFO -                        ^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.783+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/streams.py", line 640, in read
+[2025-11-03T22:54:37.783+0000] {docker.py:438} INFO -     await self._waiter
+[2025-11-03T22:54:37.786+0000] {docker.py:438} INFO - aiohttp.client_exceptions.ClientOSError: [Errno None] Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow
+[2025-11-03T22:54:37.786+0000] {docker.py:438} INFO - Task exception was never retrieved
+[2025-11-03T22:54:37.787+0000] {docker.py:438} INFO - future: <Task finished name='Task-21931' coro=<upload_follow() done, defined at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:9> exception=ClientOSError(None, 'Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow')>
+[2025-11-03T22:54:37.787+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.787+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 637, in write_bytes
+[2025-11-03T22:54:37.788+0000] {docker.py:438} INFO -     await self.body.write(writer)
+[2025-11-03T22:54:37.788+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/payload.py", line 246, in write
+[2025-11-03T22:54:37.789+0000] {docker.py:438} INFO -     await writer.write(self._value)
+[2025-11-03T22:54:37.789+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 115, in write
+[2025-11-03T22:54:37.791+0000] {docker.py:438} INFO -     self._write(chunk)
+[2025-11-03T22:54:37.792+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 75, in _write
+[2025-11-03T22:54:37.792+0000] {docker.py:438} INFO -     raise ConnectionResetError("Cannot write to closing transport")
+[2025-11-03T22:54:37.793+0000] {docker.py:438} INFO - ConnectionResetError: Cannot write to closing transport
+[2025-11-03T22:54:37.793+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.793+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-11-03T22:54:37.794+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.794+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.795+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 12, in upload_follow
+[2025-11-03T22:54:37.795+0000] {docker.py:438} INFO -     async with session.post(addr + '/wrk2-api/user/follow', data=payload) as resp:
+[2025-11-03T22:54:37.797+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 1353, in __aenter__
+[2025-11-03T22:54:37.798+0000] {docker.py:438} INFO -     self._resp = await self._coro
+[2025-11-03T22:54:37.798+0000] {docker.py:438} INFO -                  ^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.799+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 684, in _request
+[2025-11-03T22:54:37.799+0000] {docker.py:438} INFO -     await resp.start(conn)
+[2025-11-03T22:54:37.799+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 999, in start
+[2025-11-03T22:54:37.800+0000] {docker.py:438} INFO -     message, payload = await protocol.read()  # type: ignore[union-attr]
+[2025-11-03T22:54:37.800+0000] {docker.py:438} INFO -                        ^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.801+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/streams.py", line 640, in read
+[2025-11-03T22:54:37.801+0000] {docker.py:438} INFO -     await self._waiter
+[2025-11-03T22:54:37.801+0000] {docker.py:438} INFO - aiohttp.client_exceptions.ClientOSError: [Errno None] Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow
+[2025-11-03T22:54:37.804+0000] {docker.py:438} INFO - Task exception was never retrieved
+[2025-11-03T22:54:37.804+0000] {docker.py:438} INFO - future: <Task finished name='Task-21930' coro=<upload_follow() done, defined at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:9> exception=ClientOSError(None, 'Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow')>
+[2025-11-03T22:54:37.805+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.805+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 637, in write_bytes
+[2025-11-03T22:54:37.806+0000] {docker.py:438} INFO -     await self.body.write(writer)
+[2025-11-03T22:54:37.808+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/payload.py", line 246, in write
+[2025-11-03T22:54:37.808+0000] {docker.py:438} INFO -     await writer.write(self._value)
+[2025-11-03T22:54:37.809+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 115, in write
+[2025-11-03T22:54:37.809+0000] {docker.py:438} INFO -     self._write(chunk)
+[2025-11-03T22:54:37.809+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/http_writer.py", line 75, in _write
+[2025-11-03T22:54:37.812+0000] {docker.py:438} INFO -     raise ConnectionResetError("Cannot write to closing transport")
+[2025-11-03T22:54:37.812+0000] {docker.py:438} INFO - ConnectionResetError: Cannot write to closing transport
+[2025-11-03T22:54:37.813+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.813+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-11-03T22:54:37.814+0000] {docker.py:438} INFO - 
+[2025-11-03T22:54:37.814+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-11-03T22:54:37.814+0000] {docker.py:438} INFO -   File "/opt/***/src/pod/socialNetwork/scripts/init_social_graph.py", line 12, in upload_follow
+[2025-11-03T22:54:37.815+0000] {docker.py:438} INFO -     async with session.post(addr + '/wrk2-api/user/follow', data=payload) as resp:
+[2025-11-03T22:54:37.815+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 1353, in __aenter__
+[2025-11-03T22:54:37.816+0000] {docker.py:438} INFO -     self._resp = await self._coro
+[2025-11-03T22:54:37.816+0000] {docker.py:438} INFO -                  ^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.816+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client.py", line 684, in _request
+[2025-11-03T22:54:37.817+0000] {docker.py:438} INFO -     await resp.start(conn)
+[2025-11-03T22:54:37.817+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 999, in start
+[2025-11-03T22:54:37.818+0000] {docker.py:438} INFO -     message, payload = await protocol.read()  # type: ignore[union-attr]
+[2025-11-03T22:54:37.821+0000] {docker.py:438} INFO -                        ^^^^^^^^^^^^^^^^^^^^^
+[2025-11-03T22:54:37.821+0000] {docker.py:438} INFO -   File "/home/***/.local/lib/python3.11/site-packages/aiohttp/streams.py", line 640, in read
+[2025-11-03T22:54:37.825+0000] {docker.py:438} INFO -     await self._waiter
+[2025-11-03T22:54:37.825+0000] {docker.py:438} INFO - aiohttp.client_exceptions.ClientOSError: [Errno None] Can not write request body for http://4.154.253.199:8080/wrk2-api/user/follow
+[2025-11-03T22:54:37.826+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.826+0000] {docker.py:438} INFO - task: <Task pending name='Task-22186' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(121, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.826+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.827+0000] {docker.py:438} INFO - task: <Task pending name='Task-22187' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(122, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.827+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.828+0000] {docker.py:438} INFO - task: <Task pending name='Task-22188' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(123, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.828+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.828+0000] {docker.py:438} INFO - task: <Task pending name='Task-22189' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(124, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.834+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.834+0000] {docker.py:438} INFO - task: <Task pending name='Task-22190' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(126, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.835+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.835+0000] {docker.py:438} INFO - task: <Task pending name='Task-22191' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(127, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.836+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.836+0000] {docker.py:438} INFO - task: <Task pending name='Task-22192' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(129, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.836+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.839+0000] {docker.py:438} INFO - task: <Task pending name='Task-22193' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(133, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.839+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.840+0000] {docker.py:438} INFO - task: <Task pending name='Task-22194' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(135, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.840+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.841+0000] {docker.py:438} INFO - task: <Task pending name='Task-22195' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(137, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.841+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.842+0000] {docker.py:438} INFO - task: <Task pending name='Task-22196' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(139, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.842+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.842+0000] {docker.py:438} INFO - task: <Task pending name='Task-22197' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(145, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.843+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.843+0000] {docker.py:438} INFO - task: <Task pending name='Task-22198' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(147, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.846+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.846+0000] {docker.py:438} INFO - task: <Task pending name='Task-22199' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(148, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.847+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.847+0000] {docker.py:438} INFO - task: <Task pending name='Task-22200' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(149, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.847+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.848+0000] {docker.py:438} INFO - task: <Task pending name='Task-22201' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(153, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.848+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.849+0000] {docker.py:438} INFO - task: <Task pending name='Task-22202' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(154, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.849+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.850+0000] {docker.py:438} INFO - task: <Task pending name='Task-22204' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(158, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.850+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.851+0000] {docker.py:438} INFO - task: <Task pending name='Task-22205' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(159, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.851+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.851+0000] {docker.py:438} INFO - task: <Task pending name='Task-22206' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(160, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.854+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.854+0000] {docker.py:438} INFO - task: <Task pending name='Task-22207' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(161, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.855+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.855+0000] {docker.py:438} INFO - task: <Task pending name='Task-22208' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(162, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.856+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.856+0000] {docker.py:438} INFO - task: <Task pending name='Task-22209' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(164, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.857+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.857+0000] {docker.py:438} INFO - task: <Task pending name='Task-22210' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(165, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.857+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.860+0000] {docker.py:438} INFO - task: <Task pending name='Task-22211' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(166, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.860+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.861+0000] {docker.py:438} INFO - task: <Task pending name='Task-22212' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(169, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.861+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.862+0000] {docker.py:438} INFO - task: <Task pending name='Task-22213' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(170, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.862+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.862+0000] {docker.py:438} INFO - task: <Task pending name='Task-22214' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(171, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.863+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.863+0000] {docker.py:438} INFO - task: <Task pending name='Task-22215' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(172, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.864+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.864+0000] {docker.py:438} INFO - task: <Task pending name='Task-22216' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(173, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.865+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.865+0000] {docker.py:438} INFO - task: <Task pending name='Task-22217' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(177, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.865+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.868+0000] {docker.py:438} INFO - task: <Task pending name='Task-22218' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(178, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.868+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.869+0000] {docker.py:438} INFO - task: <Task pending name='Task-22219' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(179, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.869+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.870+0000] {docker.py:438} INFO - task: <Task pending name='Task-22220' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(182, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.870+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.870+0000] {docker.py:438} INFO - task: <Task pending name='Task-22221' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(183, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.871+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.871+0000] {docker.py:438} INFO - task: <Task pending name='Task-22223' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(188, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.874+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.874+0000] {docker.py:438} INFO - task: <Task pending name='Task-22224' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(190, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.875+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.875+0000] {docker.py:438} INFO - task: <Task pending name='Task-22225' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(191, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.876+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.876+0000] {docker.py:438} INFO - task: <Task pending name='Task-22226' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(192, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.876+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.877+0000] {docker.py:438} INFO - task: <Task pending name='Task-22227' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(193, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.877+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.878+0000] {docker.py:438} INFO - task: <Task pending name='Task-22228' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(195, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.878+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.879+0000] {docker.py:438} INFO - task: <Task pending name='Task-22229' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(196, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.879+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.879+0000] {docker.py:438} INFO - task: <Task pending name='Task-22230' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(199, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.882+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.882+0000] {docker.py:438} INFO - task: <Task pending name='Task-22231' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(200, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.883+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.883+0000] {docker.py:438} INFO - task: <Task pending name='Task-22232' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(204, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.884+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.884+0000] {docker.py:438} INFO - task: <Task pending name='Task-22233' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.884+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.885+0000] {docker.py:438} INFO - task: <Task pending name='Task-22234' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.885+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.886+0000] {docker.py:438} INFO - task: <Task pending name='Task-22235' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.886+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.887+0000] {docker.py:438} INFO - task: <Task pending name='Task-22236' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.887+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.887+0000] {docker.py:438} INFO - task: <Task pending name='Task-22237' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.890+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.890+0000] {docker.py:438} INFO - task: <Task pending name='Task-22238' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.891+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.891+0000] {docker.py:438} INFO - task: <Task pending name='Task-22239' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.892+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.892+0000] {docker.py:438} INFO - task: <Task pending name='Task-22241' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.893+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.893+0000] {docker.py:438} INFO - task: <Task pending name='Task-22242' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.893+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.896+0000] {docker.py:438} INFO - task: <Task pending name='Task-22243' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.896+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.897+0000] {docker.py:438} INFO - task: <Task pending name='Task-22244' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.897+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.901+0000] {docker.py:438} INFO - task: <Task pending name='Task-22245' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.902+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.902+0000] {docker.py:438} INFO - task: <Task pending name='Task-22246' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.902+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.904+0000] {docker.py:438} INFO - task: <Task pending name='Task-22247' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.904+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.905+0000] {docker.py:438} INFO - task: <Task pending name='Task-22248' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.905+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.907+0000] {docker.py:438} INFO - task: <Task pending name='Task-22249' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.908+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.910+0000] {docker.py:438} INFO - task: <Task pending name='Task-22250' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/s
+[2025-11-03T22:54:37.910+0000] {docker.py:438} INFO - cripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.911+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.911+0000] {docker.py:438} INFO - task: <Task pending name='Task-22251' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.912+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.912+0000] {docker.py:438} INFO - task: <Task pending name='Task-22252' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.912+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.913+0000] {docker.py:438} INFO - task: <Task pending name='Task-22253' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.913+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.916+0000] {docker.py:438} INFO - task: <Task pending name='Task-22254' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.916+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.917+0000] {docker.py:438} INFO - task: <Task pending name='Task-22255' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.917+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.917+0000] {docker.py:438} INFO - task: <Task pending name='Task-22256' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.918+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.918+0000] {docker.py:438} INFO - task: <Task pending name='Task-22257' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.919+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.919+0000] {docker.py:438} INFO - task: <Task pending name='Task-22259' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.921+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.921+0000] {docker.py:438} INFO - task: <Task pending name='Task-22260' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.921+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.922+0000] {docker.py:438} INFO - task: <Task pending name='Task-22261' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.922+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.923+0000] {docker.py:438} INFO - task: <Task pending name='Task-22262' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.923+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.923+0000] {docker.py:438} INFO - task: <Task pending name='Task-22263' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.925+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.925+0000] {docker.py:438} INFO - task: <Task pending name='Task-22264' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.927+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.928+0000] {docker.py:438} INFO - task: <Task pending name='Task-22265' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.928+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.928+0000] {docker.py:438} INFO - task: <Task pending name='Task-22266' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.931+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.931+0000] {docker.py:438} INFO - task: <Task pending name='Task-22267' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.932+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.932+0000] {docker.py:438} INFO - task: <Task pending name='Task-22268' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.934+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.934+0000] {docker.py:438} INFO - task: <Task pending name='Task-22269' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.935+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.935+0000] {docker.py:438} INFO - task: <Task pending name='Task-22270' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.938+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.938+0000] {docker.py:438} INFO - task: <Task pending name='Task-22271' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.938+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.939+0000] {docker.py:438} INFO - task: <Task pending name='Task-22272' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.939+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.942+0000] {docker.py:438} INFO - task: <Task pending name='Task-22273' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.942+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.943+0000] {docker.py:438} INFO - task: <Task pending name='Task-22274' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.943+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.943+0000] {docker.py:438} INFO - task: <Task pending name='Task-22275' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.946+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.946+0000] {docker.py:438} INFO - task: <Task pending name='Task-22276' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.947+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.947+0000] {docker.py:438} INFO - task: <Task pending name='Task-22278' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.947+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.950+0000] {docker.py:438} INFO - task: <Task pending name='Task-22279' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.950+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.951+0000] {docker.py:438} INFO - task: <Task pending name='Task-22280' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.951+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.951+0000] {docker.py:438} INFO - task: <Task pending name='Task-22281' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.955+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.955+0000] {docker.py:438} INFO - task: <Task pending name='Task-22282' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.956+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.956+0000] {docker.py:438} INFO - task: <Task pending name='Task-22283' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.956+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.959+0000] {docker.py:438} INFO - task: <Task pending name='Task-22284' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.959+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.960+0000] {docker.py:438} INFO - task: <Task pending name='Task-22285' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.960+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.960+0000] {docker.py:438} INFO - task: <Task pending name='Task-22286' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.963+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.963+0000] {docker.py:438} INFO - task: <Task pending name='Task-22287' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.964+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.964+0000] {docker.py:438} INFO - task: <Task pending name='Task-22288' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.964+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.967+0000] {docker.py:438} INFO - task: <Task pending name='Task-22289' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.967+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.968+0000] {docker.py:438} INFO - task: <Task pending name='Task-22290' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.968+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.968+0000] {docker.py:438} INFO - task: <Task pending name='Task-22291' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.971+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.971+0000] {docker.py:438} INFO - task: <Task pending name='Task-22292' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.972+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.972+0000] {docker.py:438} INFO - task: <Task pending name='Task-22293' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.972+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.976+0000] {docker.py:438} INFO - task: <Task pending name='Task-22294' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.977+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.977+0000] {docker.py:438} INFO - task: <Task pending name='Task-22296' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.977+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.979+0000] {docker.py:438} INFO - task: <Task pending name='Task-22297' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.979+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.979+0000] {docker.py:438} INFO - task: <Task pending name='Task-22298' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.980+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.980+0000] {docker.py:438} INFO - task: <Task pending name='Task-22299' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.983+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.983+0000] {docker.py:438} INFO - task: <Task pending name='Task-22300' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.984+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.984+0000] {docker.py:438} INFO - task: <Task pending name='Task-22301' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.984+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.987+0000] {docker.py:438} INFO - task: <Task pending name='Task-22302' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.987+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.988+0000] {docker.py:438} INFO - task: <Task pending name='Task-22303' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.988+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.992+0000] {docker.py:438} INFO - task: <Task pending name='Task-22304' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.993+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.993+0000] {docker.py:438} INFO - task: <Task pending name='Task-22305' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.994+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.996+0000] {docker.py:438} INFO - task: <Task pending name='Task-22306' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.996+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:37.997+0000] {docker.py:438} INFO - task: <Task pending name='Task-22307' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:37.997+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.000+0000] {docker.py:438} INFO - task: <Task pending name='Task-22308' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.000+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.001+0000] {docker.py:438} INFO - task: <Task pending name='Task-22309' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.001+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.002+0000] {docker.py:438} INFO - task: <Task pending name='Task-22310' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.006+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.006+0000] {docker.py:438} INFO - task: <Task pending name='Task-22311' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.007+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.007+0000] {docker.py:438} INFO - task: <Task pending name='Task-22312' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.010+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.010+0000] {docker.py:438} INFO - task: <Task pending name='Task-22314' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.011+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.011+0000] {docker.py:438} INFO - task: <Task pending name='Task-22315' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.012+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.012+0000] {docker.py:438} INFO - task: <Task pending name='Task-22316' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.012+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.013+0000] {docker.py:438} INFO - task: <Task pending name='Task-22317' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.013+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.014+0000] {docker.py:438} INFO - task: <Task pending name='Task-22318' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.014+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.014+0000] {docker.py:438} INFO - task: <Task pending name='Task-22319' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.015+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.015+0000] {docker.py:438} INFO - task: <Task pending name='Task-22320' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.016+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.016+0000] {docker.py:438} INFO - task: <Task pending name='Task-22321' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.016+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.017+0000] {docker.py:438} INFO - task: <Task pending name='Task-22322' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.017+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.018+0000] {docker.py:438} INFO - task: <Task pending name='Task-22323' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.018+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.018+0000] {docker.py:438} INFO - task: <Task pending name='Task-22324' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.019+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.019+0000] {docker.py:438} INFO - task: <Task pending name='Task-22325' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.020+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.020+0000] {docker.py:438} INFO - task: <Task pending name='Task-22326' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.020+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.021+0000] {docker.py:438} INFO - task: <Task pending name='Task-22313' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.021+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.022+0000] {docker.py:438} INFO - task: <Task pending name='Task-22295' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.022+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.022+0000] {docker.py:438} INFO - task: <Task pending name='Task-22277' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.023+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.023+0000] {docker.py:438} INFO - task: <Task pending name='Task-22258' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.024+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.024+0000] {docker.py:438} INFO - task: <Task pending name='Task-22240' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.025+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.025+0000] {docker.py:438} INFO - task: <Task pending name='Task-22222' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(184, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.025+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.026+0000] {docker.py:438} INFO - task: <Task pending name='Task-22203' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(157, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.026+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.027+0000] {docker.py:438} INFO - task: <Task pending name='Task-22185' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(119, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.027+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.027+0000] {docker.py:438} INFO - task: <Task pending name='Task-22184' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(118, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.028+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.028+0000] {docker.py:438} INFO - task: <Task pending name='Task-22183' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(117, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.029+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.029+0000] {docker.py:438} INFO - task: <Task pending name='Task-22182' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(116, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.030+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.030+0000] {docker.py:438} INFO - task: <Task pending name='Task-22181' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(115, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.030+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.031+0000] {docker.py:438} INFO - task: <Task pending name='Task-22180' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(113, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.031+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.031+0000] {docker.py:438} INFO - task: <Task pending name='Task-22179' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(110, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.032+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.032+0000] {docker.py:438} INFO - task: <Task pending name='Task-22178' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(108, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.033+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.033+0000] {docker.py:438} INFO - task: <Task pending name='Task-22177' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(106, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.034+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.034+0000] {docker.py:438} INFO - task: <Task pending name='Task-22176' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(105, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.034+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.035+0000] {docker.py:438} INFO - task: <Task pending name='Task-22175' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(103, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.035+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.036+0000] {docker.py:438} INFO - task: <Task pending name='Task-22174' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(102, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.036+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.036+0000] {docker.py:438} INFO - task: <Task pending name='Task-22173' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(101, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.037+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.037+0000] {docker.py:438} INFO - task: <Task pending name='Task-22172' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(99, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.037+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.038+0000] {docker.py:438} INFO - task: <Task pending name='Task-22171' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(98, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.038+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.039+0000] {docker.py:438} INFO - task: <Task pending name='Task-22170' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(96, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.039+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.040+0000] {docker.py:438} INFO - task: <Task pending name='Task-22169' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(95, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.040+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.040+0000] {docker.py:438} INFO - task: <Task pending name='Task-22168' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(92, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.041+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.041+0000] {docker.py:438} INFO - task: <Task pending name='Task-22167' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._s
+[2025-11-03T22:54:38.042+0000] {docker.py:438} INFO - ock_write_done(90, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.043+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.043+0000] {docker.py:438} INFO - task: <Task pending name='Task-22166' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(88, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.044+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.044+0000] {docker.py:438} INFO - task: <Task pending name='Task-22165' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(87, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.044+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.045+0000] {docker.py:438} INFO - task: <Task pending name='Task-22164' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(85, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.045+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.046+0000] {docker.py:438} INFO - task: <Task pending name='Task-22163' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(78, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.046+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.046+0000] {docker.py:438} INFO - task: <Task pending name='Task-22162' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(77, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.047+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.047+0000] {docker.py:438} INFO - task: <Task pending name='Task-22161' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(76, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.048+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.048+0000] {docker.py:438} INFO - task: <Task pending name='Task-22160' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(73, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.049+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.049+0000] {docker.py:438} INFO - task: <Task pending name='Task-22159' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(70, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.049+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.050+0000] {docker.py:438} INFO - task: <Task pending name='Task-22158' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(67, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.050+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.051+0000] {docker.py:438} INFO - task: <Task pending name='Task-22157' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(64, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.051+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.051+0000] {docker.py:438} INFO - task: <Task pending name='Task-22156' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(63, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.052+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.052+0000] {docker.py:438} INFO - task: <Task pending name='Task-22155' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(62, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.053+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.053+0000] {docker.py:438} INFO - task: <Task pending name='Task-22154' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(60, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.054+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.054+0000] {docker.py:438} INFO - task: <Task pending name='Task-22153' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(58, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.054+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.055+0000] {docker.py:438} INFO - task: <Task pending name='Task-22152' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(57, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.055+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.056+0000] {docker.py:438} INFO - task: <Task pending name='Task-22151' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(49, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.056+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.056+0000] {docker.py:438} INFO - task: <Task pending name='Task-22150' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(48, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.058+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.058+0000] {docker.py:438} INFO - task: <Task pending name='Task-22149' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(45, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.058+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.060+0000] {docker.py:438} INFO - task: <Task pending name='Task-22148' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(43, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.061+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.061+0000] {docker.py:438} INFO - task: <Task pending name='Task-22147' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(42, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.062+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.063+0000] {docker.py:438} INFO - task: <Task pending name='Task-22146' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(40, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.063+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.064+0000] {docker.py:438} INFO - task: <Task pending name='Task-22145' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(39, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.064+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.064+0000] {docker.py:438} INFO - task: <Task pending name='Task-22144' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(38, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.066+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.067+0000] {docker.py:438} INFO - task: <Task pending name='Task-22143' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(37, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.067+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.068+0000] {docker.py:438} INFO - task: <Task pending name='Task-22142' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(36, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.068+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.069+0000] {docker.py:438} INFO - task: <Task pending name='Task-22141' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(34, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.069+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.069+0000] {docker.py:438} INFO - task: <Task pending name='Task-22140' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(32, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.070+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.070+0000] {docker.py:438} INFO - task: <Task pending name='Task-22139' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(30, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.070+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.071+0000] {docker.py:438} INFO - task: <Task pending name='Task-22138' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(29, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.071+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.072+0000] {docker.py:438} INFO - task: <Task pending name='Task-22137' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(26, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.072+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.072+0000] {docker.py:438} INFO - task: <Task pending name='Task-22136' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(25, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.073+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.073+0000] {docker.py:438} INFO - task: <Task pending name='Task-22135' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(24, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.074+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.074+0000] {docker.py:438} INFO - task: <Task pending name='Task-22134' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(23, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.075+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.075+0000] {docker.py:438} INFO - task: <Task pending name='Task-22133' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(21, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.075+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.076+0000] {docker.py:438} INFO - task: <Task pending name='Task-22132' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(20, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.076+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.076+0000] {docker.py:438} INFO - task: <Task pending name='Task-22131' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(19, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.077+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.077+0000] {docker.py:438} INFO - task: <Task pending name='Task-22130' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(14, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.078+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.078+0000] {docker.py:438} INFO - task: <Task pending name='Task-22129' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(13, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.079+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.079+0000] {docker.py:438} INFO - task: <Task pending name='Task-22128' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(11, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.079+0000] {docker.py:438} INFO - Task was destroyed but it is pending!
+[2025-11-03T22:54:38.080+0000] {docker.py:438} INFO - task: <Task pending name='Task-22127' coro=<upload_follow() running at /opt/***/src/pod/socialNetwork/scripts/init_social_graph.py:12> wait_for=<Future pending cb=[BaseSelectorEventLoop._sock_write_done(6, handle=<Handle BaseS....199', 8080))>)(), Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+[2025-11-03T22:54:38.080+0000] {docker.py:438} INFO - [32m[2025-11-03 22:54:37 INFO] Let's rollback...
+[2025-11-03T22:54:38.081+0000] {docker.py:438} INFO - [32m[2025-11-03 22:54:37 INFO] No declared rollbacks, let's move on.
+[2025-11-03T22:54:38.081+0000] {docker.py:438} INFO - [32m[2025-11-03 22:54:37 INFO] Experiment ended with status: completed
+[2025-11-03T22:54:38.138+0000] {docker.py:438} INFO - Reinitialized Social Networking APplication successfully
+[2025-11-03T22:54:38.468+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-03T22:54:38.469+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Reinitialize_Application, task_id=apply_container_restart_docker, run_id=manual__2025-11-03T22:50:51.068876+00:00, execution_date=20251103T225051, start_date=20251103T225052, end_date=20251103T225438
+[2025-11-03T22:54:38.522+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-03T22:54:38.546+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-03T22:54:38.551+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

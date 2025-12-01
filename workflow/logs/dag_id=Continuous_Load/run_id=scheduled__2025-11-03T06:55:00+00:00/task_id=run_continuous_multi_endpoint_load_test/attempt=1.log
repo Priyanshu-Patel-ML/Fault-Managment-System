@@ -1,0 +1,176 @@
+[2025-11-03T07:00:03.784+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-03T07:00:03.851+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [queued]>
+[2025-11-03T07:00:03.884+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [queued]>
+[2025-11-03T07:00:03.884+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-03T07:00:03.976+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_continuous_multi_endpoint_load_test> on 2025-11-03 06:55:00+00:00
+[2025-11-03T07:00:04.008+0000] {standard_task_runner.py:72} INFO - Started process 5317 to run task
+[2025-11-03T07:00:04.045+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Continuous_Load', 'run_continuous_multi_endpoint_load_test', 'scheduled__2025-11-03T06:55:00+00:00', '--job-id', '13041', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpofd5cdho']
+[2025-11-03T07:00:04.056+0000] {standard_task_runner.py:105} INFO - Job 13041: Subtask run_continuous_multi_endpoint_load_test
+[2025-11-03T07:00:04.362+0000] {task_command.py:467} INFO - Running <TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-03T07:00:04.687+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Continuous_Load' AIRFLOW_CTX_TASK_ID='run_continuous_multi_endpoint_load_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-03T06:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-03T06:55:00+00:00'
+[2025-11-03T07:00:04.691+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-03T07:00:04.801+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-03T07:00:04.819+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http+docker://localhost/v1.51/containers/create?name=continuous_multi_endpoint_load_test_chaos
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.51/containers/create?name=continuous_multi_endpoint_load_test_chaos: Conflict ("Conflict. The container name "/continuous_multi_endpoint_load_test_chaos" is already in use by container "bc0a77c53f575f80674b2655617e93eca895860c558d814cb73f89baf19ccdc9". You have to remove (or rename) that container to be able to reuse that name.")
+[2025-11-03T07:00:04.848+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=Continuous_Load, task_id=run_continuous_multi_endpoint_load_test, run_id=scheduled__2025-11-03T06:55:00+00:00, execution_date=20251103T065500, start_date=20251103T070003, end_date=20251103T070004
+[2025-11-03T07:00:04.905+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-03T07:00:04.906+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 13041 for task run_continuous_multi_endpoint_load_test (409 Client Error for http+docker://localhost/v1.51/containers/create?name=continuous_multi_endpoint_load_test_chaos: Conflict ("Conflict. The container name "/continuous_multi_endpoint_load_test_chaos" is already in use by container "bc0a77c53f575f80674b2655617e93eca895860c558d814cb73f89baf19ccdc9". You have to remove (or rename) that container to be able to reuse that name."); 5317)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http+docker://localhost/v1.51/containers/create?name=continuous_multi_endpoint_load_test_chaos
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.51/containers/create?name=continuous_multi_endpoint_load_test_chaos: Conflict ("Conflict. The container name "/continuous_multi_endpoint_load_test_chaos" is already in use by container "bc0a77c53f575f80674b2655617e93eca895860c558d814cb73f89baf19ccdc9". You have to remove (or rename) that container to be able to reuse that name.")
+[2025-11-03T07:00:04.971+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-11-03T07:00:05.014+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-03T07:00:05.020+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-11-03T07:14:51.229+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-03T07:14:51.265+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [queued]>
+[2025-11-03T07:14:51.276+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [queued]>
+[2025-11-03T07:14:51.277+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-03T07:14:51.299+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_continuous_multi_endpoint_load_test> on 2025-11-03 06:55:00+00:00
+[2025-11-03T07:14:51.313+0000] {standard_task_runner.py:72} INFO - Started process 5323 to run task
+[2025-11-03T07:14:51.326+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Continuous_Load', 'run_continuous_multi_endpoint_load_test', 'scheduled__2025-11-03T06:55:00+00:00', '--job-id', '13043', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmpjrhf6hpc']
+[2025-11-03T07:14:51.328+0000] {standard_task_runner.py:105} INFO - Job 13043: Subtask run_continuous_multi_endpoint_load_test
+[2025-11-03T07:14:51.434+0000] {task_command.py:467} INFO - Running <TaskInstance: Continuous_Load.run_continuous_multi_endpoint_load_test scheduled__2025-11-03T06:55:00+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-03T07:14:51.645+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Continuous_Load' AIRFLOW_CTX_TASK_ID='run_continuous_multi_endpoint_load_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-03T06:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-03T06:55:00+00:00'
+[2025-11-03T07:14:51.651+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-03T07:14:51.737+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-03T07:14:52.389+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-03T07:15:12.866+0000] {docker.py:438} INFO - 
+[2025-11-03T07:15:12.872+0000] {docker.py:438} INFO - Starting Continuous Multi-Endpoint Load Test...
+[2025-11-03T07:15:13.773+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:13 INFO] Validating the experiment's syntax
+[2025-11-03T07:15:14.121+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Experiment looks valid
+[2025-11-03T07:15:14.123+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Running experiment: Continuous Load Test - POST Compose & GET Timeline APIs
+[2025-11-03T07:15:14.129+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Steady-state strategy: default
+[2025-11-03T07:15:14.130+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Rollbacks strategy: default
+[2025-11-03T07:15:14.132+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-03T07:15:14.133+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Playing your experiment's method now...
+[2025-11-03T07:15:14.134+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] Action: Continuous multi-endpoint load test
+[2025-11-03T07:15:14.286+0000] {docker.py:438} INFO - [32m[2025-11-03 07:15:14 INFO] ✅ Obtained login_token (JWT): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lc3RhbXAiOiIxNzYyMTU0MTE0IiwidHRsIjoiMzYwMCIsInVzZXJfaWQiOiI1ODYwMTk0NjQ1MjA0OTkyMDAwIiwidXNlcm5hbWUiOiJqYWdhbiJ9.OJ7KT1C1jPK6r2XGDdRE0QY_gYV-_i3yvcgOX4f5_Iw
+[2025-11-03T08:05:20.281+0000] {docker.py:438} INFO - [31m[2025-11-03 08:05:20 ERROR] ❌ Continuous load test failed to start
+[2025-11-03T08:05:20.282+0000] {docker.py:438} INFO - [32m[2025-11-03 08:05:20 INFO] k6 continuous output logged to k6_continuous_load.log
+[2025-11-03T08:05:20.283+0000] {docker.py:438} INFO - [32m[2025-11-03 08:05:20 INFO] Let's rollback...
+[2025-11-03T08:05:20.283+0000] {docker.py:438} INFO - [32m[2025-11-03 08:05:20 INFO] No declared rollbacks, let's move on.
+[2025-11-03T08:05:20.285+0000] {docker.py:438} INFO - [32m[2025-11-03 08:05:20 INFO] Experiment ended with status: completed
+[2025-11-03T08:05:20.415+0000] {docker.py:438} INFO - Continuous load test completed successfully
+[2025-11-03T08:05:20.956+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-03T08:05:20.957+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Continuous_Load, task_id=run_continuous_multi_endpoint_load_test, run_id=scheduled__2025-11-03T06:55:00+00:00, execution_date=20251103T065500, start_date=20251103T071451, end_date=20251103T080520
+[2025-11-03T08:05:21.028+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-03T08:05:21.059+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-03T08:05:21.067+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,45 @@
+[2025-11-20T06:58:30.765+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-20T06:58:30.808+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-20T06:58:28.294352+00:00 [queued]>
+[2025-11-20T06:58:30.827+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-20T06:58:28.294352+00:00 [queued]>
+[2025-11-20T06:58:30.828+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-20T06:58:30.862+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): redis_memory_stress_test> on 2025-11-20 06:58:28.294352+00:00
+[2025-11-20T06:58:30.882+0000] {standard_task_runner.py:72} INFO - Started process 454 to run task
+[2025-11-20T06:58:30.896+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Redis_Memory_Stress_Test', 'redis_memory_stress_test', 'manual__2025-11-20T06:58:28.294352+00:00', '--job-id', '16165', '--raw', '--subdir', 'DAGS_FOLDER/dag_factory.py', '--cfg-path', '/tmp/tmp2n2zhth6']
+[2025-11-20T06:58:30.903+0000] {standard_task_runner.py:105} INFO - Job 16165: Subtask redis_memory_stress_test
+[2025-11-20T06:58:31.111+0000] {task_command.py:467} INFO - Running <TaskInstance: Redis_Memory_Stress_Test.redis_memory_stress_test manual__2025-11-20T06:58:28.294352+00:00 [running]> on host workflow.y2twbfvcjkaujnl2bmtbxunhcb.cx.internal.cloudapp.net
+[2025-11-20T06:58:31.459+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Redis_Memory_Stress_Test' AIRFLOW_CTX_TASK_ID='redis_memory_stress_test' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T06:58:28.294352+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-20T06:58:28.294352+00:00'
+[2025-11-20T06:58:31.461+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-20T06:58:31.737+0000] {docker.py:367} INFO - Starting docker container from image ***_chaos:latest
+[2025-11-20T06:58:33.088+0000] {docker.py:438} INFO - The container is run as root user. For security, consider using a regular user account.
+[2025-11-20T06:59:03.598+0000] {docker.py:438} INFO - 
+[2025-11-20T06:59:05.697+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Validating the experiment's syntax
+[2025-11-20T06:59:05.697+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Experiment looks valid
+[2025-11-20T06:59:05.698+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Running experiment: Redis Pod Memory Stress Test
+[2025-11-20T06:59:05.749+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Steady-state strategy: default
+[2025-11-20T06:59:05.750+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Rollbacks strategy: default
+[2025-11-20T06:59:05.750+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] No steady state hypothesis defined. That's ok, just exploring.
+[2025-11-20T06:59:05.752+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Playing your experiment's method now...
+[2025-11-20T06:59:05.753+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:05 INFO] Action: redis-memory-stress-k8s
+[2025-11-20T06:59:06.448+0000] {docker.py:438} INFO - error: error executing jsonpath "{.items[0].metadata.name}": Error executing template: array index out of bounds: index 0, length 0. Printing more information for debugging the template:
+[2025-11-20T06:59:06.452+0000] {docker.py:438} INFO - 	template was:
+[2025-11-20T06:59:06.452+0000] {docker.py:438} INFO - 		{.items[0].metadata.name}
+[2025-11-20T06:59:06.453+0000] {docker.py:438} INFO - 	object given to jsonpath engine was:
+[2025-11-20T06:59:06.453+0000] {docker.py:438} INFO - 		map[string]interface {}{"apiVersion":"v1", "items":[]interface {}{}, "kind":"List", "metadata":map[string]interface {}{"resourceVersion":""}}
+[2025-11-20T06:59:06.457+0000] {docker.py:438} INFO - [31m[2025-11-20 06:59:06 ERROR]   => failed: subprocess.CalledProcessError: Command 'kubectl get pod -l app=user-timeline-redis -o jsonpath='{.items[0].metadata.name}'' returned non-zero exit status 1.
+[2025-11-20T06:59:06.459+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:06 INFO] Let's rollback...
+[2025-11-20T06:59:06.460+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:06 INFO] Rollback: reset-redis-memory-k8s
+[2025-11-20T06:59:06.461+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:06 INFO] Action: reset-redis-memory-k8s
+[2025-11-20T06:59:06.731+0000] {docker.py:438} INFO - error: error executing jsonpath "{.items[0].metadata.name}": Error executing template: array index out of bounds: index 0, length 0. Printing more information for debugging the template:
+[2025-11-20T06:59:06.731+0000] {docker.py:438} INFO - 	template was:
+[2025-11-20T06:59:06.732+0000] {docker.py:438} INFO - 		{.items[0].metadata.name}
+[2025-11-20T06:59:06.734+0000] {docker.py:438} INFO - 	object given to jsonpath engine was:
+[2025-11-20T06:59:06.734+0000] {docker.py:438} INFO - 		map[string]interface {}{"apiVersion":"v1", "items":[]interface {}{}, "kind":"List", "metadata":map[string]interface {}{"resourceVersion":""}}
+[2025-11-20T06:59:06.741+0000] {docker.py:438} INFO - [31m[2025-11-20 06:59:06 ERROR]   => failed: subprocess.CalledProcessError: Command 'kubectl get pod -l app=user-timeline-redis -o jsonpath='{.items[0].metadata.name}'' returned non-zero exit status 1.
+[2025-11-20T06:59:06.742+0000] {docker.py:438} INFO - [32m[2025-11-20 06:59:06 INFO] Experiment ended with status: completed
+[2025-11-20T06:59:06.909+0000] {docker.py:438} INFO - [INFO] Sleeping for cooldown...
+[2025-11-20T06:59:36.921+0000] {docker.py:438} INFO - [INFO] DAG complete
+[2025-11-20T06:59:37.851+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-20T06:59:37.854+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Redis_Memory_Stress_Test, task_id=redis_memory_stress_test, run_id=manual__2025-11-20T06:58:28.294352+00:00, execution_date=20251120T065828, start_date=20251120T065830, end_date=20251120T065937
+[2025-11-20T06:59:37.924+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-20T06:59:37.951+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-20T06:59:37.955+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
