@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3009
 
 // Middleware
 app.use(cors());
@@ -21,7 +21,6 @@ const AIRFLOW_PASSWORD = process.env.AIRFLOW_PASSWORD || 'admin';
 const AIRFLOW_API_VERSION = process.env.AIRFLOW_API_VERSION || 'v1';
 const USE_JWT_AUTH = process.env.USE_JWT_AUTH === 'true'; // true for Airflow 3.x, false for Airflow 2.x
 
-console.log('Backend server running on port 3001');
 console.log(`Proxying requests to Airflow at ${AIRFLOW_BASE_URL}`);
 console.log(`Using API version: ${AIRFLOW_API_VERSION}`);
 console.log(`Authentication method: ${USE_JWT_AUTH ? 'JWT (Airflow 3.x)' : 'Basic Auth (Airflow 2.x)'}`);

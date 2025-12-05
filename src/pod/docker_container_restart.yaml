@@ -1,0 +1,43 @@
+Docker_Container_Restart_Test:
+  schedule: "@once"
+  start_date: "2025-01-10"
+  description: "Continuous Docker Container Restart Experiment - Local Docker"
+  default_view: "graph"
+  orientation: "LR"
+  catchup: false
+  tags:
+    - "severity:medium"
+    - "target:docker"
+    - "type:container-restart"
+  default_args:
+    owner: "airflow"
+    depends_on_past: false
+    retries: 0
+  tasks:
+    - task_id: apply_docker_container_restart
+      operator: airflow.providers.docker.operators.docker.DockerOperator
+      image: "airflow_chaos:latest"
+      api_version: "auto"
+      auto_remove: true
+      user: "root"
+      mount_tmp_dir: false
+      docker_url: "unix://var/run/docker.sock"
+      network_mode: "host"
+      mounts:
+        - source: "/home/priyanshupatel/Fault-Managment-System/src/pod"
+          target: "/opt/airflow/src/pod"
+          type: "bind"
+        - source: "/var/run/docker.sock"
+          target: "/var/run/docker.sock"
+          type: "bind"
+      environment:
+        PYTHONPATH: "/opt/airflow/src/pod"
+      command: >
+        bash -c '
+        cd /opt/airflow/src/pod &&
+        ls -la &&
+        echo "Starting Docker container restart experiment..." &&
+        chaos run docker_container_restart.json &&
+        echo "Docker container restart experiment completed successfully"'
+      container_name: "docker_container_restart_chaos"
+

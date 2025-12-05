@@ -1,54 +1,34 @@
 {
   "chaoslib-version": "1.44.0",
-  "platform": "Linux-6.14.0-1014-azure-x86_64-with-glibc2.36",
-  "node": "workflow",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "node": "BNXL-80508-WL",
   "experiment": {
     "version": "1.0.0",
-    "title": "Continuous Load Test - POST Compose & GET Timeline APIs",
-    "description": "Continuous load test with variable VUs (30-60) hitting both POST compose and GET timeline endpoints",
+    "title": "Docker Container Restart Experiment",
+    "description": "Restart Docker containers continuously to test application resilience",
     "tags": [
-      "load-test",
-      "continuous",
-      "k6",
-      "jwt-auth",
-      "multi-endpoint"
+      "docker",
+      "container-restart",
+      "chaos-engineering",
+      "continuous"
     ],
-    "configuration": {
-      "env": {
-        "CHAOS_K6_USER": "priyanshu01ce",
-        "CHAOS_K6_PASS": "patel"
-      }
-    },
     "method": [
       {
-        "name": "Continuous multi-endpoint load test",
+        "name": "continuous-docker-container-restart",
         "type": "action",
         "provider": {
           "type": "python",
-          "module": "chaosk6_actions",
-          "func": "stress_continuous_multi_endpoint",
+          "module": "docker_container_restart",
+          "func": "restart_docker_containers_continuous",
           "arguments": {
-            "endpoints": [
-              {
-                "url": "http://4.154.253.199:8080/api/post/compose",
-                "method": "POST",
-                "body": "post_type=0&text=Continuous load test message",
-                "weight": 40
-              },
-              {
-                "url": "http://4.154.253.199:8080/api/user-timeline/read?start=0&stop=100",
-                "method": "GET",
-                "weight": 60
-              }
+            "container_names": [
+              "hotel-reservation-application-zookeeper-1"
             ],
-            "min_vus": 20,
-            "max_vus": 40,
-            "ramp_duration": "2m",
-            "steady_duration": "5m",
-            "username": "jagan",
-            "password": "maplelabs",
-            "log_file": "k6_continuous_load.log",
-            "continuous": true
+            "qty": 1,
+            "rand": true,
+            "timeout": 10,
+            "interval": 30,
+            "duration": 300
           }
         }
       }
@@ -56,7 +36,7 @@
     "rollbacks": [],
     "dry": null
   },
-  "start": "2025-11-25T15:55:21.591535+00:00",
+  "start": "2025-12-05T05:17:20.243291+00:00",
   "status": "completed",
   "deviated": false,
   "steady_states": {
@@ -67,45 +47,36 @@
   "run": [
     {
       "activity": {
-        "name": "Continuous multi-endpoint load test",
+        "name": "continuous-docker-container-restart",
         "type": "action",
         "provider": {
           "type": "python",
-          "module": "chaosk6_actions",
-          "func": "stress_continuous_multi_endpoint",
+          "module": "docker_container_restart",
+          "func": "restart_docker_containers_continuous",
           "arguments": {
-            "endpoints": [
-              {
-                "url": "http://4.154.253.199:8080/api/post/compose",
-                "method": "POST",
-                "body": "post_type=0&text=Continuous load test message",
-                "weight": 40
-              },
-              {
-                "url": "http://4.154.253.199:8080/api/user-timeline/read?start=0&stop=100",
-                "method": "GET",
-                "weight": 60
-              }
+            "container_names": [
+              "hotel-reservation-application-zookeeper-1"
             ],
-            "min_vus": 20,
-            "max_vus": 40,
-            "ramp_duration": "2m",
-            "steady_duration": "5m",
-            "username": "jagan",
-            "password": "maplelabs",
-            "log_file": "k6_continuous_load.log",
-            "continuous": true
+            "qty": 1,
+            "rand": true,
+            "timeout": 10,
+            "interval": 30,
+            "duration": 300
           }
         }
       },
-      "output": false,
-      "start": "2025-11-25T15:55:21.592563+00:00",
+      "output": {
+        "total_cycles": 10,
+        "total_containers_restarted": 10,
+        "duration": 300.00196981430054
+      },
+      "start": "2025-12-05T05:17:20.244379+00:00",
       "status": "succeeded",
-      "end": "2025-11-25T16:45:32.629736+00:00",
-      "duration": 3011.037173
+      "end": "2025-12-05T05:22:20.246824+00:00",
+      "duration": 300.002445
     }
   ],
   "rollbacks": [],
-  "end": "2025-11-25T16:45:32.633063+00:00",
-  "duration": 3011.0472173690796
+  "end": "2025-12-05T05:22:20.247489+00:00",
+  "duration": 300.00688195228577
 }
